@@ -1,6 +1,8 @@
 # Painterly Frame
 
-`Painterly Frame` 是一个把照片或文字场景转译成原创绘画动画画面的 Codex skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
+`Painterly Frame` 是一个把照片或文字场景转译成原创绘画动画画面的 skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
+
+![Painterly Frame workflow](assets/painterly-frame-flow.svg)
 
 ## 它解决什么问题
 
@@ -24,7 +26,7 @@
 
 ### 1. 直接描述目标
 
-在 Codex 中上传图片，然后用自然语言提出目标即可。技能会自动选择“新建画面”“编辑目标”“只分析”或“只写提示词”的路径。
+上传图片，然后用自然语言提出目标即可。skill 会自动选择“新建画面”“编辑目标”“只分析”或“只写提示词”的路径。
 
 推荐至少说明四件事：
 
@@ -73,7 +75,7 @@ $painterly-frame
 
 ## 本地安装
 
-将本目录放入 Codex skills 目录即可：
+将本目录放入 skills 目录即可：
 
 ```bash
 git clone https://github.com/zcjunn/painterly-frame.git ~/.codex/skills/painterly-frame

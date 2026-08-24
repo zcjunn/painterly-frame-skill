@@ -1,4 +1,4 @@
 interface:
-  display_name: "Cinematic Painterly Remake"
+  display_name: "Painterly Animation Remake"
   short_description: "Expressive painterly animation remakes with authored colour"
-  default_prompt: "Use $cinematic-painterly-remake to turn the supplied image into an original cinematic painterly-animation keyframe while preserving the declared recognition anchors."
+  default_prompt: "Use $painterly-animation-remake to turn the supplied image into an original painterly-animation keyframe while preserving the declared recognition anchors."

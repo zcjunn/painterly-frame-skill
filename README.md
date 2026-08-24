@@ -1,6 +1,6 @@
-# Cinematic Painterly Remake
+# Painterly Animation Remake
 
-`Cinematic Painterly Remake` 是一个把照片或文字场景转译成原创电影化绘画动画关键帧的 Codex skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
+`Painterly Animation Remake` 是一个把照片或文字场景转译成原创绘画动画关键帧的 Codex skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
 
 ## 它解决什么问题
 
@@ -38,7 +38,7 @@
 也可以直接写：
 
 ```text
-$cinematic-painterly-remake
+$painterly-animation-remake
 ```
 
 然后补充输入图、保留锚点、抽象程度和输出要求。
@@ -46,7 +46,7 @@ $cinematic-painterly-remake
 ### 3. 可复制的请求模板
 
 ```text
-使用 $cinematic-painterly-remake。
+使用 $painterly-animation-remake。
 把这张图转成一张原创电影化绘画动画关键帧，输出一张无边框成片。
 
 必须保留：{人物/主体/地标/位置/动作/比例}
@@ -76,7 +76,7 @@ $cinematic-painterly-remake
 将本目录放入 Codex skills 目录即可：
 
 ```bash
-git clone https://github.com/zcjunn/cinematic-painterly-remake.git ~/.codex/skills/cinematic-painterly-remake
+git clone https://github.com/zcjunn/painterly-animation-remake.git ~/.codex/skills/painterly-animation-remake
 ```
 
-安装后可用自然语言自动触发，或显式写 `$cinematic-painterly-remake`。
+安装后可用自然语言自动触发，或显式写 `$painterly-animation-remake`。

@@ -76,7 +76,7 @@ $cinematic-painterly-remake
 将本目录放入 Codex skills 目录即可：
 
 ```bash
-git clone https://github.com/<你的账号>/cinematic-painterly-remake.git ~/.codex/skills/cinematic-painterly-remake
+git clone https://github.com/zcjunn/cinematic-painterly-remake.git ~/.codex/skills/cinematic-painterly-remake
 ```
 
 安装后可用自然语言自动触发，或显式写 `$cinematic-painterly-remake`。

@@ -1,6 +1,6 @@
-# Painterly Frame
+# Painterly Frame Skill
 
-`Painterly Frame` 是一个把照片或文字场景转译成原创绘画动画画面的 skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
+`Painterly Frame Skill` 是一个把照片或文字场景转译成原创绘画动画画面的 skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
 
 ![Painterly Frame 中文流程图](assets/painterly-frame-flow-zh.png)
 
@@ -24,7 +24,7 @@
 
 ## English Introduction
 
-`Painterly Frame` is a style-led image transformation skill. It turns a supplied photograph or text scene into an original painterly animated frame by redesigning attention, colour balance, macro shape and material marks instead of applying a generic filter.
+`Painterly Frame Skill` is a style-led image transformation skill. It turns a supplied photograph or text scene into an original painterly animated frame by redesigning attention, colour balance, macro shape and material marks instead of applying a generic filter.
 
 ![Painterly Frame English workflow](assets/painterly-frame-flow-en.png)
 
@@ -61,7 +61,7 @@ Do not use it to copy a named work, character, logo, exact frame or protected pr
 也可以直接写：
 
 ```text
-$painterly-frame
+$painterly-frame-skill
 ```
 
 然后补充输入图、保留锚点、抽象程度和输出要求。
@@ -69,7 +69,7 @@ $painterly-frame
 ### 3. 可复制的请求模板
 
 ```text
-使用 $painterly-frame。
+使用 $painterly-frame-skill。
 把这张图转成一张原创绘画动画关键帧，输出一张无边框成片。
 
 必须保留：{人物/主体/地标/位置/动作/比例}
@@ -99,7 +99,7 @@ $painterly-frame
 将本目录放入 skills 目录即可：
 
 ```bash
-git clone https://github.com/zcjunn/painterly-frame.git ~/.codex/skills/painterly-frame
+git clone https://github.com/zcjunn/painterly-frame-skill.git ~/.codex/skills/painterly-frame-skill
 ```
 
-安装后可用自然语言自动触发，或显式写 `$painterly-frame`。
+安装后可用自然语言自动触发，或显式写 `$painterly-frame-skill`。

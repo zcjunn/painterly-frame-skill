@@ -90,6 +90,28 @@ $painterly-frame-skill
 5. **先做大形，再做材质**：先合并成五到九个互相咬合的大色块，再加入岩石、木材、皮肤、水、雪、雾等各自的笔触和边缘逻辑。
 6. **多尺度质检**：在缩略图、中景和近景分别检查主体读取、构图差异、颜色平衡、背景退让、材质分化和无意新增元素。
 
+## 不同模型如何保持一致
+
+这里的“一致”指视觉系统和导演判断一致，而不是像素、随机种子或每一笔的位置相同。不同模型必须共享同一份 Portable Render Contract：
+
+完整执行规范见 [Model Consistency Contract](references/model-consistency.md)。
+
+- 相同的主体、数量、动作、空间拓扑和受保护颜色；
+- 相同的五到九个大色块及其面积、轮廓、遮挡和负空间关系；
+- 相同的三组明度，以及主色场、结构色、焦点色和中性桥接色的空间归属；
+- 相同的焦点、支撑和背景对比度预算；
+- 相同的主体轮廓重建与四到七个关键分面要求；
+- 不同材质各自明确的笔触尺度、方向、边缘和反光方式；
+- 相同的“非滤镜化”验收：缩略图必须看到大形变化，近景必须看到材质差异，不能只是原照片叠加油画纹理或统一调色。
+
+允许变化的是具体笔触落点、次要纹理、小型自然细节和不改变色彩职责的细微色相偏移。如果某个模型改变第一视觉读取、破坏识别锚点、交换色彩角色、让背景与主体同样抢眼，或让皮肤、布料、金属、草木共享同一种笔触，它就不属于一致结果。随机种子不能跨模型保证一致；需要像素完全相同的区域应使用确定性合成，而不是生成式重绘。
+
+## Cross-model Consistency
+
+Consistency means a shared visual and directorial contract, not identical pixels, seeds or brush placement. Every model is evaluated against the same anchors and topology, five-to-nine macro masses, three value groups, spatial colour roles, contrast tiers, focal plane map, material-specific mark grammar, edge hierarchy and anti-filter gate. Exact brush stamps, secondary texture and small hue shifts may vary only when their visual ownership remains unchanged. A model set is considered consistent only when every output passes the same thumbnail, mid-scale and close-scale checks; a strong average cannot hide one source-literal or globally filtered result.
+
+See [Model Consistency Contract](references/model-consistency.md) for the full portable specification and acceptance boundary.
+
 ## 版权边界
 
 这个 skill 只抽象通用的构图、色彩、光线、材质和绘画动画方法，生成原创画面。它不会也不应复制任何受保护作品的角色身份、标志、文字、独特道具、准确场景设计、镜头布局或逐帧画面。若用户提出一比一复刻，应改为描述可观察的视觉关系，并保留原创主体与世界观。

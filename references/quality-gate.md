@@ -18,7 +18,8 @@ The result fails immediately if any is true:
 - color is supplied mainly by a global LUT/gradient map or a forced warm-cool/complementary cliché with no spatial, material, light, identity, or attention ownership;
 - three or more important materials use the same repeated mark scale and edge behavior;
 - the exposure was forced darker or brighter against the selected scene-owned exposure key without narrative purpose;
-- requested ratio/count/file contract is materially wrong.
+- requested ratio/count/file contract is materially wrong;
+- the output violates a required portable-render invariant: declared anchors/topology, macro-mass relationship, colour-role ownership, contrast tiers, focal plane reconstruction, material divergence, or anti-filter condition.
 
 ## Style-recognition Gate
 
@@ -33,6 +34,7 @@ Before scoring polish, answer each applicable item yes/no. Every applicable item
 7. **Environment transfiguration (when applicable):** an environment-emphasis Style-first frame has a legible hero form and counterform/current, compresses repeated detail, and uses one primary macro departure plus one supporting move while preserving declared anchors.
 8. **Contrast ownership:** focal, support, and context tiers are visibly different across selected value/edge/chroma/hue-noise/texture/FX dimensions; context remains colored, spatial, and materially legible.
 9. **Color authorship:** the output visibly reflects a justified Preserve-and-refine, Rebalance, or Re-script decision; one primary contrast logic and role/ownership map support the focal path while protected colors remain intact. Any color collision has owners, adjacency, a dominant side, and a function. No specific warm-cool relationship is required.
+10. **Portable contract conformance:** the result satisfies the same observable anchor, macro-map, value/colour-role, contrast-tier, plane, material, edge, and anti-filter decisions that another model would be judged against. Exact brush stamps and pixels are not part of this gate.
 
 ## Ten Checks
 
@@ -117,3 +119,7 @@ Make at most one automatic retry. Change only the failed module.
 | Batch repetition | Change composition family, shot scale, value plan, and quiet-area placement—not just hue |
 
 If the targeted retry still fails, return the best actual result with a precise limitation. Do not call it a pass.
+
+## Cross-model Consistency Rule
+
+Cross-model consistency means contract consistency, not pixel identity. Compare each model output independently against the same portable render contract. The set is consistent only when every output clears the critical conditions and all applicable style-recognition items; a strong average cannot hide one filtered, source-literal, materially uniform, or semantically drifting result. Differences in individual brush stamps, tiny texture, subtle facial planes, and exact hue are acceptable when their assigned visual roles remain stable.

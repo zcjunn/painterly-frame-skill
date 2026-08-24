@@ -17,6 +17,24 @@ Compile research and Source Cards into visible pixel decisions. Keep the final p
 
 Do not include a rule that cannot become a visible pixel, tool parameter, source-role mapping, or quality check. Keep generation prompts compact: lead with the six to ten highest-impact decisions, remove redundant adjectives, and avoid long inventories that dilute shape reconstruction.
 
+## Portable Core Before Model Wording
+
+Write one model-neutral render contract before adding optional phrasing for a particular runtime. Keep its decisions concrete enough to survive paraphrase:
+
+```text
+Portable render contract:
+- Canvas and anchors: [count, ratio, orientation, identity/topology invariants].
+- Macro map: [five-to-nine named interlocking masses and their area/overlap relationship].
+- Value and colour roles: [three value groups; dominant field, structural counter, focal apex, neutral bridge; protected colours].
+- Contrast ownership: [Tier 1 focal peaks; Tier 2 support cues; Tier 3 context reductions].
+- Shape reconstruction: [silhouette breaks; four-to-seven meaningful focal planes; merged repeated detail].
+- Material grammar: [material A plane scale/direction/edges/reflectance]; [B different]; [C different when present].
+- Edge hierarchy: [hardest, medium, soft/lost owners].
+- Anti-filter gate: [what must visibly differ from photographic underpainting at thumbnail, mid, and close scale].
+```
+
+Treat this block as required decisions, not prose to copy verbatim. Put recognition invariants and the primary macro departure near the beginning of the final prompt and repeat the shortest critical preservation/avoid clause at the end. Avoid sampler, seed, model-version, quality-tag, or house-style vocabulary in the portable core; those controls do not transfer reliably between model families. See [model-consistency.md](model-consistency.md).
+
 ## Base Generate Template
 
 ```text

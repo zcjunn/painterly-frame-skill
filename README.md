@@ -1,6 +1,6 @@
-# Painterly Animation Remake
+# Painterly Frame
 
-`Painterly Animation Remake` 是一个把照片或文字场景转译成原创绘画动画关键帧的 Codex skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
+`Painterly Frame` 是一个把照片或文字场景转译成原创绘画动画画面的 Codex skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
 
 ## 它解决什么问题
 
@@ -12,7 +12,7 @@
 
 ## 适合使用的场景
 
-- “把这张照片变成电影化绘画动画关键帧。”
+- “把这张照片变成有导演式主体重构的绘画动画关键帧。”
 - “保留人物和山的位置，但放大山体、降低背景细节，让主体更有压迫感。”
 - “把海浪抽象成几块有方向的青绿色形体，保留原来的俯拍关系。”
 - “把雪景做成高调、粉蓝和暖光的画面，不要强行压成夜景。”
@@ -38,7 +38,7 @@
 也可以直接写：
 
 ```text
-$painterly-animation-remake
+$painterly-frame
 ```
 
 然后补充输入图、保留锚点、抽象程度和输出要求。
@@ -46,8 +46,8 @@ $painterly-animation-remake
 ### 3. 可复制的请求模板
 
 ```text
-使用 $painterly-animation-remake。
-把这张图转成一张原创电影化绘画动画关键帧，输出一张无边框成片。
+使用 $painterly-frame。
+把这张图转成一张原创绘画动画关键帧，输出一张无边框成片。
 
 必须保留：{人物/主体/地标/位置/动作/比例}
 允许改变：{主体放大或缩小、前景遮挡、负空间、重复细节、光形、色彩区域}
@@ -76,7 +76,7 @@ $painterly-animation-remake
 将本目录放入 Codex skills 目录即可：
 
 ```bash
-git clone https://github.com/zcjunn/painterly-animation-remake.git ~/.codex/skills/painterly-animation-remake
+git clone https://github.com/zcjunn/painterly-frame.git ~/.codex/skills/painterly-frame
 ```
 
-安装后可用自然语言自动触发，或显式写 `$painterly-animation-remake`。
+安装后可用自然语言自动触发，或显式写 `$painterly-frame`。

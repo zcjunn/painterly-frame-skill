@@ -1,9 +1,9 @@
 ---
-name: painterly-animation-remake
-description: Create or edit original painterly-animation keyframes with thumbnail-visible directorial restaging, scene-owned colour authorship, focal-versus-context contrast ownership, high/mid/low-key exposure, reconstructed or expressively exaggerated graphic shapes, faceted planes, spatial depth, and selective 2D marks. Use when a photo or prompt should become a strongly stylized animated-film image, abstract scene reconstruction, or finished-frame review. Do not use for faithful photo correction, pixel-locked preservation, or copying a named work, character, logo, or exact frame.
+name: painterly-frame
+description: Create or edit original painterly frames with thumbnail-visible directorial restaging, scene-owned colour authorship, focal-versus-context contrast ownership, high/mid/low-key exposure, reconstructed or expressively exaggerated graphic shapes, faceted planes, spatial depth, and selective 2D marks. Use when a photo or prompt should become a strongly stylized painted frame, abstract scene reconstruction, or finished-frame review. Do not use for faithful photo correction, pixel-locked preservation, or copying a named work, character, logo, or exact frame.
 ---
 
-# Painterly Animation Remake
+# Painterly Frame
 
 Translate shorthand such as “hand-painted animated film” or “dark graphic cartoon mood” into an original, observable visual system. Optimize the finished frame, not resemblance to a protected sample.
 

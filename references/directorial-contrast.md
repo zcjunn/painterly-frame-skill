@@ -16,7 +16,7 @@ Examples of structure, not presets:
 - a hand or tool crosses the frame as a foreground barrier while the body becomes secondary;
 - an empty snow field opens around one dark track and a distant warm rupture.
 
-The proposition must name an actor, a pressure/counterforce, and the intended first read. Do not write only “dramatic,” “cinematic,” or “more abstract.”
+The proposition must name an actor, a pressure/counterforce, and the intended first read. Do not write only “dramatic,” “stylized,” or “more abstract.”
 
 ## Build a Directorial Transform Proposal
 

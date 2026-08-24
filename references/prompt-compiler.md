@@ -20,7 +20,7 @@ Do not include a rule that cannot become a visible pixel, tool parameter, source
 ## Base Generate Template
 
 ```text
-Create exactly one original [ratio/orientation] cinematic animation keyframe, a finished borderless image.
+Create exactly one original [ratio/orientation] painterly-animation keyframe, a finished borderless image.
 
 Scene and verb: [original subject, environment, one readable action/relationship]. Keep the focal event perceptually dominant inside the middle attention zone through [isolation/value/chroma/edge/perspective], while [quiet/occluding region] occupies a substantial part of the frame. Use [one composition family] and a believable spatial camera with clear foreground, middle, and atmosphere.
 
@@ -42,7 +42,7 @@ Replace brackets. Remove irrelevant clauses rather than leaving generic filler.
 Lead with change plus preservation:
 
 ```text
-Edit Image 1 into one finished [ratio] painterly cinematic animation keyframe.
+Edit Image 1 into one finished [ratio] painterly-animation keyframe.
 
 Preserve as recognition anchors: [identity, count, relationship, gesture, signature silhouette, protected geometry, wardrobe/object color anchors, required text]. Do not add or remove subjects.
 Reconstruct: [transformable proportions/contours, crop/headroom, minor folds/hardware, repeated props, environment micro-detail, area/value/color/light/contrast organization]. Use [Identity-first/Balanced] transformation, [Restrained/Expressive] abstraction, [High/Mid/Low]-key exposure, and [Preserve-and-refine/Rebalance/Re-script] color authorship. Make [primary macro departure] and [supporting move] without changing [protected anchors].
@@ -120,5 +120,5 @@ Do not invoke an image tool unless the user also asks for a result.
 This example uses a scene-motivated warm/cool relationship; it demonstrates prompt syntax, not a default palette. Analogous, value-led, saturation-led, and near-monochrome solutions are equally valid when justified by the color audit.
 
 ```text
-Create one original 16:9 cinematic animation keyframe of a lone maintenance diver bracing a failing pressure door in an abandoned underwater transit hub. A pale circular window behind the diver forms the central focal island; near-black pipes and a cropped foreground valve create an asymmetrical aperture. Three value masses: deep blue-green structure over most of the frame, muted rust machinery as support, and a small cold-white window/helmet apex. The window is the motivated key light; a tiny amber warning lamp is the only warm accent. Grounded stylized anatomy, faceted painted planes, spatial depth, broad shadow masses, sharpest edges at the eyes, gripping hands, and door seam, lost edges in drifting silt. Flat graphic pressure fractures radiate from one seam with a tight core and almost no particles. Avoid franchise motifs, generic neon, glossy skin, uniform rim light, excessive sparks, and muddy blacks.
+Create one original 16:9 painterly-animation keyframe of a lone maintenance diver bracing a failing pressure door in an abandoned underwater transit hub. A pale circular window behind the diver forms the central focal island; near-black pipes and a cropped foreground valve create an asymmetrical aperture. Three value masses: deep blue-green structure over most of the frame, muted rust machinery as support, and a small cold-white window/helmet apex. The window is the motivated key light; a tiny amber warning lamp is the only warm accent. Grounded stylized anatomy, faceted painted planes, spatial depth, broad shadow masses, sharpest edges at the eyes, gripping hands, and door seam, lost edges in drifting silt. Flat graphic pressure fractures radiate from one seam with a tight core and almost no particles. Avoid franchise motifs, generic neon, glossy skin, uniform rim light, excessive sparks, and muddy blacks.
 ```

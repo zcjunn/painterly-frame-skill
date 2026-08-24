@@ -2,7 +2,7 @@
 
 `Painterly Frame` 是一个把照片或文字场景转译成原创绘画动画画面的 skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
 
-![Painterly Frame workflow](assets/painterly-frame-flow.svg)
+![Painterly Frame 中文流程图](assets/painterly-frame-flow-zh.png)
 
 ## 它解决什么问题
 
@@ -21,6 +21,27 @@
 - “分析这张图的视觉主体和颜色关系，只输出可执行的生成提示词。”
 
 不适合用于：忠实修图、逐像素复原、严格的纪录片拓扑保持，或复制任何已知作品的角色、标志、台词、道具、场景设计和准确镜头。
+
+## English Introduction
+
+`Painterly Frame` is a style-led image transformation skill. It turns a supplied photograph or text scene into an original painterly animated frame by redesigning attention, colour balance, macro shape and material marks instead of applying a generic filter.
+
+![Painterly Frame English workflow](assets/painterly-frame-flow-en.png)
+
+### What it does
+
+- Preserves declared recognition anchors while allowing controlled changes to scale, negative space, light shape and repeated detail.
+- Assigns colour by scene function: dominant field, structural counter, focal accent, neutral bridge and optional colour collision.
+- Gives the focal event the strongest useful contrast while lowering background microcontrast, edge density and texture frequency.
+- Builds large shapes first, then adds faceted planes, material-specific brush marks and restrained graphic interventions.
+
+### Use it when
+
+- You want a source-aware painterly animated image rather than a photographic filter.
+- You want stronger abstraction without losing the main subject, landmark or spatial relationship.
+- You need an explicit colour and contrast plan, including high-key, mid-key or low-key results.
+
+Do not use it to copy a named work, character, logo, exact frame or protected production design.
 
 ## 使用方法
 

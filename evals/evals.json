@@ -1,0 +1,74 @@
+{
+  "skill": "painterly-frame-skill",
+  "purpose": "Effect and regression cases for source-aware abstraction, authored colour, focal-versus-context contrast, material-specific marks, multi-scale quality gates, and truthful output claims.",
+  "cases": [
+    {
+      "id": "portrait-strong-stylization-not-filter",
+      "request": "把这张人物照片转成原创绘画动画画面。保留人物身份、动作和红伞，但要用大面积色块、分面笔触和明显材质差异，不能只是照片叠加绘画滤镜。",
+      "input_contract": "One environmental portrait with a declared identity, pose, and colour anchor.",
+      "expected_route": "Edit Target",
+      "expected_behavior": [
+        "Preserve the declared identity, action, subject count, and red umbrella anchor.",
+        "Make one thumbnail-visible macro departure plus one supporting move before adding texture.",
+        "Reconstruct the subject with readable planes and use different mark grammars for skin, hair, fabric, vegetation, metal, and sky where present.",
+        "Fail any result whose source photo remains intact beneath one global paint texture or uniform grade."
+      ]
+    },
+    {
+      "id": "high-key-snow-environment-abstraction",
+      "request": "把这张明亮雪山与河流照片变成更抽象的绘画画面。保留山、森林、河流的空间关系，但可以合并树木和雪石，不要压成暗夜。",
+      "input_contract": "One high-key winter landscape without a human focal anchor.",
+      "expected_route": "Edit Target with Environment Abstraction",
+      "expected_behavior": [
+        "Keep a high- or mid-key exposure independently from abstraction strength.",
+        "Preserve the mountain/forest/river topology while compressing repeated trees and stones into a small set of rhythm groups.",
+        "Choose one hero form and one counterform or current, expressed through five to nine macro masses.",
+        "Lower non-focal microcontrast and edge density without turning the background into neutral blur."
+      ]
+    },
+    {
+      "id": "aerial-wave-shape-and-colour-authorship",
+      "request": "把这张俯拍海浪做成强烈、抽象但仍能认出浪向的绘画画面。可以夸张主浪和泡沫形状，请对青绿、白色、岩石色的面积与平衡负责。",
+      "input_contract": "One aerial ocean photograph with a dominant wave direction.",
+      "expected_route": "Edit Target with Environment Abstraction",
+      "expected_behavior": [
+        "Preserve the dominant flow and essential coastline or rock adjacency.",
+        "Enlarge or simplify the hero wave at thumbnail scale instead of tracing all foam detail.",
+        "Assign spatial ownership to the dominant field, structural counter, focal accent, and neutral bridge.",
+        "Use directional water marks, broken foam edges, and distinct rock planes rather than one shared texture."
+      ]
+    },
+    {
+      "id": "balanced-source-faithful-restaging",
+      "request": "保留人物、山峰、地平线和左右位置，不要把原图改到无关；但可以适度放大山体、重做光形和降低非主体对比度，让画面更有绘画动画感。",
+      "input_contract": "One environmental portrait with protected composition anchors.",
+      "expected_route": "Edit Target",
+      "expected_behavior": [
+        "Treat subject position, landmark position, horizon, depth order, and left-right relationships as protected anchors.",
+        "Use anchored enlargement or local overlap changes without relocating the subject or landmark.",
+        "Give the focal event two or three attention advantages while keeping context chromatic, unified, and quieter.",
+        "Do not confuse source faithfulness with preserving photographic microdetail or contrast distribution."
+      ]
+    },
+    {
+      "id": "prompt-only-no-false-generation-claim",
+      "request": "只给我一段可执行提示词：一个人在雨后的高架桥下，做成大色面、分面结构和材质笔触明显的原创绘画画面。不要生成。",
+      "expected_route": "Prompt-only",
+      "expected_behavior": [
+        "Return one priority-ordered executable prompt with canvas anchors, macro masses, value groups, colour roles, contrast tiers, material grammars, and anti-filter conditions.",
+        "Do not call an image tool or claim that an image was generated, inspected, or passed quality review."
+      ]
+    },
+    {
+      "id": "review-global-filter-regression",
+      "request": "检查这张重制图：构图几乎没变，原照片明暗还在，只是人物、草地、天空和衣服都叠了一层相同油画纹理。它合格吗？",
+      "input_contract": "One generated remake that retains photographic underpainting with uniform texture.",
+      "expected_route": "Finished-frame review",
+      "expected_behavior": [
+        "Fail the anti-filter gate even if the close-up brush texture is attractive.",
+        "Identify missing macro-shape departure, insufficient contrast ownership, and identical cross-material marks.",
+        "Recommend one targeted correction that rebuilds large shapes and material differences rather than adding more texture or darkness."
+      ]
+    }
+  ]
+}

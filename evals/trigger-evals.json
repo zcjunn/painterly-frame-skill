@@ -1,0 +1,44 @@
+{
+  "skill": "painterly-frame-skill",
+  "purpose": "Natural-language discovery cases. Run these separately from effect evaluation; do not name or explicitly invoke the skill in the request.",
+  "should_trigger": [
+    {
+      "id": "photo-to-authored-painterly-frame",
+      "request": "把这张照片做成大色块和分面笔触明显的绘画动画画面，背景要安静一些，但人物必须认得出来。"
+    },
+    {
+      "id": "abstract-environment-reconstruction",
+      "request": "这个雪景太写实了，保留山河关系，把树和雪石概括成更大胆的形状，并重新负责整张图的颜色平衡。"
+    },
+    {
+      "id": "prompt-only-painterly-contract",
+      "request": "只写提示词：我要一张有导演式主次、大面积绘画色块、不同材质不同笔触的原创画面。"
+    },
+    {
+      "id": "anti-filter-review",
+      "request": "帮我检查这张风格化结果是不是只加了滤镜；请从缩略图大形、分面、材质笔触和背景对比度判断。"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "id": "ordinary-photo-correction",
+      "request": "帮我修正这张 RAW 的白平衡、曝光和镜头畸变，画面内容不要改变。"
+    },
+    {
+      "id": "pixel-locked-overlay",
+      "request": "每个像素都必须保持不变，只允许叠一层固定透明纹理。"
+    },
+    {
+      "id": "exact-protected-frame-copy",
+      "request": "把某部动画最后一帧的人物、机位、场景和道具一比一复制出来。"
+    },
+    {
+      "id": "technical-lut-export",
+      "request": "请导出一个可以直接在达芬奇加载的 33 点 3D LUT 文件。"
+    },
+    {
+      "id": "flat-cel-character-sheet",
+      "request": "做一张白底、均匀黑描边、纯赛璐璐平涂的角色三视图，不要绘画材质和光影重构。"
+    }
+  ]
+}

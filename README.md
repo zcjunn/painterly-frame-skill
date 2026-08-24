@@ -2,6 +2,11 @@
 
 `Painterly Frame Skill` 是一个把照片或文字场景转译成原创绘画动画画面的 skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
 
+> [!IMPORTANT]
+> **仅限个人、非商业使用。** 不允许销售、收费生成、订阅服务、代做、咨询、培训、SaaS/API、公司或客户项目及其他商业化用途。任何商业使用均须事先获得 zcjun（GitHub：[@zcjunn](https://github.com/zcjunn)）的明确书面许可。详见 [个人非商业许可证](LICENSE)。
+>
+> **Personal, non-commercial use only.** Selling, paid generation, subscriptions, commissions, consulting, training, SaaS/API use, organizational or client work, and all other commercial uses require prior explicit written permission from zcjun. See [LICENSE](LICENSE).
+
 ![Painterly Frame 中文流程图](assets/painterly-frame-flow-zh.png)
 
 ## 它解决什么问题
@@ -125,3 +130,28 @@ git clone https://github.com/zcjunn/painterly-frame-skill.git ~/.codex/skills/pa
 ```
 
 安装后可用自然语言自动触发，或显式写 `$painterly-frame-skill`。
+
+## 项目结构 / Project Structure
+
+```text
+painterly-frame-skill/
+├── SKILL.md                  # 运行入口：触发范围、路由、主流程与验收契约
+├── agents/openai.yaml        # UI 名称、简述和默认调用提示
+├── references/               # 按任务条件读取的视觉系统与质量标准
+├── assets/                   # README 使用的中英文流程图
+├── evals/
+│   ├── evals.json            # 效果与回归用例
+│   └── trigger-evals.json    # should-trigger / should-not-trigger 用例
+├── README.md                 # 面向使用者的双语介绍和安装说明
+└── LICENSE                   # 自定义个人非商业许可证
+```
+
+该结构采用渐进式加载：执行时先根据 `name` 和 `description` 判断是否触发，再读取 `SKILL.md` 主流程，只有命中具体条件时才加载对应的 `references/`。`assets/` 不作为指令加载；两组 Eval 分别验证“能否正确触发”和“触发后是否真正改善结果”，避免把路由问题与执行质量混在一起。
+
+The repository uses progressive disclosure: discovery metadata selects the skill, `SKILL.md` carries the shared execution path, and individual references are loaded only when their stated conditions apply. Trigger evaluation and effect evaluation are kept separate so routing accuracy is not confused with output quality.
+
+## 许可证 / License
+
+本项目采用自定义的 [Painterly Frame Skill 个人非商业许可证](LICENSE)。它允许自然人为了个人学习、研究、试验或兴趣免费使用和修改，但不允许任何商业、组织或客户用途，也不允许将本 Skill 或其生成服务用于收费。商业使用须事先获得 zcjun 的明确书面许可。
+
+This project uses a custom [Painterly Frame Skill Personal Non-Commercial License](LICENSE). It is not an open-source license: personal non-commercial use is permitted, while commercial, organizational, client, paid-generation, subscription, consulting, training, SaaS/API, and monetized-output uses require prior explicit written permission from zcjun.

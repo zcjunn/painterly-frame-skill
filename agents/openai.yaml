@@ -1,4 +1,4 @@
 interface:
   display_name: "Painterly Frame Skill"
-  short_description: "Painterly frames with adaptive facial and material detail"
-  default_prompt: "Use $painterly-frame-skill to preserve composition and scene-owned colour, verify and correct any visible face, and adapt skin, clothing and shoe detail to the inspected model output without over-rendering."
+  short_description: "Source-aware colour, composition and connected brushwork"
+  default_prompt: "Use $painterly-frame-skill to turn the supplied image into an original painterly frame: lock composition and scene-owned colour first, then connect the forms with shared-light brushwork while preserving declared anchors."

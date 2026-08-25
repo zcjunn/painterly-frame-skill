@@ -29,10 +29,6 @@
     {
       "id": "facial-feature-control",
       "request": "这张人物绘画重制的构图和笔触很好，但有点斜眼、眼间距偏大，请在不改构图和颜色的前提下修好五官。"
-    },
-    {
-      "id": "adaptive-character-material-detail",
-      "request": "人物的脸、肤质、衣服和鞋子在这个模型里都太简略了，请看实际成图决定是否加强人物细节；如果已经够好就不要继续堆纹理。"
     }
   ],
   "should_not_trigger": [

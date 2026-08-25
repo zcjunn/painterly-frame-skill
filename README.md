@@ -17,8 +17,6 @@
 - 把对比度分配给焦点、支撑结构和背景场：非视觉主体可以降微对比和边缘密度，但仍保持有色的空间层次。
 - 让跨模型的一致性体现在构图锁、色彩锁、共享光场和材质笔触合同上，而不是要求相同像素或相同随机笔触。
 - 当画面有人物时，额外锁定头部轴线、眼线、视线、表情和五官相对间距，避免斜眼、上下眼位漂移、眼间距过宽或五官贴纸化；五官细节服从透视和共同光场，而不是套用通用动漫脸。
-- 五官“要求保留”之后仍必须检查实际成图；发现斜眼、视线、间距或面部中轴问题时，先进行一次定向修正并复检，未通过不能作为合格结果交付。
-- 人物默认获得适量而非最大的细节：脸部结构、克制的肤质转折、衣物重量与主要褶皱、鞋面/鞋底与落地关系、重要手部接触。若首轮成图同时出现环境材质贫乏和人物材质塌缩，只加强焦点人物；若模型已经表现充分，则不再添加毛孔、织线、发丝、密集缝线或全局锐化。
 
 ## 适合使用的场景
 
@@ -43,8 +41,6 @@
 - Gives the focal event the strongest useful contrast while lowering background microcontrast, edge density and texture frequency.
 - Builds large shapes first, then adds faceted planes, material-specific brush marks and restrained graphic interventions.
 - When a human face is visible, adds a perspective-aware facial packet for head axis, eye-line, gaze, expression and feature spacing, with a close-scale anatomy gate.
-- Verifies the actual generated face and requires one targeted correction plus reinspection when the facial gate fails.
-- Starts with restrained character detail, then adapts from observed output behaviour: selectively restore face, skin, clothing and shoes only for collapsed-detail output; do not over-render an already capable result.
 
 ### Use it when
 
@@ -90,7 +86,6 @@ $painterly-frame-skill
 第一读取：{观众先看到的主体或关系}
 抽象程度：{克制 / 明显 / 强烈}
 曝光：{高调 / 中调 / 低调}
-人物细节：{默认适量；根据首轮实际成图决定是否只加强脸部、肤质、衣物、鞋子和重要接触}
 避免：{新增人物、文字、标志、复制其他作品的具体设计}
 ```
 
@@ -101,10 +96,9 @@ $painterly-frame-skill
 3. **只在允许时写导演提案**：Directed-restage 才要求一个主宏观变化和一个辅助变化；Preserve-and-enrich 通过光形、色彩邻接、边缘节奏和观看路径丰富原构图。
 4. **建立连续绘画合同**：先做五到九个互相咬合的大色面，再用内部色彩转折、邻接连接、共享光场和结构/转折/焦点三级笔触完成材质。
 5. **分配对比度和材质**：焦点拥有最有用的两到三个对比维度；支撑结构保留中等信息；背景降低局部值差、微对比、硬边和纹理频率，但仍保持有色空间层次。
-6. **人物细节自适应**：有人物时，首轮只写适量的脸部、肤质、衣物、鞋子、手部与接触细节。检查成图后再把输出归为细节塌缩、合格或已充分；判断依据是成图，不是模型名称。
-7. **多尺度质检与修正**：在缩略图、中景和近景分别检查锁定的构图/色彩、主体读取、连续光场、材质分化和无意新增元素。五官失败必须定向修正并复检；人物细节不足时只修复人物材质，已经充分时停止增加微纹理。
+6. **多尺度质检**：在缩略图、中景和近景分别检查锁定的构图/色彩、主体读取、连续光场、材质分化和无意新增元素。
 
-人物存在时，近景检查还必须确认：两眼沿同一头部轴线和视线方向组织，眼间距与脸部透视相称，鼻梁—嘴—下巴不偏离面部中轴，表情没有被泛化；皮肤、头发、衣物、鞋子和重要手部接触各自具有足够但克制的构建。只有姿势、透视或明确表情造成的非对称才允许保留。一次焦点人物修正仍失败时，应报告该模型的五官或材质能力超出支持范围，而不是继续叠加风格形容词。
+人物存在时，近景检查还必须确认：两眼沿同一头部轴线和视线方向组织，眼间距与脸部透视相称，鼻梁—嘴—下巴不偏离面部中轴，表情没有被泛化；只有姿势、透视或明确表情造成的非对称才允许保留。一次定向修正仍失败时，应报告该模型的五官几何超出支持范围，而不是继续叠加风格形容词。
 
 ## 不同模型如何保持一致
 
@@ -119,7 +113,6 @@ $painterly-frame-skill
 - 相同的焦点、支撑和背景对比度预算；
 - 相同的主体轮廓重建与四到七个关键分面要求；
 - 不同材质各自明确的笔触尺度、方向、边缘和反光方式；
-- 相同的人物最低质量门槛：五官几何、克制肤质、衣物结构、鞋子构建与接触必须可读；具体微纹理密度可按实际输出能力变化，已充分的模型不额外强化；
 - 相同的“非滤镜化”验收：缩略图必须看到大形变化，近景必须看到材质差异，不能只是原照片叠加油画纹理或统一调色。
 
 允许变化的是具体笔触落点、次要纹理、小型自然细节和不改变色彩职责的细微色相偏移。如果某个模型改变第一视觉读取、破坏识别锚点、交换色彩角色、让背景与主体同样抢眼，或让皮肤、布料、金属、草木共享同一种笔触，它就不属于一致结果。随机种子不能跨模型保证一致；需要像素完全相同的区域应使用确定性合成，而不是生成式重绘。
@@ -153,8 +146,7 @@ painterly-frame-skill/
 ├── references/               # 按任务条件读取的视觉系统与质量标准
 │   ├── composition-color-lock.md # 初始版构图/色彩优先级合同
 │   ├── painterly-continuity.md   # 跨模型连续笔触合同
-│   ├── facial-control.md          # 人物五官、视线、复检和修正合同
-│   └── character-detail-adaptation.md # 人物肤质、衣物、鞋子与模型能力自适应合同
+│   └── facial-control.md          # 人物五官、视线和表情控制合同
 ├── assets/                   # README 使用的中英文流程图
 ├── evals/
 │   ├── evals.json            # 效果与回归用例

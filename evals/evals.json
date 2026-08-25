@@ -1,6 +1,6 @@
 {
   "skill": "painterly-frame-skill",
-  "purpose": "Effect and regression cases for initial-version composition/color locks, source-aware abstraction, connected brushwork, authored colour, mandatory facial correction, capacity-adaptive character detail, material-specific marks, multi-scale quality gates, and truthful output claims.",
+  "purpose": "Effect and regression cases for initial-version composition/color locks, source-aware abstraction, connected brushwork, authored colour, material-specific marks, multi-scale quality gates, and truthful output claims.",
   "cases": [
     {
       "id": "portrait-strong-stylization-not-filter",
@@ -126,33 +126,8 @@
       "expected_behavior": [
         "Fail the facial gate while preserving the composition lock, colour lock, pose and painterly continuity packet.",
         "Identify the concrete defects: incoherent eye-line/head axis, over-wide inter-eye spacing, and mismatched gaze; do not call intentional pose asymmetry a failure without evidence.",
-        "Apply only the facial-anatomy guard once: rebuild skull/jaw, one perspective-aware eye band, aligned pupils, and nose/mouth/chin axis before adding small skin or brush details; then reinspect the actual corrected face before pass.",
+        "Apply only the facial-anatomy guard once: rebuild skull/jaw, one perspective-aware eye band, aligned pupils, and nose/mouth/chin axis before adding small skin or brush details.",
         "If the targeted retry still fails, report facial geometry as outside the supported consistency envelope rather than adding generic style adjectives."
-      ]
-    },
-    {
-      "id": "collapsed-character-detail-adaptive-restoration",
-      "request": "这张人物绘画成图的构图和色彩都对，但弱模型把环境画得很空，人物的脸、衣服和鞋子也像同一种平涂材质。请保留构图与环境大形，只加强人物需要的质感，不要全图加纹理。",
-      "input_contract": "One generated environmental portrait with correct locks but observed environment-detail scarcity and collapsed focal-person materials.",
-      "expected_route": "Finished-frame review / targeted focal-character correction",
-      "expected_behavior": [
-        "Diagnose Collapsed-detail from the inspected output rather than the model brand.",
-        "Keep composition, colour, pose, silhouette, shared light and environment masses unchanged while reallocating useful detail toward the focal person.",
-        "Correct and recheck facial geometry, then selectively restore quiet skin turns, grouped hair, clothing weight/fold origins and a few joins, shoe upper/sole/contact, and important hand/prop contact.",
-        "Keep the environment broad but retain a few perspective, contact and material cues so the person does not become a sharp sticker.",
-        "Reject pores, every fabric thread, individual hair strands, dense stitching, global sharpening and universal texture."
-      ]
-    },
-    {
-      "id": "capable-model-detail-restraint",
-      "request": "这张人物绘画成图的五官、衣物、鞋子和环境层次已经很完整。请检查是否还需要加强细节；不要为了所谓高质量继续加毛孔、织线、发丝和锐化。",
-      "input_contract": "One already successful high-capacity painterly portrait with sufficient facial and material detail.",
-      "expected_route": "Finished-frame review",
-      "expected_behavior": [
-        "Classify the observed result as Adequate or High-capacity/already-dense and make no restoration retry.",
-        "Confirm facial geometry, restrained skin turns, clothing structure, shoe construction/contact, environment depth and painterly continuity.",
-        "If any microdetail competes, recommend reducing redundant pores, threads, seams, hair strands, stitching or hard edges instead of adding more.",
-        "Do not infer that a better model requires a denser prompt or stronger texture."
       ]
     }
   ]

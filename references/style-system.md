@@ -92,11 +92,9 @@ Increase detail toward the focal event and foreground. Compress distant building
 
 Do not equate context compression with uniform softness. Keep a few structural edges, perspective cues, and material boundaries; remove equal competition rather than all information.
 
-When a person appears, read [character-detail-adaptation.md](character-detail-adaptation.md). Begin with balanced, selective character detail: facial construction first; quiet skin turns; grouped hair; clothing weight, major fold origins and a few joins; readable shoe construction/contact; important hands and prop contact. After inspecting the result, strengthen only an observed Collapsed-detail output. If the face and materials already read, do not add pores, thread inventory, individual strands, dense stitching or global sharpening.
-
 ### 9. Faceted painterly modeling
 
-Model faces and objects with stepped planes rather than uniform gradients. For a face, 4–7 meaningful plane changes are usually enough before small accents. Allow cool and warm shifts within skin; show restrained skin character through plane turns, local colour, reflected light and selective edges rather than pores. Skin may be quieter than scar, fabric, wall, metal, smoke or magical material while still reading as skin.
+Model faces and objects with stepped planes rather than uniform gradients. For a face, 4–7 meaningful plane changes are usually enough before small accents. Allow cool and warm shifts within skin, but keep skin quieter than scar, fabric, wall, metal, smoke, or magical material.
 
 Use visible brush boundaries locally. Avoid global canvas grain, noisy pores, waxy subsurface skin, wet-plastic highlights, or evenly sharp hair strands.
 
@@ -144,8 +142,8 @@ For action, choose one verb—strike, flee, brace, reach, fall, aim, confront—
 
 ### Micro: face, material, and mark
 
-- Concentrate microcontrast around eyes/expression or one narrative mark; every inspectable face must pass the facial gate before microtexture is judged.
-- Differentiate skin, hair, cloth, shoes, metal, wall, smoke, and energy through plane size, edge, and reflectance.
+- Concentrate microcontrast around eyes/expression or one narrative mark.
+- Differentiate skin, cloth, metal, wall, smoke, and energy through plane size, edge, and reflectance.
 - Keep peripheral texture broad and incomplete.
 
 ## Composition Families

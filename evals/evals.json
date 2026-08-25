@@ -1,6 +1,6 @@
 {
   "skill": "painterly-frame-skill",
-  "purpose": "Effect and regression cases for source-aware abstraction, authored colour, focal-versus-context contrast, material-specific marks, multi-scale quality gates, and truthful output claims.",
+  "purpose": "Effect and regression cases for source-aware abstraction, authored colour, paint architecture, focal-versus-context contrast, non-interchangeable material marks, model-shortcut rejection, multi-scale quality gates, and truthful output claims.",
   "cases": [
     {
       "id": "portrait-strong-stylization-not-filter",
@@ -8,10 +8,11 @@
       "input_contract": "One environmental portrait with a declared identity, pose, and colour anchor.",
       "expected_route": "Edit Target",
       "expected_behavior": [
-        "Preserve the declared identity, action, subject count, and red umbrella anchor.",
+        "Preserve the declared identity, feature spacing, action, subject count, red umbrella state/orientation/contact, adjacency, overlap, and key negative-space anchors.",
         "Make one thumbnail-visible macro departure plus one supporting move before adding texture.",
-        "Reconstruct the subject with readable planes and use different mark grammars for skin, hair, fabric, vegetation, metal, and sky where present.",
-        "Fail any result whose source photo remains intact beneath one global paint texture or uniform grade."
+        "Reconstruct the subject with unequal orientation/light/material/fold-derived planes, selective contour fragments, and a focal-to-context mark-density falloff.",
+        "Use non-interchangeable grammars for skin, hair, fabric, vegetation, metal, and sky where present; require the form read to survive texture removal.",
+        "Fail any result whose source photo remains intact beneath one global paint texture or uniform grade, or whose identity becomes a generic cel-anime character."
       ]
     },
     {
@@ -68,6 +69,30 @@
         "Fail the anti-filter gate even if the close-up brush texture is attractive.",
         "Identify missing macro-shape departure, insufficient contrast ownership, and identical cross-material marks.",
         "Recommend one targeted correction that rebuilds large shapes and material differences rather than adding more texture or darkness."
+      ]
+    },
+    {
+      "id": "review-cel-anime-source-template-regression",
+      "request": "检查这张跨模型结果：原图人物拿着张开的伞站在右侧，结果却把人物改成举手的通用动漫角色，伞收起来了，地标也消失了；全身有黑描边和两段式明暗。它是否符合这个 skill？",
+      "input_contract": "One source photo plus one generated result that keeps similar nouns but changes identity, pose, prop state, topology, and rendering medium.",
+      "expected_route": "Finished-frame review",
+      "expected_behavior": [
+        "Fail immediately for identity/action/prop-state/topology drift; keeping a person, umbrella, field, and sky is not source fidelity.",
+        "Fail the continuous-outline and cel-anime shortcut tests for generic facial replacement, full dark contours, and two-band shading.",
+        "Identify the missing source anchors: feature spacing, pose/gaze, prop state/contact/orientation, landmark relation, adjacency/occlusion, and key negative space.",
+        "Apply only the Source-template adapter plus the Cel-anime adapter on one targeted retry; do not add generic painterly adjectives."
+      ]
+    },
+    {
+      "id": "review-brush-slab-low-poly-regression",
+      "request": "检查这张跨模型结果：天空被几块巨大白色矩形笔刷代替，裙子和脸被均匀切成三角面，稻田是几条平涂色带，皮肤、布料和草地的笔触可以互换。请指出问题并给一次定向修正。",
+      "input_contract": "One generated frame exhibiting brush-slab scenery, low-poly/posterized planes, and material-grammar collapse.",
+      "expected_route": "Finished-frame review",
+      "expected_behavior": [
+        "Fail the brush-slab test because scenery strokes do not follow cloud volume, light, material, or motion.",
+        "Fail the plane-cause test because equal mechanical polygons and poster bands are not orientation/light/material/fold-derived planes.",
+        "Fail the material-swap and texture-removal tests when unrelated surfaces share one grammar or form depends on decorative texture.",
+        "Keep the portable core fixed and apply only the dominant Brush-slab/filter or Low-poly/posterization adapter; after one failed correction, report the runtime outside the supported consistency envelope."
       ]
     }
   ]

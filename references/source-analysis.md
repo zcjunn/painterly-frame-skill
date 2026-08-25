@@ -78,7 +78,8 @@ observed:
   core_subjects: 1-2 identity-defining subjects
   supporting_facts: 2-4 scene facts
   identity_invariants: face, body, product, architecture, markings, wardrobe color
-  spatial_invariants: only declared count, left-right order, gesture, gaze, horizon, overlap, or scale relationships that must remain
+  action_prop_invariants: pose/action, gaze, expression, prop type and state, hand/contact relation, orientation
+  topology_invariants: subject/landmark positions, left-right order, adjacency, occlusion, depth order, horizon, scale relationship, key negative space, dominant motion line
   dominant_gesture: horizontal / vertical / diagonal / curve / gaze / motion
   current_visual_weight: area, value, chroma, texture, isolation
   color_audit:
@@ -135,9 +136,14 @@ environment_design:
   optional_additional_axes: only changes that remain visibly useful; axis count alone is not success
   repeated_detail_policy: which trees, rocks, windows, waves, foliage, rubble, or reflections become grouped rhythms
 shape_rebuild:
-  subject_planes: silhouette and 4-7 meaningful face/object planes
+  contour_language: selected hard fragments, broken medium edges, lost context edges; whether any complete outline is authorized
+  subject_planes: 4-7 unequal major face/object planes and their orientation/light/material/fold causes
+  transition_planes: subordinate turning-form or reflected-light bridges only
   environment_masses: broad graphic forms replacing repeated detail
-  material_grammars: distinct marks for 3-5 important materials
+  mark_density: focal 1.0, support about 0.5, context about 0.2-0.33 as perceptual targets
+  material_grammars: distinct, non-interchangeable construction and marks for 3-5 important materials
+  texture_removal_read: silhouette, depth, light direction, and three value groups that survive without surface marks
+  model_shortcut_adapter: None / Cel-anime / Brush-slab-filter / Low-poly-posterization / Source-template
 allowed_changes: user-authorized changes
 hard_avoids: identity drift, added objects, sample residue, text errors
 ```
@@ -148,10 +154,10 @@ Do not invent unseen facial features, object backs, hidden text, location, date,
 
 1. Keep the semantic minimum and recognition anchors; do not automatically preserve every visible detail.
 2. Apply the chosen transformation mode. In Balanced or Style-first work, simplify or redesign transformable elements instead of tracing them literally.
-3. Rebuild the focal silhouette, internal planes, and major surrounding masses before adding brush marks. Apply the same logic to people, creatures, products, buildings, machines, and environments.
+3. Read [paint-architecture.md](paint-architecture.md). Rebuild protected topology and the focal silhouette, then macro masses, legally caused unequal major planes, subordinate transition planes, material-owned marks, and sparse accents. Apply the same ordered logic to people, creatures, products, buildings, machines, and environments. A style edit may simplify identity but may not replace it with a generic anime face, stock pose, new prop state, or similar-noun scene.
 4. Read `directorial-contrast.md`. For Expressive/Radical work, require a dramatic proposition, one primary macro departure, one supporting move, and a thumbnail difference target. Fidelity protects declared recognition anchors; it does not silently preserve every area ratio, crop, horizon, or incidental distribution.
 5. For environment-emphasis, read `environment-abstraction.md`. Select a hero form, a counterform/current, and a visible verb. Make the primary departure change their scale, area, contour, overlap, negative-space, light-shape, perspective, or color-zone relationship rather than merely changing palette and brush texture.
-6. Merge repeated micro-detail into larger shapes and assign each important material a distinct mark grammar derived from its behavior. Exact distributions of incidental trees, rocks, windows, waves, leaves, snow clumps, rubble, and reflections are not invariants unless declared.
+6. Merge repeated micro-detail into larger shapes and assign each important material a distinct mark grammar derived from rigidity, reflectance, porosity, motion, depth and focal importance. Run the material-swap and texture-removal tests. Exact distributions of incidental trees, rocks, windows, waves, leaves, snow clumps, rubble, and reflections are not invariants unless declared.
 7. Choose one focal event and one composition family from `style-system.md`; restage or crop only when permitted.
 8. Assign focal/support/context contrast tiers. Lower context local contrast, microcontrast, edge density, hue noise, and texture frequency selectively; retain broad depth, material identity, motivated colour, and any protected subject geometry.
 9. Read `color-authorship.md`. Audit what already works, choose Preserve-and-refine, Rebalance, or Re-script, then assign one primary contrast axis, an optional subordinate axis, spatially owned color roles, and an explicit None/Preserve/Author color-collision decision. Keep source-derived color anchors when recognition depends on them; never add warm-cool or complementary contrast by reflex.

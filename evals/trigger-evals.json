@@ -17,6 +17,10 @@
     {
       "id": "anti-filter-review",
       "request": "帮我检查这张风格化结果是不是只加了滤镜；请从缩略图大形、分面、材质笔触和背景对比度判断。"
+    },
+    {
+      "id": "cross-model-paint-architecture-review",
+      "request": "同一提示在另一个图片模型里变成了赛璐璐黑描边、随机多边形和巨型白色笔刷，请按面构建、材质笔触和跨模型一致性规则帮我诊断。"
     }
   ],
   "should_not_trigger": [

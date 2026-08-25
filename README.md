@@ -1,6 +1,6 @@
 # Painterly Frame Skill
 
-`Painterly Frame Skill` 是一个把照片或文字场景转译成原创绘画动画画面的 skill。它关注的不是套用滤镜，而是重新设计一张成片：先判断视觉主体、构图压力和颜色关系，再用大色面、分面笔触、材质化边缘和少量图形标记完成画面。
+`Painterly Frame Skill` 是一个把照片或文字场景转译成原创绘画动画画面的 skill。它关注的不是套用滤镜，而是重新设计一张成片：先保护来源拓扑、判断视觉主体、构图压力和颜色关系，再按“大形 → 结构面 → 过渡面 → 材质笔触 → 点睛”的顺序完成画面。
 
 > [!IMPORTANT]
 > **仅限个人、非商业使用。** 不允许销售、收费生成、订阅服务、代做、咨询、培训、SaaS/API、公司或客户项目及其他商业化用途。任何商业使用均须事先获得 zcjun（GitHub：[@zcjunn](https://github.com/zcjunn)）的明确书面许可。详见 [个人非商业许可证](LICENSE)。
@@ -38,7 +38,7 @@
 - Preserves declared recognition anchors while allowing controlled changes to scale, negative space, light shape and repeated detail.
 - Assigns colour by scene function: dominant field, structural counter, focal accent, neutral bridge and optional colour collision.
 - Gives the focal event the strongest useful contrast while lowering background microcontrast, edge density and texture frequency.
-- Builds large shapes first, then adds faceted planes, material-specific brush marks and restrained graphic interventions.
+- Builds large shapes first, then unequal light/material-derived planes, subordinate transitions, material-owned brush marks and restrained graphic interventions.
 
 ### Use it when
 
@@ -88,12 +88,14 @@ $painterly-frame-skill
 
 ## 技能内部的工作顺序
 
-1. **建立 Source Card**：区分观察到的事实与推断，标出识别锚点、可变区域、主体和层次。
+1. **建立 Source Card**：区分观察到的事实与推断，标出身份、姿态、道具状态与接触、朝向、遮挡、地标关系、负空间等识别锚点，以及真正可变的区域。
 2. **写导演提案**：确定一个主宏观变化和一个辅助变化。变化必须在 128–256 像素缩略图上仍然可见，例如扩大山体、让水面变成主导色带、把树冠压成前景拱门，或把一束光重组成视觉走廊。
 3. **分配对比度**：焦点拥有最锋利的两到三个对比维度；支撑结构保留中等信息；背景降低局部值差、微对比、硬边和纹理频率，形成统一而有色的背景场。
 4. **建立场景色彩表**：主色场、结构色、焦点色、中性色桥接和可选回声色都要有空间归属。色彩可以是同类色、近单色、互补、分裂互补、局部照明或单纯的明度组织。
-5. **先做大形，再做材质**：先合并成五到九个互相咬合的大色块，再加入岩石、木材、皮肤、水、雪、雾等各自的笔触和边缘逻辑。
-6. **多尺度质检**：在缩略图、中景和近景分别检查主体读取、构图差异、颜色平衡、背景退让、材质分化和无意新增元素。
+5. **建立绘画结构**：先合并成五到九个互相咬合的大形；结构面只能来自朝向、光照、材质边界、褶皱受力或明确的轮廓设计；过渡面保持从属；最后才加入材质笔触和点睛。
+6. **多尺度质检**：在缩略图、中景和近景分别检查主体读取、构图差异、颜色平衡、背景退让和材质分化，并执行去纹理、分面成因、材质互换、连续描边、巨型刷痕和来源拓扑检查。
+
+完整的面、笔触与材质定义见 [Paint Architecture Contract](references/paint-architecture.md)。
 
 ## 不同模型如何保持一致
 
@@ -105,15 +107,18 @@ $painterly-frame-skill
 - 相同的五到九个大色块及其面积、轮廓、遮挡和负空间关系；
 - 相同的三组明度，以及主色场、结构色、焦点色和中性桥接色的空间归属；
 - 相同的焦点、支撑和背景对比度预算；
-- 相同的主体轮廓重建与四到七个关键分面要求；
-- 不同材质各自明确的笔触尺度、方向、边缘和反光方式；
+- 相同的选择性轮廓语言；不允许默认给完整人物或物体套均匀黑描边；
+- 相同的分面拓扑：焦点通常为四到七个大小不等、具有光照/朝向/材质/受力原因的主结构面，而不是赛璐璐两段明暗或随机低多边形；
+- 相同的笔触密度梯度：焦点最丰富、支撑约一半、背景约五分之一到三分之一；
+- 不同材质各自明确且不可互换的构建方式、笔触尺度、方向、边缘和反光方式；
+- 相同的去纹理结果：拿掉所有表面笔触后，轮廓、空间、光向和三组明度仍然成立；
 - 相同的“非滤镜化”验收：缩略图必须看到大形变化，近景必须看到材质差异，不能只是原照片叠加油画纹理或统一调色。
 
-允许变化的是具体笔触落点、次要纹理、小型自然细节和不改变色彩职责的细微色相偏移。如果某个模型改变第一视觉读取、破坏识别锚点、交换色彩角色、让背景与主体同样抢眼，或让皮肤、布料、金属、草木共享同一种笔触，它就不属于一致结果。随机种子不能跨模型保证一致；需要像素完全相同的区域应使用确定性合成，而不是生成式重绘。
+允许变化的是具体笔触落点、次要纹理、小型自然细节和不改变色彩职责的细微色相偏移。如果某个模型改变第一视觉读取、破坏识别锚点、交换色彩角色、让背景与主体同样抢眼，或让皮肤、布料、金属、草木共享同一种笔触，它就不属于一致结果。出现赛璐璐替代、巨型矩形刷痕、随机三角分面或“只保留相似物件却改变姿态与道具状态”时，只追加对应的一条行为纠偏；一次纠偏后仍失败，就明确判定该模型超出支持范围。随机种子不能跨模型保证一致；需要像素完全相同的区域应使用确定性合成，而不是生成式重绘。
 
 ## Cross-model Consistency
 
-Consistency means a shared visual and directorial contract, not identical pixels, seeds or brush placement. Every model is evaluated against the same anchors and topology, five-to-nine macro masses, three value groups, spatial colour roles, contrast tiers, focal plane map, material-specific mark grammar, edge hierarchy and anti-filter gate. Exact brush stamps, secondary texture and small hue shifts may vary only when their visual ownership remains unchanged. A model set is considered consistent only when every output passes the same thumbnail, mid-scale and close-scale checks; a strong average cannot hide one source-literal or globally filtered result.
+Consistency means a shared visual and directorial contract, not identical pixels, seeds or brush placement. Every model is evaluated against the same source topology, five-to-nine macro masses, three value groups, spatial colour roles, contrast tiers and paint-architecture fingerprint: selective contours, unequal causally derived planes, focal-to-context mark-density falloff, non-interchangeable material grammar, and a form read that survives texture removal. Exact brush stamps, secondary texture and small hue shifts may vary only when their visual ownership remains unchanged. A model set is considered consistent only when every output passes the same thumbnail, mid-scale and close-scale checks; a strong average cannot hide one source-literal, cel-shaded, mechanically faceted or globally filtered result.
 
 See [Model Consistency Contract](references/model-consistency.md) for the full portable specification and acceptance boundary.
 

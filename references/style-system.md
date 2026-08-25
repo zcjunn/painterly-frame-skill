@@ -66,6 +66,8 @@ For photo remakes, do not preserve photographic shading and then cover it with t
 - let one or two asymmetric contour accents carry character;
 - preserve recognition anchors, not incidental realism.
 
+Use the closed definitions and mandatory construction order in [paint-architecture.md](paint-architecture.md). `Large shape` means a named compositional mass, not a giant brush stamp; `plane` means an unequal region caused by orientation, light, material, fold mechanics, or a declared silhouette decision, not random triangulation or two-band cel shading.
+
 If the frame still reads as the original photograph beneath one uniform brush treatment, the transformation failed.
 
 ### 7. Environment as a designed subject
@@ -86,13 +88,15 @@ Increase detail toward the focal event and foreground. Compress distant building
 
 Do not equate context compression with uniform softness. Keep a few structural edges, perspective cues, and material boundaries; remove equal competition rather than all information.
 
-### 9. Faceted painterly modeling
+### 9. Hierarchical painterly plane modeling
 
-Model faces and objects with stepped planes rather than uniform gradients. For a face, 4–7 meaningful plane changes are usually enough before small accents. Allow cool and warm shifts within skin, but keep skin quieter than scar, fabric, wall, metal, smoke, or magical material.
+Model faces and objects with unequal, hierarchical planes rather than uniform gradients. For a face, 4–7 meaningful plane changes are usually enough before small accents, and each break must be owned by orientation, light, material or anatomy. Keep one broad plane dominant. Do not interpret `faceted` as a triangulated low-poly mosaic, equal-size polygon tiling, uniform hard bands, or an ink outline around every plane. Allow cool and warm shifts within skin, but keep skin quieter than scar, fabric, wall, metal, smoke, or magical material.
 
-Use visible brush boundaries locally. Avoid global canvas grain, noisy pores, waxy subsurface skin, wet-plastic highlights, or evenly sharp hair strands.
+Use visible brush boundaries locally and keep mark scale smaller than the form it describes. Mark density must fall from focal to support to context. Avoid global canvas grain, opaque brush slabs used as clouds/land/walls, noisy pores, waxy subsurface skin, wet-plastic highlights, evenly sharp hair strands, or continuous comic outlines.
 
 Assign material-specific shape and mark grammar rather than one universal paint texture. The following are examples, not a required material list; select only relevant rows and derive unlisted materials from scale, rigidity, reflectance, motion, and focal importance.
+
+Use the more explicit plane causes, material-swap test, texture-removal test, material library, and failure adapters in [paint-architecture.md](paint-architecture.md).
 
 | Material | Primary construction | Avoid |
 |---|---|---|

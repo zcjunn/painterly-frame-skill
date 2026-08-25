@@ -87,6 +87,7 @@ observed:
   identity_invariants: face, body, product, architecture, markings, wardrobe color
   spatial_invariants: only declared count, left-right order, gesture, gaze, horizon, overlap, or scale relationships that must remain
   facial_packet_when_present: head axis, eye-line, gaze, expression cues, relative eye size/interval, brow-nose-mouth-chin axis, face-to-hair/neck/hand overlap
+  character_detail_packet_when_present: visible skin turns, hair grouping, clothing material/weight/fold origins/joins, shoe upper-sole-closure-contact, important hands and prop contact; omit unobservable microdetail
   dominant_gesture: horizontal / vertical / diagonal / curve / gaze / motion
   current_visual_weight: area, value, chroma, texture, isolation
   color_audit:
@@ -140,7 +141,11 @@ continuity_plan:
   structural_stroke_current: cloud / field / road / cloth / water / shadow direction carrying the viewing path
   shared_light_bridges: key, shadow family and one or two reflected-colour echoes across owners
   depth_frequency_falloff: foreground / middle / atmosphere edge and mark behaviour
-  likely_model_adapter: None / Cut-paper-colour-block / Poster-fill-cel-band / Brush-stamp-slab / Global-texture-filter / Sticker-airless-depth
+  likely_model_adapter: None / Cut-paper-colour-block / Poster-fill-cel-band / Brush-stamp-slab / Global-texture-filter / Sticker-airless-depth / Focal-character-detail-collapse
+post_output_character_diagnosis:
+  observed_capacity: Collapsed-detail / Adequate / High-capacity-or-already-dense
+  evidence: face geometry, skin turns, clothing structure, shoe/contact structure, hand/prop contact, environment depth/material cues
+  decision: one focal-character restoration / no change / remove redundant microtexture
 environment_design:
   hero_form: primary landform, structure, void, weather mass, or light shape
   counterform_current: opposing or guiding source-owned mass/direction
@@ -172,7 +177,8 @@ Do not invent unseen facial features, object backs, hidden text, location, date,
 8. Assign focal/support/context contrast tiers. Lower context local contrast, microcontrast, edge density, hue noise and texture frequency selectively; retain broad depth, material identity, motivated colour and any protected subject geometry.
 9. Read `color-authorship.md`. Audit what already works, choose Preserve-and-refine by default (or Rebalance/Re-script with reason), then assign one primary contrast axis, an optional subordinate axis, spatially owned colour roles and an explicit None/Preserve/Author color-collision decision. Keep source-derived color anchors when recognition depends on them; never add warm-cool or complementary contrast by reflex.
 10. Read `painterly-continuity.md` and bind the locked masses through boundary relationships, internal turns, shared light and material-owned strokes. Add at most one observed model adapter.
-11. Change only what the user allowed.
+11. When a person appears, read `character-detail-adaptation.md`. Record only visible material evidence and use the balanced first-pass character packet. After generation, diagnose observed output capacity; strengthen the focal person only for Collapsed-detail behaviour, and remove or avoid redundant microtexture for an already capable result.
+12. Change only what the user allowed.
 
 For Edit Target, write prompt clauses as `Preserve anchors Y; reconstruct elements X`. Do not imply that “stylize” grants permission to change identity, count, protected geometry, or required text, but do not promote incidental photographic detail to an invariant either.
 

@@ -13,8 +13,9 @@ Compile research and Source Cards into visible pixel decisions. Keep the final p
 7. **Attention geometry:** composition family, central attention zone, perspective and viewing path as constrained by the composition lock.
 8. **Continuity and surface:** internal colour turns, boundary relationships, shared light and interlocking strokes first; then material-specific marks, edge/detail hierarchy, spatial depth and limited graphic 2D intervention.
 9. **Facial control when a face is visible:** read [facial-control.md](facial-control.md) and add the facial packet, perspective-aware eye-line and gaze guard, feature-spacing guard, expression cues and close-scale rejection conditions. Keep it after source/composition lock and before general texture language.
-10. **FX:** only if story-motivated; unique shape language and edge hierarchy.
-11. **Avoids:** the shortest relevant list of likely model errors and sample residue; never let avoids override the lock.
+10. **Adaptive character detail when a person is visible:** read [character-detail-adaptation.md](character-detail-adaptation.md). Use a balanced first-pass packet for face, quiet skin turns, clothing weight/structure, shoes and important hands/contact. Only after inspecting output may a Collapsed-detail result receive the focal-character restoration adapter; Adequate or already-dense output receives no extra microtexture.
+11. **FX:** only if story-motivated; unique shape language and edge hierarchy.
+12. **Avoids:** the shortest relevant list of likely model errors and sample residue; never let avoids override the lock.
 
 Do not include a rule that cannot become a visible pixel, tool parameter, source-role mapping, or quality check. Keep generation prompts compact: lead with the six to ten highest-impact decisions, remove redundant adjectives, and avoid long inventories that dilute shape reconstruction.
 
@@ -33,6 +34,7 @@ Portable render contract:
 - Material grammar: [material A plane scale/direction/edges/reflectance]; [B different]; [C different when present].
 - Edge hierarchy: [hardest, medium, soft/lost owners].
 - Facial packet when present: [head axis; eye-line/gaze; relative eye size and interval; brow/nose/mouth/chin axis; expression cues; face-to-hair/neck/hand overlaps].
+- Character detail when present: [balanced face/skin/hair/clothing/shoe/hand packet; focal/support/context density; no unobserved microdetail; post-output Collapsed/Adequate/High-capacity decision].
 - Painterly continuity: [internal colour turns; important boundary relations; shared key/shadow/reflected colour; structural stroke current].
 - Anti-filter gate: [what must visibly differ from photographic underpainting at thumbnail, mid, and close scale].
 ```
@@ -54,9 +56,9 @@ Value, light, and contrast ownership: organize the frame into three large value 
 
 Color authorship: use the locked [Preserve-and-refine/Rebalance/Re-script] decision because [source/story reason]. Use [primary contrast strategy] with [optional subordinate strategy]. Assign [dominant field: spatial owner, hue family, value, chroma], [structural counter: owner and separation job], [focal accent/apex: owner and attention job], and [optional connector/neutral bridge]. Color collision is [None/Preserve existing/Author new: owners, adjacency, dominant side, function]. These roles may share one hue family when value/chroma does the work. Preserve [protected local-color anchors]. Let motivated light influence rather than replace material color. Warm-cool is optional; avoid formulaic teal-orange, purple-neon, global gray fog, or equal saturated competition.
 
-Continuity and rendering: after the lock, build each major mass from a broad base plus a few unequal internal light/material turns; connect important neighbours through [occlusion/contact/turning form/atmospheric merge/reflected-colour bridge]; carry one structural stroke current across the scene; use mixed hard/broken/soft/lost edges and shared key/shadow/reflected light. Differentiate skin, cloth, metal, wall, smoke, foliage and energy by plane size, direction and reflectance. If a face is visible, preserve [head axis, eye-line, gaze, expression and relative feature spacing] with a perspective-aware eye band, aligned nose/mouth axis and eyes/brows/smile as the sharpest local construction; avoid slanted eyes, over-wide eye spacing, crossed gaze, generic anime facial replacement and full head outlines. If FX are present, use [unique graphic shape language] with one sharp core, broad motion forms, sparse particles and no global glow.
+Continuity and rendering: after the lock, build each major mass from a broad base plus a few unequal internal light/material turns; connect important neighbours through [occlusion/contact/turning form/atmospheric merge/reflected-colour bridge]; carry one structural stroke current across the scene; use mixed hard/broken/soft/lost edges and shared key/shadow/reflected light. Differentiate skin, cloth, metal, wall, smoke, foliage and energy by plane size, direction and reflectance. If a face is visible, preserve [head axis, eye-line, gaze, expression and relative feature spacing] with a perspective-aware eye band, aligned nose/mouth axis and eyes/brows/smile as the sharpest local construction; avoid slanted eyes, over-wide eye spacing, crossed gaze, generic anime facial replacement and full head outlines. If a person is visible, use moderate selective detail: quiet skin turns, grouped hair, clothing weight through major fold origins and a few joins, readable shoe upper/sole/contact and important hand/prop contact; do not add pores, every thread, individual strands, dense stitching or global sharpening. If FX are present, use [unique graphic shape language] with one sharp core, broad motion forms, sparse particles and no global glow.
 
-Avoid: franchise characters, logos, runes, copied architecture or camera layouts; photoreal plastic skin; generic anime facial replacement; slanted or vertically drifting eyes; an over-wide eye gap; crossed gaze; off-axis nose or mouth; generic anime cel shading; uniform black outlines; all-over texture; excessive bloom, sparks, wet gloss, or crushed muddy blacks.
+Avoid: franchise characters, logos, runes, copied architecture or camera layouts; photoreal plastic skin; generic anime facial replacement; slanted or vertically drifting eyes; an over-wide eye gap; crossed gaze; off-axis nose or mouth; pores and high-pass skin detail; every fabric thread, wrinkle, hair strand, shoe stitch or tread; generic anime cel shading; uniform black outlines; all-over texture; excessive bloom, sparks, wet gloss, or crushed muddy blacks.
 ```
 
 Replace brackets. Remove irrelevant clauses rather than leaving generic filler.
@@ -72,7 +74,7 @@ Preserve as recognition anchors: [identity, count, relationship, gesture, signat
 Composition/color lock: use Preserve-and-enrich unless the user explicitly asks for restaging. Keep [ratio, crop/headroom, focal scale, quiet-area share, horizon, major diagonal/current and viewing path] and [high/mid/low]-key exposure. Audit the source palette; use [Preserve-and-refine/Rebalance/Re-script], [primary contrast axis], spatial [dominant/structural/focal/neutral] roles and protected [local-colour anchors].
 Reconstruct: [transformable contours, repeated props, environment micro-detail, planes, material marks and light/colour turns]. If Directed-restage is authorized, make [one primary macro departure] and [one supporting move] without changing [protected anchors]. Otherwise enrich the locked distribution without enlarging or cropping the subject by default.
 
-[Then add the continuity packet, attention geometry, three-group value plan, material-specific edge treatment and the shortest relevant failure adapter from the base template. If a human face is visible, insert the compact facial guard from [facial-control.md](facial-control.md) before general rendering and texture terms. Do not bury it after style adjectives or let a model-specific adapter rewrite it.]
+[Then add the continuity packet, attention geometry, three-group value plan, material-specific edge treatment and the shortest relevant failure adapter from the base template. If a human face is visible, insert the compact facial guard from [facial-control.md](facial-control.md) before general rendering and texture terms. When a person is visible, insert the balanced character-detail packet from [character-detail-adaptation.md](character-detail-adaptation.md). Do not use the focal-character restoration adapter until an inspected result demonstrates Collapsed-detail behaviour; do not let a model-specific adapter rewrite the locks.]
 ```
 
 Do not claim exact pixels. If pixels or typography must be exact, keep those regions outside the generative edit and composite deterministically.
@@ -138,7 +140,7 @@ Do not invoke an image tool unless the user also asks for a result.
 - Use the runtime's real image generation/editing mechanism; attach every Edit Target and Support Insert through tool parameters, not prose alone.
 - Use the requested ratio when supported. If a backend supports only nearby sizes, preserve composition intent and disclose the actual output.
 - Default to one result. Generate a batch only when requested.
-- After tool output, inspect the actual image before describing it as successful.
+- After tool output, inspect the actual image before describing it as successful. A visible face must pass [facial-control.md](facial-control.md); if it fails, perform the one targeted correction and inspect again. For visible people, use [character-detail-adaptation.md](character-detail-adaptation.md) to decide whether the output needs selective restoration, no change or detail reduction.
 
 ## Compact Dark-frame Example
 

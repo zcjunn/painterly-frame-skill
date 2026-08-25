@@ -17,7 +17,8 @@ Lock the decisions that define the visual system. Allow the model to vary only t
 7. **Material and edge contract** — for every important material, specify plane scale, mark direction, edge family, reflectance and focal density. When three or more important materials are visible, at least three must have clearly different grammars. Assign hardest, medium and soft/lost edge owners.
 8. **Continuity contract** — bind important adjacencies through overlap, contact, turning form, reflected colour, shared light or atmosphere; use unequal internal colour turns and one structural stroke current without changing the composition/color lock.
 9. **Facial contract when present** — use one perspective-aware eye band, a coherent gaze, a natural eye interval for the view, and a nose/mouth/chin axis that agrees with the head. Accidental slant, vertical drift, over-wide spacing, crossed gaze, off-axis features or generic replacement are failures; intentional asymmetry from pose or expression is allowed.
-10. **Anti-filter contract** — reject photographic shading preserved beneath global impasto, canvas grain, LUT, blur, bloom, vignette, uniform outlines or one repeated stroke. The source/result difference must survive thumbnail inspection and material differences must survive close inspection.
+10. **Adaptive character-detail contract when a person is present** — first require a balanced hierarchy: face/expression; important hands and contact; clothing structure; shoe construction/contact; quiet skin turns; lower-frequency environment. After inspection, classify only the observed output as Collapsed, Adequate or High-capacity/already-dense. Collapsed output may receive one selective focal-character restoration; adequate/dense output may not receive extra pores, threads, strands, stitching or global sharpening.
+11. **Anti-filter contract** — reject photographic shading preserved beneath global impasto, canvas grain, LUT, blur, bloom, vignette, uniform outlines or one repeated stroke. The source/result difference must survive thumbnail inspection and material differences must survive close inspection.
 
 ### Allowed variation
 
@@ -26,6 +27,7 @@ Lock the decisions that define the visual system. Allow the model to vary only t
 - small secondary folds, leaves, stones, windows, droplets, or cloud fragments;
 - subtle hue shifts that keep the same colour owner and dominance hierarchy;
 - facial nuance that preserves identity, expression, pose, plane hierarchy, head axis, gaze and relative feature spacing;
+- exact skin, clothing and shoe micro-mark density when the face and material-sufficiency gates still pass and the focal/support/context hierarchy remains stable;
 - runtime-specific wording or parameters outside the portable core.
 
 Allowed variation becomes a failure when it changes the first read, breaks a recognition anchor, redistributes locked major masses, swaps colour roles, changes exposure key, equalizes focal and background contrast, or makes important materials share one surface treatment.
@@ -44,6 +46,7 @@ Plane map: [silhouette and focal 4–7 planes; repeated detail groups]
 Material grammar: [material -> plane scale, direction, edge, reflectance]
 Edge hierarchy: [hard / medium / soft-lost owners]
 Facial packet when present: [head axis; eye-line/gaze; eye size and interval; brow/nose/mouth/chin axis; expression; face-to-hair/neck/hand overlap]
+Character detail when present: [balanced first-pass face/skin/hair/clothing/shoe/hand packet; intended density hierarchy; observed Collapsed/Adequate/High-capacity diagnosis; restoration or restraint decision]
 Continuity packet: [internal turns; boundary relationships; shared light; structural current]
 Anti-filter gate: [thumbnail, mid-scale, close-scale failures]
 ```
@@ -56,10 +59,10 @@ When actual multi-model comparison is requested:
 
 1. Use the same source image, Source Card, composition/color lock, portable render contract, output count, and aspect ratio for every model.
 2. Keep required decisions identical; translate only the minimum syntax needed by each runtime.
-3. Inspect every output at thumbnail, mid, and close scale with [quality-gate.md](quality-gate.md).
+3. Inspect every output at thumbnail, mid, and close scale with [quality-gate.md](quality-gate.md). When people are present, also use [character-detail-adaptation.md](character-detail-adaptation.md) and [facial-control.md](facial-control.md); a model name is not a capacity diagnosis.
 4. Mark each required invariant pass/fail. Do not average away a failure and do not select consistency by visual similarity alone.
 5. A model set is consistent only when every output preserves the contract. Report remaining variation as brush residue, micro-detail variance, colour-role drift, geometry drift, lock drift, or another specific module.
-6. If one model fails, make at most one correction targeted to the failed module. If it still fails, report that model as outside the supported consistency envelope.
+6. If one model fails, make at most one correction targeted to the failed module. A combined face/material collapse may use one focal-character restoration packet. If it still fails, report that model as outside the supported consistency envelope.
 
 ## What Cannot Be Guaranteed
 

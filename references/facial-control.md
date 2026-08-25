@@ -56,4 +56,13 @@ At close scale, fail the face module if any of these is true:
 5. nose, mouth or chin drifts off the facial axis and changes the expression;
 6. the face reads as a generic replacement or a pasted sticker rather than a form connected to hair, neck and shared light.
 
-If the face module fails, make one targeted facial-anatomy correction only. Keep the composition lock, colour lock, macro masses and painterly continuity packet unchanged. If the runtime still fails after that correction, report facial geometry as outside the supported consistency envelope instead of adding unrelated style adjectives.
+## Mandatory Verification and Correction
+
+Preservation language is not evidence that the face succeeded. After every generated or edited result containing an inspectable face:
+
+1. compare the actual face with the recorded facial packet at close scale;
+2. mark each applicable gate item pass/fail;
+3. if any facial item fails, do not return the result as a pass—make one targeted facial-anatomy correction;
+4. reinspect the corrected result against the same packet before describing it as successful.
+
+Keep the composition lock, colour lock, macro masses and painterly continuity packet unchanged during correction. When facial geometry and character material detail fail together, combine this guard with the focal-character restoration adapter in [character-detail-adaptation.md](character-detail-adaptation.md) as one targeted focal-character correction. If the runtime still fails after that correction, report facial geometry as outside the supported consistency envelope instead of adding unrelated style adjectives or silently accepting the face.

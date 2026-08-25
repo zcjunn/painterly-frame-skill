@@ -12,6 +12,7 @@ Do not treat later cross-model precision as permission to make every frame busie
 - Preserve an already effective source ratio, headroom, quiet-area share and subject scale. Change them only when the user allows it and the change clearly improves the first read.
 - A macro departure may reshape light, colour adjacency, cloud volume, field current or viewing path inside the existing distribution. It does not have to enlarge the subject or replace the crop.
 - Painterly richness comes from connected colour turns, edge variety and directed marks—not from extra objects, uniform texture, more polygons or maximum detail.
+- When people are present, use [character-detail-adaptation.md](character-detail-adaptation.md): preserve a readable material minimum on the focal person, but let observed output capacity determine whether selective restoration is needed. Do not equate a stronger model with a need for more microtexture.
 
 ## Closed Vocabulary
 
@@ -90,6 +91,7 @@ Select only materials present. These are behaviours, not mandatory words.
 | Skin | quiet overlapping wedges and curved colour turns; sparse hard accents; soft reflected colour from nearby cloth or sky | flat peach fill, porcelain gradient, dark complete contour |
 | Hair | one dominant mass with several overlapping ribbons and broken silhouette clumps | helmet shape, equal glossy stripes, strand inventory |
 | Cloth | broad planes joined by strokes that radiate from gravity, tension and contact points | unrelated triangles, every fold outlined, same texture as skin |
+| Shoes | grouped upper and sole planes, a few closure/edge cues, contact shadow and reflected ground colour | shapeless foot blocks, every stitch/tread, isolated product-render sharpness |
 | Grass/foliage | clustered depth masses linked by a common wind/current; a few foreground directional blades | leaf-by-leaf noise, uniform neon fill, identical upright strokes |
 | Sky/cloud | broad atmospheric fields with interlocking soft-edged strokes that turn around light | flat blue background plus pasted white blocks, rectangular slabs |
 | Water | overlapping ribbons and broken foam seams aligned to current | equal short strokes everywhere, white texture pasted on blue |
@@ -172,5 +174,6 @@ Bind the focal subject to the scene with contact shadow, reflected local colour 
 6. **Depth-frequency test:** edge and mark frequency change across foreground, middle distance and atmosphere without collapsing the background into blur.
 7. **Texture-removal test:** removing grain and tiny marks must leave composition, value, depth and light intact.
 8. **Quiet-space test:** large negative space remains intentionally simple when it strengthens mood; do not fill it merely to prove painterliness.
+9. **Character-material test when present:** facial geometry passes first; skin, clothing, shoes and important hands have enough distinct structure to read at their scale without pores, thread inventory, strand inventory or global sharpening.
 
 Pass only when the frame reads first as one connected painted scene and second as distinct shapes and materials. A collection of individually attractive colour blocks is not enough.

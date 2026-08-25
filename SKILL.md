@@ -1,9 +1,9 @@
 ---
-name: painterly-frame-universal
+name: painterly-frame-skill
 description: Create or edit original painterly frames with initial-version composition and colour control plus portable connected brushwork. Use this skill whenever a photo or prompt should become a strongly stylized hand-painted frame, when another image model produces pasted colour blocks, cutout subjects, flat cel bands, global texture or malformed facial features, or when a finished painterly frame needs source-aware composition, authored colour, shared light, face geometry and material-specific QA. Preserve a strong source distribution by default; open expressive restaging only when the user or source diagnosis permits it. Do not use for faithful photo correction, pixel-locked preservation, or copying a named work, character, logo or exact frame.
 ---
 
-# Painterly Frame Universal
+# Painterly Frame Skill
 
 Translate shorthand such as “hand-painted animated film” or “painterly remake” into an original, observable visual system. The universal contract has two layers: first lock the picture's composition, value and colour authorship; then make the locked design read as one connected painted field across different image models.
 

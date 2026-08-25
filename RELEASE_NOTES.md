@@ -1,6 +1,6 @@
-# Painterly Frame Universal — v1.0.0
+# Painterly Frame Skill — v1.0.1
 
-This release replaces the previous default implementation of `painterly-frame-skill` with the universal composition/colour lock and connected-painterly continuity contract.
+This patch release keeps the universal composition/colour lock and connected-painterly continuity contract while restoring the public skill identifier to `painterly-frame-skill`.
 
 ## Included
 
@@ -9,6 +9,7 @@ This release replaces the previous default implementation of `painterly-frame-sk
 - Adds portable continuity rules for connected light, boundary relationships, structural stroke currents and material-specific marks, with one behaviour adapter at most.
 - Adds a conditional facial-control contract for human faces: head axis, eye-line, gaze, expression, perspective-aware eye spacing, nose/mouth/chin alignment, and a close-scale anatomy gate.
 - Adds a facial-geometry regression case for accidental slanted eyes, over-wide eye spacing and mismatched gaze.
+- Uses `$painterly-frame-skill` consistently in the frontmatter, UI metadata, examples, evals and package.
 - Keeps the personal non-commercial license and the source/reference boundary unchanged.
 
 ## Deliberately not guaranteed

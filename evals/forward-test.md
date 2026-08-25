@@ -1,4 +1,4 @@
-# Painterly Frame Universal — forward contract test
+# Painterly Frame Skill — forward contract test
 
 ## Input scenario
 

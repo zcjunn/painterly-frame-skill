@@ -1,5 +1,5 @@
 {
-  "skill": "painterly-frame-universal",
+  "skill": "painterly-frame-skill",
   "purpose": "Effect and regression cases for initial-version composition/color locks, source-aware abstraction, connected brushwork, authored colour, material-specific marks, multi-scale quality gates, and truthful output claims.",
   "cases": [
     {

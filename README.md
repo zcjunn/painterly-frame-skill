@@ -1,6 +1,6 @@
-# Painterly Frame Universal
+# Painterly Frame Skill
 
-`Painterly Frame Universal` 是一个把照片或文字场景转译成原创绘画动画画面的通用 skill。它先锁定初始版本最重要的构图、曝光与色彩作者性，再用连续、互相连接的笔触和材质差异完成画面，避免弱模型把结果做成色块拼贴或全局滤镜。
+`Painterly Frame Skill` 是一个把照片或文字场景转译成原创绘画动画画面的通用 skill。它先锁定初始版本最重要的构图、曝光与色彩作者性，再用连续、互相连接的笔触和材质差异完成画面，避免弱模型把结果做成色块拼贴或全局滤镜。
 
 > [!IMPORTANT]
 > **仅限个人、非商业使用。** 不允许销售、收费生成、订阅服务、代做、咨询、培训、SaaS/API、公司或客户项目及其他商业化用途。任何商业使用均须事先获得 zcjun（GitHub：[@zcjunn](https://github.com/zcjunn)）的明确书面许可。详见 [个人非商业许可证](LICENSE)。
@@ -30,7 +30,7 @@
 
 ## English Introduction
 
-`Painterly Frame Universal` is a source-aware image transformation skill. It first locks composition, exposure and scene-owned colour, then turns the locked design into an original painterly animated frame with connected brush fields and material-specific marks instead of applying a generic filter.
+`Painterly Frame Skill` is a source-aware image transformation skill. It first locks composition, exposure and scene-owned colour, then turns the locked design into an original painterly animated frame with connected brush fields and material-specific marks instead of applying a generic filter.
 
 ![Painterly Frame English workflow](assets/painterly-frame-flow-en.png)
 
@@ -68,7 +68,7 @@ Do not use it to copy a named work, character, logo, exact frame or protected pr
 也可以直接写：
 
 ```text
-$painterly-frame-universal
+$painterly-frame-skill
 ```
 
 然后补充输入图、保留锚点、抽象程度和输出要求。
@@ -76,7 +76,7 @@ $painterly-frame-universal
 ### 3. 可复制的请求模板
 
 ```text
-使用 $painterly-frame-universal。
+使用 $painterly-frame-skill。
 把这张图转成一张原创绘画动画关键帧，输出一张无边框成片。
 
 必须保留：{人物/主体/地标/位置/动作/比例}
@@ -132,15 +132,15 @@ See [Model Consistency Contract](references/model-consistency.md) for the full p
 将本目录放入 skills 目录即可：
 
 ```bash
-git clone https://github.com/zcjunn/painterly-frame-skill.git ~/.codex/skills/painterly-frame-universal
+git clone https://github.com/zcjunn/painterly-frame-skill.git ~/.codex/skills/painterly-frame-skill
 ```
 
-安装后可用自然语言自动触发，或显式写 `$painterly-frame-universal`。
+安装后可用自然语言自动触发，或显式写 `$painterly-frame-skill`。
 
 ## 项目结构 / Project Structure
 
 ```text
-painterly-frame-universal/
+painterly-frame-skill/
 ├── SKILL.md                  # 运行入口：触发范围、路由、主流程与验收契约
 ├── agents/openai.yaml        # UI 名称、简述和默认调用提示
 ├── references/               # 按任务条件读取的视觉系统与质量标准

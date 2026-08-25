@@ -4,9 +4,9 @@ Compile research and Source Cards into visible pixel decisions. Keep the final p
 
 ## Compiler Order
 
-1. **Canvas:** output count, aspect ratio, orientation, finished borderless image, shot scale.
-2. **Source contract:** image role, semantic minimum, recognition anchors, transformable elements, identity fidelity, transformation mode, scene emphasis, abstraction strength, exposure key, color-authorship mode, and allowed changes.
-3. **Directorial proposition:** actor, visible pressure/counterforce, intended first read, one primary macro departure, one supporting move, protected anchors, and a thumbnail difference target from `directorial-contrast.md`.
+1. **Canvas:** output count, source ratio, chosen output ratio/orientation, crop/headroom policy, finished borderless image, and shot scale. Preserve the source canvas only when it is protected or remains the strongest composition.
+2. **Source contract:** image role, semantic minimum, recognition anchors, topology invariants, output-distribution permissions, transformable elements, identity fidelity, transformation mode, scene emphasis, abstraction strength, exposure key, color-authorship mode, and allowed changes.
+3. **Positive target and directorial proposition:** select one quality bundle from `positive-quality-anchor.md`; state the actor, visible pressure/counterforce, intended first read, one primary macro departure, one supporting move, protected anchors, and a thumbnail difference target from `directorial-contrast.md`.
 4. **Focal actor and transformation:** one readable verb/relationship; for environment-emphasis, name the hero form, counterform/current, merged repeated detail, and the major area/contour/overlap/light/color impact of the primary departure.
 5. **Attention geometry:** composition family, central attention zone, perspective, quiet area, viewing path.
 6. **Value, light, and contrast ownership:** three mass groups, brightest/deepest placement, motivated source geometry, haze/rim restraint, and focal/support/context contrast tiers.
@@ -23,9 +23,10 @@ Write one model-neutral render contract before adding optional phrasing for a pa
 
 ```text
 Portable render contract:
-- Canvas and anchors: [count, ratio, orientation, identity, pose/action, prop state/contact/orientation, adjacency/occlusion/depth order, landmark and negative-space invariants].
+- Canvas and anchors: [count, source ratio, chosen output ratio/orientation, crop/headroom, identity, pose/action, prop state/contact/orientation, adjacency/occlusion/depth order, landmark and negative-space invariants].
+- Distribution permissions and positive target: [exact versus relational position; protected versus transformable focal scale/horizon/area; one focal-scale/crop, area/negative-space, light/colour-topology, or viewing-path improvement].
 - Macro map: [five-to-nine named interlocking masses and their area/overlap relationship].
-- Value and colour roles: [three value groups; dominant field, structural counter, focal apex, neutral bridge; protected colours].
+- Value and colour roles: [three value groups; dominant field, structural counter, focal apex, neutral bridge, dark/light anchor, retained saturated field; protected colours].
 - Contrast ownership: [Tier 1 focal peaks; Tier 2 support cues; Tier 3 context reductions].
 - Paint architecture: [selective contour fragments; four-to-seven unequal focal planes with orientation/light/material/fold causes; subordinate transitions; merged repeated detail].
 - Mark ladder: [focal 1.0; support about 0.5; context about 0.2–0.33; broad-to-small scale].
@@ -53,15 +54,17 @@ Select a shortcut adapter by observed output behaviour, not model brand. Keep th
 ```text
 Create exactly one original [ratio/orientation] painterly-animation keyframe, a finished borderless image.
 
+Positive quality target: make [one focal-scale/crop, area/negative-space, light/colour-topology, or viewing-path decision] the visible improvement that survives at thumbnail scale.
+
 Scene and verb: [original subject, environment, one readable action/relationship]. Keep the focal event perceptually dominant inside the middle attention zone through [isolation/value/chroma/edge/perspective], while [quiet/occluding region] occupies a substantial part of the frame. Use [one composition family] and a believable spatial camera with clear foreground, middle, and atmosphere.
 
 Directorial proposition: [actor] is [visible pressure/relationship] against [counterforce]; the first read is [event]. Make [specific primary macro departure] so [major area/contour/overlap/focal-scale/light/color-zone relationship] is unmistakable at thumbnail scale; reinforce it with [supporting move]. Preserve [declared anchors], but do not preserve [incidental distribution].
 
 Value, light, and contrast ownership: organize the frame into three large value groups: [dominant field], [supporting mass], and [small apex]. The primary light is [visible/motivated source with geometry]; reserve the brightest highlight and deepest dark for [focal path]. Tier 1 [focal owner] peaks in [two or three selected contrast dimensions]; Tier 2 [support] keeps medium structural cues; Tier 3 [context] becomes a unified [scene-owned colored/chromatic-gray] field through lower [local contrast/microcontrast/edge density/hue noise/texture frequency] while retaining [depth/material cues]. Use only a restrained subordinate [bounce/rim], controlled haze, and tight bloom.
 
-Color authorship: use [Preserve-and-refine/Rebalance/Re-script] because [source/story reason]. Use [primary contrast strategy] with [optional subordinate strategy]. Assign [dominant field: spatial owner, hue family, value, chroma], [structural counter: owner and separation job], [focal accent/apex: owner and attention job], and [optional connector/neutral bridge]. Color collision is [None/Preserve existing/Author new: owners, adjacency, dominant side, function]. These roles may share one hue family when value/chroma does the work. Preserve [protected local-color anchors]. Let the motivated light influence rather than replace material color. Warm-cool is optional; avoid formulaic teal-orange, purple-neon, global gray fog, or equal saturated competition.
+Color authorship: use [Preserve-and-refine/Rebalance/Re-script] because [source/story reason]. Use [primary contrast strategy] with [optional subordinate strategy]. Assign [dominant field: spatial owner, hue family, value, chroma], [structural counter: owner and separation job], [focal accent/apex: owner and attention job], [optional connector/neutral bridge], and [contained dark or light anchor]. State which successful large colour field may retain saturation after context quieting. Color collision is [None/Preserve existing/Author new: owners, adjacency, dominant side, function]. These roles may share one hue family when value/chroma does the work. Preserve [protected local-color anchors]. Let the motivated light influence rather than replace material color. Warm-cool is optional; avoid formulaic teal-orange, purple-neon, global gray fog, equal saturated competition, or washed-out equal midtones.
 
-Rendering: grounded stylized proportions and spatial depth rebuilt through [named macro masses]. Use selective contour fragments rather than a complete ink outline. Build [focal form] from [4–7] unequal planes caused by [orientation/light/material/fold], with subordinate transition planes; keep repeated context in [1–3] broad planes per rhythm group. Marks fall from focal to support to context and stay smaller than the form they describe. [Skin construction and marks], [cloth visibly different], and [metal/wall/foliage visibly different]. The silhouette, three value groups, light direction and depth remain readable when surface texture is mentally removed. If FX are present, use [unique graphic shape language] with one sharp core, broad motion forms, sparse particles, and no global glow.
+Rendering: grounded stylized proportions and spatial depth rebuilt through [named macro masses]. Use selective contour fragments rather than a complete ink outline. Build [focal form] from [4–7] unequal planes caused by [orientation/light/material/fold], with subordinate transition planes; keep repeated context in [1–3] broad planes per rhythm group. Use structural large marks for [named material/atmosphere owner] only where their direction and edge follow [volume/flow/gravity/perspective/light/motion]; smaller marks fall from focal to support to context. [Skin construction and marks], [cloth visibly different], and [metal/wall/foliage visibly different]. The silhouette, three value groups, light direction and depth remain readable when surface texture is mentally removed. If FX are present, use [unique graphic shape language] with one sharp core, broad motion forms, sparse particles, and no global glow.
 
 Avoid: franchise characters, logos, runes, copied architecture or camera layouts; generic anime facial replacement, two-band cel shading, complete black outlines, equal-size polygon mosaics, horizontal poster bands, giant opaque scenery strokes, all-over texture, interchangeable material marks, excessive bloom, sparks, wet gloss, or crushed muddy blacks.
 ```
@@ -73,10 +76,12 @@ Replace brackets. Remove irrelevant clauses rather than leaving generic filler.
 Lead with change plus preservation:
 
 ```text
-Edit Image 1 into one finished [ratio] painterly-animation keyframe.
+Edit Image 1 into one finished [chosen output ratio] painterly-animation keyframe. The source ratio is [source ratio]; [preserve it because it is protected/strong, or change it because the new crop improves the first read].
 
-Preserve as recognition anchors: [identity and feature spacing, count, pose/action/gaze, prop type/state/orientation/contact, subject/landmark positions, adjacency/occlusion/depth order, signature silhouette, key negative space/motion line, protected geometry/colours, required text]. Do not add, remove, substitute, or generically re-pose subjects.
-Reconstruct: [transformable proportions/contours, crop/headroom, minor folds/hardware, repeated props, environment micro-detail, area/value/color/light/contrast organization]. Use [Identity-first/Balanced] transformation, [Restrained/Expressive] abstraction, [High/Mid/Low]-key exposure, and [Preserve-and-refine/Rebalance/Re-script] color authorship. Make [primary macro departure] and [supporting move] without changing [protected anchors].
+Preserve as recognition anchors: [identity and feature spacing, count, pose/action/gaze, prop type/state/orientation/contact, relational or exact subject/landmark positions, adjacency/occlusion/depth order, signature silhouette, key negative space/motion line, protected geometry/colours, required text]. Do not add, remove, substitute, or generically re-pose subjects.
+Distribution decision: preserve [explicitly protected ratio/crop/coordinates/scale/horizon]; permit [output ratio, crop/headroom, relational-position adjustment, focal-scale takeover, foreground/negative-space share, colour-area allocation] because [visible hierarchy reason].
+Positive quality target: make [one focal-scale/crop, area/negative-space, light/colour-topology, or viewing-path improvement] unmistakable at thumbnail scale while keeping [topology guard].
+Reconstruct: [transformable proportions/contours, minor folds/hardware, repeated props, environment micro-detail, area/value/color/light/contrast organization]. Use [Identity-first/Balanced] transformation, [Restrained/Expressive] abstraction, [High/Mid/Low]-key exposure, and [Preserve-and-refine/Rebalance/Re-script] color authorship. Make [primary macro departure] and [supporting move] without changing [protected anchors].
 
 [Then add attention geometry, three-group value plan, color roles, motivated light, faceted material/edge treatment, and relevant avoids from the base template.]
 ```
@@ -86,13 +91,15 @@ Do not claim exact pixels. If pixels or typography must be exact, keep those reg
 For **Style-first** photo remakes, use this shorter contract:
 
 ```text
-Rebuild Image 1 as one finished [ratio] painterly animation keyframe; do not put an oil-paint texture over photographic shading.
+Rebuild Image 1 as one finished [chosen output ratio] painterly animation keyframe; do not put an oil-paint texture over photographic shading. Preserve the source ratio only when protected or compositionally superior.
 
 Keep only these recognition anchors: [subject identity/count, action or pose, signature color anchors, essential spatial relationship]. Permit [crop, controlled proportion and contour stylization, merged folds/hardware/foliage/props, redesigned atmosphere and environment shapes].
 
 Directorial abstraction: [dramatic proposition]. Make [specific primary macro departure] so [major area/contour/overlap/focal-scale/light/color-zone relation] visibly differs from the source at 128–256 px; reinforce it with [supporting move]. Do not preserve [incidental distribution].
 
-Shape and contrast design: use [Restrained/Expressive/Radical] abstraction. Preserve [topology anchors]. Build [subject] from [4–7 unequal major planes and their orientation/light/material causes], [support from 3–5 grouped planes], and [context rhythm masses from 1–3 broad planes]; transition pieces stay subordinate. Use focal/support/context mark density about [1.0/0.5/0.2–0.33]. [Material A construction/marks] must not work on [B] or [C]. Exposure is [high/mid/low]-key because [scene reason], with [three value groups]. Assign Tier 1 [focal], Tier 2 [support], and Tier 3 [chromatic-gray/scene-owned context quieting plus retained depth/material cues]. Color authorship is [mode] because [source/story diagnosis]; use [primary contrast], spatially assign [dominant/structural/focal/neutral roles], decide [None/Preserve/Author] color collision, and preserve [color anchors]. Make [focal event] the first read through [two cues]. Add [one restrained natural or FX graphic intervention].
+Positive quality target: preserve [topology anchors] but permit [crop/headroom/focal-scale/area/negative-space/light/colour-zone changes]. The result must improve [first read/viewing path/colour ownership] rather than merely satisfy avoidance rules.
+
+Shape and contrast design: use [Restrained/Expressive/Radical] abstraction. Preserve [topology anchors]. Build [subject] from [4–7 unequal major planes and their orientation/light/material causes], [support from 3–5 grouped planes], and [context rhythm masses from 1–3 broad planes]; transition pieces stay subordinate. Permit structural large marks for [named sky/field/water/fold/wall/current owner] because they follow [volume/light/perspective/motion], then use focal/support/context mark density about [1.0/0.5/0.2–0.33]. [Material A construction/marks] must not work on [B] or [C]. Exposure is [high/mid/low]-key because [scene reason], with [three value groups]. Assign Tier 1 [focal], Tier 2 [support], and Tier 3 [scene-owned context quieting plus retained colour/depth/material cues]. Color authorship is [mode] because [source/story diagnosis]; use [primary contrast], spatially assign [dominant/structural/focal/neutral/dark-or-light-anchor roles], state [successful large colour field retained after quieting], decide [None/Preserve/Author] color collision, and preserve [color anchors]. Make [focal event] the first read through [two cues]. Add [one restrained natural or FX graphic intervention].
 
 Avoid photographic underpainting, source/result thumbnail layouts that differ only in surface texture, global impasto/filter texture, generic anime identity replacement, complete outlines, two-band cel shading, equal polygon mosaics, giant opaque scenery strokes, identical marks across materials, literal micro-detail, plastic skin, franchise motifs, unnecessary darkness, passive source color, forced warm-cool, global gray fog, and global LUT color.
 ```

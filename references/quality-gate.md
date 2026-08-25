@@ -12,10 +12,12 @@ The result fails immediately if any is true:
 - focal event is not identifiable at thumbnail scale;
 - photographic shading remains substantially intact beneath one global oil/impasto/texture treatment;
 - a Style-first/Expressive source remake remains essentially interchangeable with the source at 128–256 px or in a blur/color-block map; differences limited to brushwork, grain, fog, bloom, vignette, rim light, or global color do not count as macro abstraction;
+- a request for strong stylization produces a technically safe but visually timid source-sized repaint because unprotected output ratio, crop, headroom, focal scale, area, negative space, light topology, or colour zoning was silently locked;
 - a Style-first/Expressive environment remains a conventional realistic landscape or matte painting with no meaningful transformation of scale, contour, spatial rhythm, negative space, light shape, or color zoning;
 - the focal owner and non-focal context carry essentially the same local contrast, microcontrast, hard-edge density, hue noise, and texture frequency, leaving no meaningful contrast ownership or deliberately declared equal-conflict design;
 - non-focal quieting is achieved mainly with uniform gray fog, global desaturation, lifted blacks, or blur that erases spatial/material information;
 - color is supplied mainly by a global LUT/gradient map or a forced warm-cool/complementary cliché with no spatial, material, light, identity, or attention ownership;
+- successful broad source colour fields are washed into pale or dusty equal midtones merely to quiet context, leaving no contained dark/light anchor or controlled chroma apex;
 - three or more important materials use the same repeated mark scale and edge behavior;
 - the frame reads primarily as generic cel/anime rendering: subject identity is replaced by stock manga proportions, lighting is reduced to two hard bands, or a complete dark contour encloses the focal face/body/object;
 - important forms are broken into equal-size or mechanically triangulated polygons with no orientation, light, material, fold, or silhouette cause;
@@ -35,7 +37,7 @@ Before scoring polish, answer each applicable item yes/no. Every applicable item
 3. **Graphic-spatial hybrid:** believable depth coexists with at least one restrained flat/broken 2D intervention; it need not be magical FX.
 4. **Exposure independence:** high-, mid-, or low-key treatment follows the source/story; darkness is not used as a style shortcut.
 5. **Focal resolution:** when character-level style is requested, the face/gesture is large enough to inspect. Otherwise restage/crop, choose environment-emphasis explicitly, or disclose the limitation before passing.
-6. **Macro departure (Style-first/Expressive/Radical):** source and result differ at thumbnail scale in at least one major area, contour, overlap, focal scale, negative-space, light topology, perspective/depth interval, or color-zone relationship; the declared primary move improves hierarchy while preserving declared anchors.
+6. **Positive macro departure (Style-first/Expressive/Radical):** source and result differ at thumbnail scale in at least one major area, contour, overlap, focal scale, negative-space, light topology, perspective/depth interval, output-canvas decision, or color-zone relationship; the declared primary move improves hierarchy while preserving topology anchors and using only permitted distribution changes.
 7. **Environment transfiguration (when applicable):** an environment-emphasis Style-first frame has a legible hero form and counterform/current, compresses repeated detail, and uses one primary macro departure plus one supporting move while preserving declared anchors.
 8. **Contrast ownership:** focal, support, and context tiers are visibly different across selected value/edge/chroma/hue-noise/texture/FX dimensions; context remains colored, spatial, and materially legible.
 9. **Color authorship:** the output visibly reflects a justified Preserve-and-refine, Rebalance, or Re-script decision; one primary contrast logic and role/ownership map support the focal path while protected colors remain intact. Any color collision has owners, adjacency, a dominant side, and a function. No specific warm-cool relationship is required.
@@ -48,9 +50,9 @@ Score each `0 = fail`, `1 = acceptable`, `2 = strong`.
 1. **Semantic read:** one clear event/relationship/verb.
 2. **Focal geometry:** the intended subject is first read inside the central attention zone without mechanical centering.
 3. **Value/contrast massing:** approximately three large groups; shadows remain readable; brightest/deepest values are purposeful; focal/support/context contrast budgets are distinct.
-4. **Color function:** dominant, structural, focal, context-quiet, and neutral/connector roles are coherent; hue/value/chroma and spatial ownership support hierarchy; peak chroma and any color collision are controlled rather than decorative.
+4. **Color function:** dominant, structural, focal, context-quiet, neutral/connector, and any needed dark/light-anchor roles are coherent; hue/value/chroma and spatial ownership support hierarchy; successful large colour fields remain rich where appropriate; peak chroma and any color collision are controlled rather than decorative.
 5. **Light motivation:** source geometry is believable; rim, haze, and bloom are restrained.
-6. **Shape, plane, and macro departure:** silhouettes and internal planes are reconstructed; unequal major planes have visible orientation/light/material/fold causes; transition planes are subordinate; expressive remakes show a thumbnail-visible primary compositional change rather than literal source distribution. Equal polygon mosaics and two-band cel shading score zero.
+6. **Shape, plane, and macro departure:** silhouettes and internal planes are reconstructed; unequal major planes have visible orientation/light/material/fold causes; transition planes are subordinate; structural large marks follow named volumes/currents; expressive remakes show a thumbnail-visible primary compositional change rather than literal source distribution. Equal polygon mosaics and two-band cel shading score zero.
 7. **Depth/graphic balance:** spatial staging is believable and selective 2D marks interrupt optical realism purposefully.
 8. **Edge/detail hierarchy:** eyes/gesture/key object are sharper; peripheral or distant detail is compressed.
 9. **Material specificity:** skin, cloth, metal, wall, smoke, and energy do not share one texture/gloss response.
@@ -66,8 +68,10 @@ Pass only when the style-recognition gate passes, there is no critical failure, 
 - Can the image be described as three value masses?
 - Does saturated color occupy a controlled area?
 - Does color have a clear dominant family and focal owner without depending on a generic grade?
+- If large fields are colour-rich, is there a neutral bridge plus a contained dark/light anchor rather than an all-midtone wash?
 - Is there a genuine quiet or occluding region?
 - Beside the source, does the result change one major mass/area/contour/overlap/focal-scale/light/color-zone relationship, or is it still the same photograph with a new surface?
+- If source distribution was not protected, did the result make an authored output-ratio, crop, headroom, focal-scale, area, or negative-space decision rather than preserving it by inertia?
 - For environment-emphasis, do the hero form and counterforce survive after small assets disappear, and is the primary macro departure more than palette or texture?
 - Does Tier 3 context merge into one or two chromatic-gray/scene-owned colored fields while retaining broad depth?
 
@@ -80,6 +84,7 @@ Pass only when the style-recognition gate passes, there is no critical failure, 
 - Do adjacent subject/environment/material masses separate through the chosen primary contrast without maximizing every color axis?
 - If a color collision exists, are both owners, their boundary/transition, the dominant side, and the attention/depth function legible?
 - Does each important plane break have a visible structural cause, or is the image merely posterized/triangulated?
+- Do conspicuously large marks interlock into a named material volume or directional current, rather than behaving as decorative stamps?
 - Are complete ink contours absent unless the requested medium explicitly requires them?
 
 ### Close-scale
@@ -102,6 +107,8 @@ Run these before assigning a pass:
 4. **Continuous-outline test:** trace the focal silhouette. If a uniform dark line encloses the complete face/body/object, fail unless that exact medium was requested.
 5. **Brush-slab test:** every large visible stroke must follow a form, transition or motion. Opaque rectangular scenery strokes with no volumetric job fail.
 6. **Source-topology test for edits:** compare pose, prop state/contact/orientation, adjacency, overlap, landmark relation, key negative space and motion line, not only the object list.
+7. **Positive-quality test:** compare protected topology separately from distribution. If ratio/crop/headroom/focal scale/area/light/colour topology was transformable, identify the visible improvement; inability to name one fails a strong-stylization request.
+8. **Structural-large-mark test:** name the owner, volume/motion cause, direction, depth tier and material grammar of every conspicuously large stroke. Large marks with those jobs pass; decorative slabs without them fail.
 
 ## One Targeted Correction
 
@@ -116,6 +123,7 @@ Make at most one automatic retry. Change only the failed module.
 | Decorative color | Reassign each color a focal, structural, connective, or semantic job; remove unused accents |
 | Generic purple/teal look | Rebuild palette from the scene's story and source color anchors |
 | Passive source palette | Audit what works and what fails; choose Preserve-and-refine, Rebalance, or Re-script explicitly, then change only area/value/chroma/ownership relationships needed for hierarchy |
+| Colour-rich frame becomes pale or dusty | Restore the successful dominant field, structural counter, focal apex, neutral bridge, and contained dark/light anchor; quiet context by reducing hue noise, small edges, microcontrast and competing texture before reducing broad-field saturation |
 | Forced warm-cool/complementary formula | Remove the formula and reselect a primary contrast from the actual attention/material/depth problem; an analogous, value-led, saturation-led, or near-monochrome plan may be stronger |
 | Equal saturated competition | Declare one dominant family; quiet, neutralize, or reduce the area of subordinate hues; keep peak chroma on the focal path or deliberate counterweight |
 | Muddy or overcomplicated palette | Reduce competing mid-saturation hue families, restore a neutral bridge, and separate important masses through one primary axis |
@@ -124,6 +132,7 @@ Make at most one automatic retry. Change only the failed module.
 | Global oil filter/noise | Remove all-over texture; localize marks by material and focus |
 | Photographic underpainting | Rebuild silhouette, face/object planes, fold groups, and environment masses before specifying any brush texture |
 | Thumbnail remains source-identical | Stop surface refinement; choose one primary macro departure that reallocates a major area, changes focal scale/crop/overlap, creates an active void/occluder, or rebuilds light/color-zone topology, then add one supporting move |
+| Strong edit is safe but visually timid | Keep topology anchors, release only unprotected distribution dimensions, and choose one focal-scale/crop, area/negative-space, light/colour-topology, or viewing-path improvement from `positive-quality-anchor.md` |
 | Environment remains scenic/literal | Choose one hero form and counterform/current; merge repeated assets into a few rhythm groups; make one source-owned primary departure large enough to change the blur map, then reinforce it with one supporting move |
 | Exaggeration feels random | Return to the source's dominant gesture and protected anchors; keep only the axes that improve hierarchy, rhythm, and viewing path |
 | Non-focal regions compete | Keep broad depth/material cues but compress context local contrast, microcontrast, hard-edge density, hue noise, and texture frequency; let only the focal owner peak in the selected dimensions |

@@ -84,6 +84,27 @@ Keep these scale relationships:
 
 Reject opaque rectangular strokes that impersonate clouds, mountains, fields, walls or water without following their volume. Reject an all-over canvas texture, identical dry-brush edge on every object, or one brush size repeated from foreground to background.
 
+## Structural Large Marks
+
+Large visible brushwork is a valid part of the target when it constructs a named mass. Do not shrink every mark into safe, evenly distributed impasto merely to avoid the brush-slab failure.
+
+A structural large mark:
+
+- follows cloud turning, field/foliage growth, water flow, fold expansion, wall perspective, rock weight, light direction, atmospheric shear, or another visible form/motion cause;
+- interlocks with neighbouring marks into a coherent volume or current rather than floating as an isolated stamp;
+- remains smaller than and subordinate to the macro mass it describes;
+- changes scale, direction, edge and opacity according to material and depth;
+- strengthens a contour, area relationship, viewing path, or three-value read at thumbnail or mid scale.
+
+A decorative brush slab:
+
+- is an opaque rectangle or repeated stamp with no volume, perspective, light, material or motion job;
+- replaces a cloud, field, wall, mountain or water body with one flat plate;
+- repeats the same edge, scale and orientation across unrelated materials;
+- becomes the scene's main attraction while the subject, light and depth remain underdesigned.
+
+Run the **structural-large-mark test**: name the owner, form/motion cause, direction, depth tier and material grammar of every conspicuously large stroke. If those fields cannot be named, reduce or rebuild it. A scene may share a coherent painted medium; coherence does not permit material interchangeability.
+
 ## Material Construction Library
 
 Choose only materials present in the scene. Derive an unlisted material from rigidity, reflectance, porosity, motion and focal importance.
@@ -151,7 +172,7 @@ No continuous ink contour, two-band cel shading, manga facial proportions or gen
 ### Brush-slab/filter shortcut
 
 ```text
-No global canvas texture, opaque rectangular scenery strokes or one repeated brush edge. Macro masses and volume must read before local marks; every visible mark names a material and follows its form or motion.
+No global canvas texture, opaque rectangular scenery slabs without volumetric work, or one repeated brush edge. Allow structural large marks when they interlock into a named volume/current and follow its material, light, perspective or motion. Macro masses and volume must read before local marks.
 ```
 
 ### Low-poly/posterization shortcut
@@ -175,7 +196,7 @@ Fail the output before polish scoring when any applies:
 - it reads primarily as cel-shaded anime or a vector/cartoon poster;
 - a complete subject is enclosed by a uniform dark outline;
 - the focal form is an equal-size polygon mosaic or mechanical triangulation;
-- giant decorative brush slabs replace the volume of sky, cloud, land, water or architecture;
+- giant decorative brush slabs replace the volume of sky, cloud, land, water or architecture; structurally caused large marks are allowed;
 - texture or grain is spread uniformly across unrelated materials;
 - the same mark grammar can be swapped across three important materials;
 - removing texture destroys the form, light or depth read;

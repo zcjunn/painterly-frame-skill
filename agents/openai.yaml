@@ -1,4 +1,4 @@
 interface:
   display_name: "Painterly Frame Skill"
-  short_description: "Painted frames with authored colour and structure"
-  default_prompt: "Use $painterly-frame-skill to turn the supplied image into an original painterly frame while preserving declared identity, pose, prop-state, topology, and colour anchors."
+  short_description: "Painterly frames with authored focus and colour"
+  default_prompt: "Use $painterly-frame-skill to preserve the supplied image's declared identity and topology while authoring a stronger crop, focal scale, colour structure, and material-owned paint marks where allowed."

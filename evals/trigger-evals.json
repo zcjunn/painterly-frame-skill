@@ -21,6 +21,10 @@
     {
       "id": "cross-model-paint-architecture-review",
       "request": "同一提示在另一个图片模型里变成了赛璐璐黑描边、随机多边形和巨型白色笔刷，请按面构建、材质笔触和跨模型一致性规则帮我诊断。"
+    },
+    {
+      "id": "authored-crop-and-colour-restaging",
+      "request": "保留照片里人物的动作、道具状态和场景关系，但不要锁死原画幅和人物大小；请重新导演裁切、焦点尺度和色彩面积，让画面浓郁耐看并保留结构性大笔触。"
     }
   ],
   "should_not_trigger": [

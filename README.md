@@ -1,6 +1,6 @@
 # Painterly Frame Skill
 
-`Painterly Frame Skill` 是一个把照片或文字场景转译成原创绘画动画画面的 skill。它关注的不是套用滤镜，而是重新设计一张成片：先保护来源拓扑、判断视觉主体、构图压力和颜色关系，再按“大形 → 结构面 → 过渡面 → 材质笔触 → 点睛”的顺序完成画面。
+`Painterly Frame Skill` 是一个把照片或文字场景转译成原创绘画动画画面的 skill。它关注的不是套用滤镜，而是重新设计一张成片：保护人物、姿态、道具状态和场景关系，不等于锁死原画幅、头顶空间、主体占比和色彩面积；在用户未保护这些分布维度时，skill 会主动选择更好的裁切、焦点尺度、负空间与观看路径，再按“大形 → 结构面 → 结构性大笔触 → 材质笔触 → 点睛”的顺序完成画面。
 
 > [!IMPORTANT]
 > **仅限个人、非商业使用。** 不允许销售、收费生成、订阅服务、代做、咨询、培训、SaaS/API、公司或客户项目及其他商业化用途。任何商业使用均须事先获得 zcjun（GitHub：[@zcjunn](https://github.com/zcjunn)）的明确书面许可。详见 [个人非商业许可证](LICENSE)。
@@ -16,6 +16,16 @@
 - 让色彩由场景负责：根据原图与叙事选择主色场、结构色、焦点色、过渡中性色和可选的色彩碰撞，而不是机械套用固定冷暖或固定暗调。
 - 把对比度分配给焦点、支撑结构和背景场：非视觉主体可以发灰、降微对比和边缘密度，但仍保持有色的空间层次。
 - 在缩略图尺度就能看出成片与原图的设计差异，同时避免把输入改到无法辨认。
+
+## 正向质量目标
+
+这个 skill 不以“没有动漫化、没有滤镜、没有低多边形”作为完成标准。强风格化结果还必须做出一个缩略图可见的视觉优化：例如改变输出画幅或裁切、让主体或关键道具获得尺度接管、重分配天空/地面/负空间面积、重建大光形与色彩区域，或强化从环境到主体再到动作的观看路径。
+
+来源拓扑与画面分布分开处理：人物身份、动作、视线、道具开合与接触、地标左右关系、遮挡和深度序可以保持不变；输出比例、头顶空间、焦点尺度、面积比例和局部对比度只有在用户明确要求时才锁定。若只说“人物仍在右侧、山仍在左侧”，通常保护的是关系，而不是逐像素坐标。
+
+色彩浓郁来自空间职责，而不是全局提高饱和度：主色场建立气氛，结构色分隔空间，焦点色承担峰值，中性色提供呼吸，深色或亮色锚点稳定画面。降低背景对比度时，优先减少杂乱色相、小硬边、微对比和竞争性纹理，不会自动把成功的大色域洗灰。
+
+大笔触也不是默认错误。只要笔触共同构建云的体积、草木的流向、水流、衣褶、墙面透视或光形，并随材质和远近改变尺度与边缘，它就是结构性大笔触；只有缺少体积和运动依据的装饰性矩形刷板才会被拒绝。
 
 ## 适合使用的场景
 
@@ -40,6 +50,12 @@
 - Gives the focal event the strongest useful contrast while lowering background microcontrast, edge density and texture frequency.
 - Builds large shapes first, then unequal light/material-derived planes, subordinate transitions, material-owned brush marks and restrained graphic interventions.
 
+### Positive quality target
+
+Avoiding filters, cel shading and mechanical polygons is only the baseline. A strongly stylized result must also make one thumbnail-visible improvement in output ratio or crop, focal scale, area/negative-space allocation, light/colour topology, or viewing path. Recognition topology and image distribution are recorded separately: identity, action, prop state and landmark relationships may remain fixed while unprotected headroom, crop, scale and colour-area shares are deliberately redesigned.
+
+Rich colour comes from spatial ownership—a dominant field, structural counter, focal apex, neutral bridge and a contained dark or light anchor—not from saturating everything. Context is quieted by reducing hue noise, small hard edges, microcontrast and competing texture before bleaching a successful large colour field. Large brushwork is welcome when it interlocks into a named volume or current and changes with material and depth.
+
 ### Use it when
 
 - You want a source-aware painterly animated image rather than a photographic filter.
@@ -56,8 +72,8 @@ Do not use it to copy a named work, character, logo, exact frame or protected pr
 
 推荐至少说明四件事：
 
-1. **必须保留的锚点**：人物身份、人数、动作、山峰位置、地平线、建筑关系、文字等。
-2. **允许改变的范围**：主体放大、前景遮挡、负空间重组、重复元素合并、光形重构、色彩重脚本。
+1. **必须保留的锚点**：人物身份、人数、动作、道具状态、山峰或建筑的关系；若画幅、坐标、地平线或比例必须精确不变，也要单独说明。
+2. **允许改变的范围**：输出画幅、裁切和头顶空间、主体或道具放大、前景遮挡、负空间重组、重复元素合并、光形重构、色彩区域重分配。
 3. **第一视觉读取**：观众最先看到什么，或希望画面产生什么压力与方向。
 4. **色彩倾向**：保留原色、重新平衡、或完全重写；是否允许色彩碰撞。冷暖对比不是必选项。
 
@@ -77,8 +93,8 @@ $painterly-frame-skill
 使用 $painterly-frame-skill。
 把这张图转成一张原创绘画动画关键帧，输出一张无边框成片。
 
-必须保留：{人物/主体/地标/位置/动作/比例}
-允许改变：{主体放大或缩小、前景遮挡、负空间、重复细节、光形、色彩区域}
+必须保留：{人物/主体/动作/道具状态/地标关系；哪些位置、比例或画幅必须精确锁定}
+允许改变：{输出画幅、裁切、头顶空间、主体放大或缩小、前景遮挡、负空间、重复细节、光形、色彩区域}
 第一读取：{观众先看到的主体或关系}
 抽象程度：{克制 / 明显 / 强烈}
 色彩策略：{保留并整理 / 重新平衡 / 重新脚本；冷暖对比可选}
@@ -89,10 +105,10 @@ $painterly-frame-skill
 ## 技能内部的工作顺序
 
 1. **建立 Source Card**：区分观察到的事实与推断，标出身份、姿态、道具状态与接触、朝向、遮挡、地标关系、负空间等识别锚点，以及真正可变的区域。
-2. **写导演提案**：确定一个主宏观变化和一个辅助变化。变化必须在 128–256 像素缩略图上仍然可见，例如扩大山体、让水面变成主导色带、把树冠压成前景拱门，或把一束光重组成视觉走廊。
+2. **确定正向质量目标与导演提案**：把拓扑保护和画面分布分开，确定一个主宏观变化和一个辅助变化。变化必须在 128–256 像素缩略图上仍然可见，例如重新选择画幅与裁切、扩大山体或关键道具、让水面变成主导色带、把树冠压成前景拱门，或把一束光重组成视觉走廊。
 3. **分配对比度**：焦点拥有最锋利的两到三个对比维度；支撑结构保留中等信息；背景降低局部值差、微对比、硬边和纹理频率，形成统一而有色的背景场。
-4. **建立场景色彩表**：主色场、结构色、焦点色、中性色桥接和可选回声色都要有空间归属。色彩可以是同类色、近单色、互补、分裂互补、局部照明或单纯的明度组织。
-5. **建立绘画结构**：先合并成五到九个互相咬合的大形；结构面只能来自朝向、光照、材质边界、褶皱受力或明确的轮廓设计；过渡面保持从属；最后才加入材质笔触和点睛。
+4. **建立场景色彩表**：主色场、结构色、焦点色、中性色桥接和深色/亮色锚点都要有空间归属。色彩可以是同类色、近单色、互补、分裂互补、局部照明或单纯的明度组织；背景退让不能把成功的大色域洗灰。
+5. **建立绘画结构**：先合并成五到九个互相咬合的大形；结构面只能来自朝向、光照、材质边界、褶皱受力或明确的轮廓设计；允许沿体积、流向、透视或动作组织的结构性大笔触；过渡面保持从属；最后才加入较小的材质笔触和点睛。
 6. **多尺度质检**：在缩略图、中景和近景分别检查主体读取、构图差异、颜色平衡、背景退让和材质分化，并执行去纹理、分面成因、材质互换、连续描边、巨型刷痕和来源拓扑检查。
 
 完整的面、笔触与材质定义见 [Paint Architecture Contract](references/paint-architecture.md)。
@@ -104,6 +120,7 @@ $painterly-frame-skill
 完整执行规范见 [Model Consistency Contract](references/model-consistency.md)。
 
 - 相同的主体、数量、动作、空间拓扑和受保护颜色；
+- 相同的正向质量目标、所选输出画幅、裁切、焦点尺度和面积关系；这些值可以不同于源图，但跨模型不能各自任意改变；
 - 相同的五到九个大色块及其面积、轮廓、遮挡和负空间关系；
 - 相同的三组明度，以及主色场、结构色、焦点色和中性桥接色的空间归属；
 - 相同的焦点、支撑和背景对比度预算；
@@ -112,6 +129,7 @@ $painterly-frame-skill
 - 相同的笔触密度梯度：焦点最丰富、支撑约一半、背景约五分之一到三分之一；
 - 不同材质各自明确且不可互换的构建方式、笔触尺度、方向、边缘和反光方式；
 - 相同的去纹理结果：拿掉所有表面笔触后，轮廓、空间、光向和三组明度仍然成立；
+- 相同的结构性大笔触所有权：大型笔触必须共同构建指定体积或流向，而不是被统一缩小或变成装饰性刷板；
 - 相同的“非滤镜化”验收：缩略图必须看到大形变化，近景必须看到材质差异，不能只是原照片叠加油画纹理或统一调色。
 
 允许变化的是具体笔触落点、次要纹理、小型自然细节和不改变色彩职责的细微色相偏移。如果某个模型改变第一视觉读取、破坏识别锚点、交换色彩角色、让背景与主体同样抢眼，或让皮肤、布料、金属、草木共享同一种笔触，它就不属于一致结果。出现赛璐璐替代、巨型矩形刷痕、随机三角分面或“只保留相似物件却改变姿态与道具状态”时，只追加对应的一条行为纠偏；一次纠偏后仍失败，就明确判定该模型超出支持范围。随机种子不能跨模型保证一致；需要像素完全相同的区域应使用确定性合成，而不是生成式重绘。

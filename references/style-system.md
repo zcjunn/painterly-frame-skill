@@ -2,6 +2,8 @@
 
 Use this reference to design the image. Treat numeric ranges as starting targets, not rigid measurements.
 
+Use [positive-quality-anchor.md](positive-quality-anchor.md) to define what success looks like before applying the fixed system: preserve recognition topology, deliberately choose output distribution, and require one visible composition/colour/viewing-path improvement for strong stylization.
+
 ## Fixed System
 
 These rules survived cross-season, bright/dark, close/wide, character/environment, action/quiet, and FX comparisons.
@@ -13,6 +15,8 @@ Place one subject, relationship, gesture, object, or light event inside the midd
 Do not mechanically center every subject. “Center-emphasized” means perceptual dominance near the middle, not passport-photo symmetry.
 
 Before surface design, write the dramatic proposition and directorial transform proposal from [directorial-contrast.md](directorial-contrast.md). In Style-first/Expressive work, one primary macro departure must change the composition decision at thumbnail scale; attractive brushwork is not a substitute.
+
+Do not inherit the source ratio, crop, headroom, focal scale, horizon share, or exact coordinates by default. Protect them only when declared or compositionally necessary; otherwise use one of them as a directing tool while preserving relational topology.
 
 ### 2. Three large value groups
 
@@ -37,12 +41,15 @@ Audit the source/story and choose a color-authorship mode from [color-authorship
 - **Focal accent:** marks the story event, usually a small area;
 - **Optional memory/echo:** repeats once to connect distant regions.
 - **Neutral bridge:** prevents all regions from competing and keeps materials readable.
+- **Dark/light anchor:** stabilizes a colour-rich frame and prevents equal bright midtones.
 
 Keep the highest chroma controlled and give it clear attention ownership; its area may be small or may belong to a larger focal subject. Tint shadows deliberately rather than defaulting to neutral black or one universal shadow hue.
 
 Choose one primary contrast axis—value, analogous harmony, complementary/split-complementary, warm-cool, saturation, hue-boundary, near-monochrome rupture, or local color versus colored illumination—and at most one subordinate axis. Warm-cool is optional; near-monochrome, analogous, or value-led solutions can be equally specific. Do not default to teal-orange, purple-neon, blue hair, acid green, or any palette sampled from one published frame.
 
 The generated frame owns its color outcome: preserve an already functional source palette, rebalance a weak hierarchy, or re-script when allowed and justified. A global grade, decorative accent, or list of attractive hues is not color authorship.
+
+For a colour-rich target, retain successful broad colour fields and reduce background hue noise, small edges, microcontrast and competing texture before reducing their saturation. Richness comes from area hierarchy and controlled ownership, not universal saturation or universal gray.
 
 ### 4. Motivated, shape-readable light
 
@@ -67,6 +74,8 @@ For photo remakes, do not preserve photographic shading and then cover it with t
 - preserve recognition anchors, not incidental realism.
 
 Use the closed definitions and mandatory construction order in [paint-architecture.md](paint-architecture.md). `Large shape` means a named compositional mass, not a giant brush stamp; `plane` means an unequal region caused by orientation, light, material, fold mechanics, or a declared silhouette decision, not random triangulation or two-band cel shading.
+
+Large brushwork is allowed when it is structural: multiple strokes must interlock into a named cloud volume, field current, water flow, fold fan, wall plane, rock weight, light corridor, or atmospheric motion. Its direction, edge and scale must change with material and depth. Do not replace this with uniformly small impasto merely to avoid decorative brush slabs.
 
 If the frame still reads as the original photograph beneath one uniform brush treatment, the transformation failed.
 
@@ -130,6 +139,7 @@ For action, choose one verb—strike, flee, brace, reach, fall, aim, confront—
 - Does the viewing path end at the intended subject?
 - For environment-emphasis, do a hero form and counterforce remain legible after repeated detail disappears?
 - For a source remake, does the source/result blur map show a different major area, contour, overlap, focal scale, light shape, or color-zone adjacency rather than only different texture?
+- If output distribution was transformable, did the chosen ratio/crop/headroom/focal scale/area decision visibly improve the first read?
 - Do non-focal regions read first as one or two chromatic-gray/scene-owned fields while retaining depth?
 
 ### Meso: subject and environment

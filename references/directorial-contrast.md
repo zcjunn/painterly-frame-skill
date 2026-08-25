@@ -4,6 +4,8 @@ Read this for every Generate, Edit Target, Prompt-only, and finished-frame revie
 
 The objective is not maximal distortion. It is an authored shot whose focal hierarchy, area relationships, color events, and contrast ownership are deliberately different from an unexamined photographic layout.
 
+Use [positive-quality-anchor.md](positive-quality-anchor.md) as the success target. Avoidance rules prevent obvious failure; this file must also produce one visible improvement in composition, focal scale, colour zoning, or viewing path.
+
 ## Start with a Dramatic Proposition
 
 Write one sentence describing what the finished frame should make the viewer feel or notice first. Phrase it as a visible relationship, not a mood adjective.
@@ -70,6 +72,30 @@ Preserve identity, count, action, gaze, protected geometry, required text, and r
 - the source's local contrast distribution.
 
 If architecture, product geometry, map structure, text, or documentary topography is protected, keep it stable and direct the macro departure into crop, foreground, light shape, atmosphere, color zoning, or surrounding transformable space.
+
+Record distribution permissions explicitly instead of inheriting them from the source:
+
+- source ratio versus chosen output ratio;
+- exact crop/headroom versus relational framing;
+- exact subject coordinates versus left/right/central relational zone;
+- protected scale versus permitted focal-scale takeover;
+- protected horizon/landmark geometry versus transformable area shares;
+- protected local colours versus transformable colour-zone area and contrast distribution.
+
+When a user asks for a strong painterly result while protecting identity, pose, prop state, and scene relationships—but does not protect exact ratio, crop, headroom, or scale—treat those distribution dimensions as available directing tools. Do not translate “keep the person on the right” into “keep the same pixels and size.”
+
+## Author Crop and Focal Scale When They Improve the Frame
+
+The source canvas is evidence, not automatically the final canvas. A different portrait/landscape ratio, tighter crop, reduced passive headroom, enlarged prop, or changed foreground share is valid when it:
+
+- keeps declared topology and recognition anchors intact;
+- produces a stronger first read at 128–256 px;
+- creates a cleaner viewing path or more decisive quiet field;
+- does not invent a new pose, prop state, landmark relationship, or camera event.
+
+For character/environment relationships, the subject or signature prop may change scale class while remaining in the same relational zone. For protected documentary, product, map, or architectural tasks, keep the required geometry and use light, colour, surrounding negative space, or permitted crop as the departure instead.
+
+A conservative source-sized repaint is not the default response to “strong,” “明显,” “大胆,” or “更有视觉优化.” It passes only when the source distribution is already the strongest option or the user protected it.
 
 ## Assign Contrast Ownership
 
@@ -154,6 +180,7 @@ Compile the proposal into visible instructions:
 Directorial proposition: [actor] is [visible pressure/relationship] against [counterforce]; the first read is [event].
 Primary macro departure: [specific scale/area/crop/occlusion/perspective/negative-space/light/color-zone change] so [major silhouette or area relationship] differs from the source at thumbnail scale.
 Supporting move: [specific secondary change]. Preserve [declared anchors], but do not preserve [incidental distribution].
+Distribution decision: preserve [exact protected ratio/crop/position/scale items]; permit [output ratio/headroom/focal scale/area/negative-space changes] because [visible hierarchy reason].
 Contrast ownership: Tier 1 [owner] receives [selected value/edge/chroma/texture dimensions]; Tier 2 [support] retains [medium structural cues]; Tier 3 [context] becomes a unified [chromatic-gray or scene-owned colored] field through reduced [local contrast/microcontrast/edge density/hue noise/texture frequency], while preserving [depth/material cues].
 Color collision: [none, preserve existing, or explicit owners/adjacency/dominance/function].
 Thumbnail target: source and result must differ in [major mass/contour/overlap/focal scale/light topology/color-zone adjacency], not only in surface texture.

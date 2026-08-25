@@ -20,6 +20,8 @@ Fidelity:
 - **Medium:** preserve the core subject and relationships; allow crop, surface, palette, and surrounding staging changes.
 - **Low:** preserve only semantic relationships or visual grammar.
 
+Fidelity protects recognition and topology; it does not by itself lock output distribution. Record source ratio, output ratio, crop/headroom, exact-versus-relational position, focal scale, horizon, negative-space share, and colour-area allocation separately. If the user protects only a left/right or near/far relationship, preserve that relationship while allowing a stronger crop or scale decision. If the user protects exact coordinates, ratio, or documentary geometry, lock them.
+
 Transformation mode:
 
 - **Identity-first:** preserve recognizable face/body/object geometry closely; redesign color, light, edges, and surfaces. Use when exact likeness or product/architecture recognition dominates.
@@ -67,6 +69,12 @@ file_facts:
   orientation: landscape / portrait / square
   quality_limits: blur, crop, occlusion, compression
 image_role: one primary role
+output_canvas_policy:
+  ratio: preserve source / choose for composition / user-specified
+  crop_headroom: exact / relational / transformable
+  position_precision: exact coordinates / relational zone / transformable
+  focal_scale: protected / may change scale class
+  horizon_negative_space_area: protected / selectively restage
 identity_fidelity: High / Medium / Low
 transformation_mode: Identity-first / Balanced / Style-first
 scene_emphasis: Character/Object / Environment / Relationship
@@ -108,6 +116,10 @@ directorial_transform_proposal:
   area_contour_impact: which major mass, silhouette, overlap, light shape, or color-zone relationship changes
   protected_invariants: what this proposal may not alter
   incidental_distribution_not_preserved: headroom, exact crop/horizon, repeated assets, secondary detail, or local contrast when allowed
+positive_quality_target:
+  primary_bundle: focal-scale-and-crop / area-and-negative-space / light-and-colour-topology / viewing-path reinforcement
+  visible_improvement: the better composition decision that must survive at 128-256 px
+  topology_guard: recognition anchors that the improvement may not alter
 contrast_ownership:
   tier_1_focal: owner plus selected peak value/edge/chroma/hue-boundary/texture/FX dimensions
   tier_2_support: structural owner plus medium cues retained for depth and relation
@@ -125,6 +137,8 @@ color_plan:
   focal_accent_apex: owner and attention job
   connector_echo: optional quiet recurrence
   neutral_bridge: low-chroma family preventing equal competition
+  dark_or_light_anchor: contained value owner preventing an all-midtone frame
+  retained_saturated_field: successful large colour owner that stays rich after context quieting, or None
   protected_anchors: colors that must remain recognizable
 environment_design:
   hero_form: primary landform, structure, void, weather mass, or light shape
@@ -154,14 +168,15 @@ Do not invent unseen facial features, object backs, hidden text, location, date,
 
 1. Keep the semantic minimum and recognition anchors; do not automatically preserve every visible detail.
 2. Apply the chosen transformation mode. In Balanced or Style-first work, simplify or redesign transformable elements instead of tracing them literally.
-3. Read [paint-architecture.md](paint-architecture.md). Rebuild protected topology and the focal silhouette, then macro masses, legally caused unequal major planes, subordinate transition planes, material-owned marks, and sparse accents. Apply the same ordered logic to people, creatures, products, buildings, machines, and environments. A style edit may simplify identity but may not replace it with a generic anime face, stock pose, new prop state, or similar-noun scene.
-4. Read `directorial-contrast.md`. For Expressive/Radical work, require a dramatic proposition, one primary macro departure, one supporting move, and a thumbnail difference target. Fidelity protects declared recognition anchors; it does not silently preserve every area ratio, crop, horizon, or incidental distribution.
-5. For environment-emphasis, read `environment-abstraction.md`. Select a hero form, a counterform/current, and a visible verb. Make the primary departure change their scale, area, contour, overlap, negative-space, light-shape, perspective, or color-zone relationship rather than merely changing palette and brush texture.
-6. Merge repeated micro-detail into larger shapes and assign each important material a distinct mark grammar derived from rigidity, reflectance, porosity, motion, depth and focal importance. Run the material-swap and texture-removal tests. Exact distributions of incidental trees, rocks, windows, waves, leaves, snow clumps, rubble, and reflections are not invariants unless declared.
-7. Choose one focal event and one composition family from `style-system.md`; restage or crop only when permitted.
-8. Assign focal/support/context contrast tiers. Lower context local contrast, microcontrast, edge density, hue noise, and texture frequency selectively; retain broad depth, material identity, motivated colour, and any protected subject geometry.
-9. Read `color-authorship.md`. Audit what already works, choose Preserve-and-refine, Rebalance, or Re-script, then assign one primary contrast axis, an optional subordinate axis, spatially owned color roles, and an explicit None/Preserve/Author color-collision decision. Keep source-derived color anchors when recognition depends on them; never add warm-cool or complementary contrast by reflex.
-10. Change only what the user allowed.
+3. Read [positive-quality-anchor.md](positive-quality-anchor.md). Choose one positive optimization bundle and state output-distribution permissions independently from topology. A strong stylization request must not default to a source-sized, source-ratio repaint when crop, focal scale, area, light or colour topology is transformable.
+4. Read [paint-architecture.md](paint-architecture.md). Rebuild protected topology and the focal silhouette, then macro masses, legally caused unequal major planes, subordinate transition planes, structural large marks, smaller material-owned marks, and sparse accents. Apply the same ordered logic to people, creatures, products, buildings, machines, and environments. A style edit may simplify identity but may not replace it with a generic anime face, stock pose, new prop state, or similar-noun scene.
+5. Read `directorial-contrast.md`. For Expressive/Radical work, require a dramatic proposition, one primary macro departure, one supporting move, and a thumbnail difference target. Fidelity protects declared recognition anchors; it does not silently preserve every area ratio, crop, horizon, or incidental distribution.
+6. For environment-emphasis, read `environment-abstraction.md`. Select a hero form, a counterform/current, and a visible verb. Make the primary departure change their scale, area, contour, overlap, negative-space, light-shape, perspective, or color-zone relationship rather than merely changing palette and brush texture.
+7. Merge repeated micro-detail into larger shapes and assign each important material a distinct mark grammar derived from rigidity, reflectance, porosity, motion, depth and focal importance. Run the material-swap, texture-removal, and structural-large-mark tests. Exact distributions of incidental trees, rocks, windows, waves, leaves, snow clumps, rubble, and reflections are not invariants unless declared.
+8. Choose one focal event and one composition family from `style-system.md`; restage or crop only when permitted.
+9. Assign focal/support/context contrast tiers. Lower context local contrast, microcontrast, edge density, hue noise, and texture frequency selectively; retain broad depth, material identity, motivated colour, successful large colour fields, and any protected subject geometry.
+10. Read `color-authorship.md`. Audit what already works, choose Preserve-and-refine, Rebalance, or Re-script, then assign one primary contrast axis, an optional subordinate axis, spatially owned color roles, a dark/light anchor for colour-rich frames, and an explicit None/Preserve/Author color-collision decision. Keep source-derived color anchors when recognition depends on them; never add warm-cool or complementary contrast by reflex.
+11. Change only what the user allowed.
 
 For Edit Target, write prompt clauses as `Preserve anchors Y; reconstruct elements X`. Do not imply that “stylize” grants permission to change identity, count, protected geometry, or required text, but do not promote incidental photographic detail to an invariant either.
 

@@ -1,6 +1,6 @@
 {
   "skill": "painterly-frame-skill",
-  "purpose": "Effect and regression cases for source-aware abstraction, authored colour, paint architecture, focal-versus-context contrast, non-interchangeable material marks, model-shortcut rejection, multi-scale quality gates, and truthful output claims.",
+  "purpose": "Effect and regression cases for topology-versus-distribution control, positive visual optimization, source-aware abstraction, authored colour, structural large marks, paint architecture, focal-versus-context contrast, non-interchangeable materials, model-shortcut rejection, multi-scale quality gates, and truthful output claims.",
   "cases": [
     {
       "id": "portrait-strong-stylization-not-filter",
@@ -13,6 +13,19 @@
         "Reconstruct the subject with unequal orientation/light/material/fold-derived planes, selective contour fragments, and a focal-to-context mark-density falloff.",
         "Use non-interchangeable grammars for skin, hair, fabric, vegetation, metal, and sky where present; require the form read to survive texture removal.",
         "Fail any result whose source photo remains intact beneath one global paint texture or uniform grade, or whose identity becomes a generic cel-anime character."
+      ]
+    },
+    {
+      "id": "positive-anchor-authored-restaging",
+      "request": "把这张人物环境照做成更成熟的绘画成片。保持人物身份、动作、张开的亮色伞以及人物与田野、天空、远处建筑的关系，但不要锁死原画幅、头顶空间和人物占比。请像导演一样选择更好的画幅与裁切，可以放大人物或伞；色彩要浓郁耐看，天空和草地可以出现大块结构性笔触，但不要把背景洗灰。",
+      "input_contract": "One environmental portrait with protected identity/action/prop/topology and explicitly transformable output distribution.",
+      "expected_route": "Edit Target",
+      "expected_behavior": [
+        "Separate topology from distribution: preserve identity, action, open-prop state/contact/orientation, adjacency, depth order, landmark relationship, and motion line while treating source ratio, crop, headroom, focal scale, and colour-area allocation as directing variables.",
+        "Choose one thumbnail-visible positive optimization in focal-scale/crop, area/negative-space, light/colour topology, or viewing path; fail a technically safe source-sized repaint that only changes surface texture.",
+        "Build colour richness through a dominant field, structural counter, focal apex, neutral bridge, and contained dark or light anchor; keep successful large colour fields rich while reducing context hue noise, small edges, microcontrast, and competing texture.",
+        "Allow structural large marks when sky, field, cloth, or another named owner uses interlocking strokes that follow volume, flow, gravity, perspective, light, or motion; reject only decorative slabs without those jobs.",
+        "Do not universalize the example's subject, prop, environment, output ratio, or exact palette as a reusable template."
       ]
     },
     {

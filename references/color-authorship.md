@@ -59,6 +59,20 @@ For every role, specify spatial owner, approximate area hierarchy, value range, 
 
 Roles do not need different hues. In analogous, near-monochrome, or value-led plans, the structural counter and focal apex may come from value, chroma, edge, or material shifts inside one hue family. “Balanced” means controlled visual weight, not equal color area.
 
+## Build Richness Through Area and Anchors
+
+When the user wants colour that feels richer, stronger, or more memorable, do not respond with a global saturation increase or with excessive background desaturation. Use the positive target in [positive-quality-anchor.md](positive-quality-anchor.md):
+
+- let one dominant field occupy enough area to establish the frame's colour identity;
+- give one structural counter a different value, hue, temperature, material or chroma role;
+- localize the cleanest chroma or strongest hue boundary on the focal apex;
+- keep a neutral bridge so large saturated fields have visual breathing room;
+- place one contained dark or light anchor so the image does not collapse into equally bright midtones.
+
+Large coloured areas are allowed and may remain saturated. Richness comes from clean ownership, area hierarchy, value separation, and neutral/dark support—not from making every object vivid. If the source already has a strong broad blue, green, earth, snow, water, wall, skin, cloth, or other field, Preserve-and-refine or Rebalance may strengthen it rather than washing it into chromatic gray.
+
+Run the **colour-area test** at thumbnail scale: can the dominant field, structural counter, focal apex, neutral bridge, and dark/light anchor be located spatially? Roles may merge when the scene is intentionally restrained, but a colour-rich request fails when all regions converge to pale, dusty, equal mid-chroma or when context quieting erases the source's attractive colour identity.
+
 ## Quiet Context Through Chromatic Gray
 
 When non-focal areas compete, reduce their color complexity rather than neutralizing the entire frame.
@@ -68,6 +82,7 @@ When non-focal areas compete, reduce their color complexity rather than neutrali
 - Preserve broad light/shadow depth shifts, local-color traces, and material differences; snow, wood, skin, stone, foliage, metal, and fog must not become the same gray substance.
 - Pair color quieting with lower local contrast, microcontrast, hard-edge density, and texture frequency in the Tier 3 context field from `directorial-contrast.md`.
 - Keep the focal owner and protected colors stable. Do not correct a busy background by globally desaturating or lifting blacks over the subject.
+- Reduce hue noise, competing small accents, microcontrast, hard-edge density and texture frequency before reducing the area or saturation of a successful large colour field.
 
 The objective is a colored, coherent field that reads before its individual objects. Uniform gray fog, muddy low saturation, and a full-frame faded overlay fail.
 
@@ -118,6 +133,8 @@ Use a compact visible contract:
 
 ```text
 Color authorship: use [Preserve-and-refine/Rebalance/Re-script]. The source already succeeds at [observed strengths] and needs correction at [specific issue]. Use [primary contrast strategy] with [optional subordinate strategy]. Assign [dominant field: location, hue family, value, chroma], [structural counter: owner and function], [focal accent/apex: owner and function], and [optional connector/neutral bridge]. The Tier 3 context converges toward [scene-owned chromatic gray/quiet color family] through lower [hue noise/local contrast/microcontrast/edge density/texture frequency] while retaining [depth/material cues]. Color collision is [None/Preserve existing/Author new: owners, adjacency, dominance, function]. Preserve [protected local-color anchors]. Let [motivated light] influence rather than replace material color. Avoid [specific likely imbalance or cliché].
+
+For colour-rich work, also name [contained dark or light anchor] and state which large field may retain saturation after context quieting.
 ```
 
 Name exact hue families only after roles are clear. Prefer two or three important color decisions over a long palette inventory.
@@ -135,6 +152,7 @@ Reject or correct:
 - hue contrast with collapsed values, or value contrast that destroys protected color identity;
 - muddy mixtures caused by too many mid-saturation hues and no neutral bridge;
 - non-focal regions carrying the same peak chroma, hue-boundary strength, microcontrast, and edge density as the focal owner;
+- colour-rich source fields washed into pale or dusty equal midtones merely to make context quieter;
 - uniform gray fog, global desaturation, or lifted-black haze replacing scene-owned chromatic gray and spatial depth;
 - a strong color collision with no declared owners, adjacency, dominant side, or narrative/attention function;
 - every shadow sharing one hue regardless of material and illumination;

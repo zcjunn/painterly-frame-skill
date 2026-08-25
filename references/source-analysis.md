@@ -20,8 +20,6 @@ Fidelity:
 - **Medium:** preserve the core subject and relationships; allow crop, surface, palette, and surrounding staging changes.
 - **Low:** preserve only semantic relationships or visual grammar.
 
-Fidelity protects recognition and topology; it does not by itself lock output distribution. Record source ratio, output ratio, crop/headroom, exact-versus-relational position, focal scale, horizon, negative-space share, and colour-area allocation separately. If the user protects only a left/right or near/far relationship, preserve that relationship while allowing a stronger crop or scale decision. If the user protects exact coordinates, ratio, or documentary geometry, lock them.
-
 Transformation mode:
 
 - **Identity-first:** preserve recognizable face/body/object geometry closely; redesign color, light, edges, and surfaces. Use when exact likeness or product/architecture recognition dominates.
@@ -69,12 +67,6 @@ file_facts:
   orientation: landscape / portrait / square
   quality_limits: blur, crop, occlusion, compression
 image_role: one primary role
-output_canvas_policy:
-  ratio: preserve source / choose for composition / user-specified
-  crop_headroom: exact / relational / transformable
-  position_precision: exact coordinates / relational zone / transformable
-  focal_scale: protected / may change scale class
-  horizon_negative_space_area: protected / selectively restage
 identity_fidelity: High / Medium / Low
 transformation_mode: Identity-first / Balanced / Style-first
 scene_emphasis: Character/Object / Environment / Relationship
@@ -82,12 +74,19 @@ abstraction_strength: Restrained / Expressive / Radical
 exposure_key: High-key / Mid-key / Low-key
 color_authorship_mode: Preserve-and-refine / Rebalance / Re-script
 distribution_policy: Preserve protected layout / Selectively restage / Major restage
+composition_color_lock:
+  mode: Preserve-and-enrich / Directed-restage
+  composition_strengths: negative space, focal scale, headroom, horizon, quiet-area share, diagonal/current
+  preserve: ratio, crop, topology, viewing path, value and colour hierarchy
+  permitted_changes: exact user-authorized restaging only
+  exposure_key: High-key / Mid-key / Low-key with reason
+  primary_contrast_axis: value / analogous / complementary / warm-cool / saturation / hue-boundary / other justified axis
 observed:
   core_subjects: 1-2 identity-defining subjects
   supporting_facts: 2-4 scene facts
   identity_invariants: face, body, product, architecture, markings, wardrobe color
-  action_prop_invariants: pose/action, gaze, expression, prop type and state, hand/contact relation, orientation
-  topology_invariants: subject/landmark positions, left-right order, adjacency, occlusion, depth order, horizon, scale relationship, key negative space, dominant motion line
+  spatial_invariants: only declared count, left-right order, gesture, gaze, horizon, overlap, or scale relationships that must remain
+  facial_packet_when_present: head axis, eye-line, gaze, expression cues, relative eye size/interval, brow-nose-mouth-chin axis, face-to-hair/neck/hand overlap
   dominant_gesture: horizontal / vertical / diagonal / curve / gaze / motion
   current_visual_weight: area, value, chroma, texture, isolation
   color_audit:
@@ -102,6 +101,7 @@ observed:
     problems: adjacency, hierarchy, material, depth, or balance issues actually needing correction
     contrast_audit: global span, local contrast, microcontrast, edge density, chroma, hue noise, texture/FX density and their current owners
   quiet_areas: low-information regions
+  composition_strengths: existing negative space, subject scale, headroom, horizon, colour area or viewing path worth preserving
   visible_text_brand: preserve exactly or exclude
 inferred:
   narrative_event: what appears to be happening
@@ -116,10 +116,6 @@ directorial_transform_proposal:
   area_contour_impact: which major mass, silhouette, overlap, light shape, or color-zone relationship changes
   protected_invariants: what this proposal may not alter
   incidental_distribution_not_preserved: headroom, exact crop/horizon, repeated assets, secondary detail, or local contrast when allowed
-positive_quality_target:
-  primary_bundle: focal-scale-and-crop / area-and-negative-space / light-and-colour-topology / viewing-path reinforcement
-  visible_improvement: the better composition decision that must survive at 128-256 px
-  topology_guard: recognition anchors that the improvement may not alter
 contrast_ownership:
   tier_1_focal: owner plus selected peak value/edge/chroma/hue-boundary/texture/FX dimensions
   tier_2_support: structural owner plus medium cues retained for depth and relation
@@ -137,9 +133,14 @@ color_plan:
   focal_accent_apex: owner and attention job
   connector_echo: optional quiet recurrence
   neutral_bridge: low-chroma family preventing equal competition
-  dark_or_light_anchor: contained value owner preventing an all-midtone frame
-  retained_saturated_field: successful large colour owner that stays rich after context quieting, or None
   protected_anchors: colors that must remain recognizable
+continuity_plan:
+  boundary_relationships: important adjacency -> occlusion / turning form / contact / atmospheric merge / reflected-colour bridge / graphic seam
+  internal_colour_turns: broad base plus a few unequal light/form/material shifts for each important mass
+  structural_stroke_current: cloud / field / road / cloth / water / shadow direction carrying the viewing path
+  shared_light_bridges: key, shadow family and one or two reflected-colour echoes across owners
+  depth_frequency_falloff: foreground / middle / atmosphere edge and mark behaviour
+  likely_model_adapter: None / Cut-paper-colour-block / Poster-fill-cel-band / Brush-stamp-slab / Global-texture-filter / Sticker-airless-depth
 environment_design:
   hero_form: primary landform, structure, void, weather mass, or light shape
   counterform_current: opposing or guiding source-owned mass/direction
@@ -150,14 +151,9 @@ environment_design:
   optional_additional_axes: only changes that remain visibly useful; axis count alone is not success
   repeated_detail_policy: which trees, rocks, windows, waves, foliage, rubble, or reflections become grouped rhythms
 shape_rebuild:
-  contour_language: selected hard fragments, broken medium edges, lost context edges; whether any complete outline is authorized
-  subject_planes: 4-7 unequal major face/object planes and their orientation/light/material/fold causes
-  transition_planes: subordinate turning-form or reflected-light bridges only
+  subject_planes: silhouette and 4-7 meaningful face/object planes
   environment_masses: broad graphic forms replacing repeated detail
-  mark_density: focal 1.0, support about 0.5, context about 0.2-0.33 as perceptual targets
-  material_grammars: distinct, non-interchangeable construction and marks for 3-5 important materials
-  texture_removal_read: silhouette, depth, light direction, and three value groups that survive without surface marks
-  model_shortcut_adapter: None / Cel-anime / Brush-slab-filter / Low-poly-posterization / Source-template
+  material_grammars: distinct marks for 3-5 important materials
 allowed_changes: user-authorized changes
 hard_avoids: identity drift, added objects, sample residue, text errors
 ```
@@ -167,15 +163,15 @@ Do not invent unseen facial features, object backs, hidden text, location, date,
 ## Translate the Source
 
 1. Keep the semantic minimum and recognition anchors; do not automatically preserve every visible detail.
-2. Apply the chosen transformation mode. In Balanced or Style-first work, simplify or redesign transformable elements instead of tracing them literally.
-3. Read [positive-quality-anchor.md](positive-quality-anchor.md). Choose one positive optimization bundle and state output-distribution permissions independently from topology. A strong stylization request must not default to a source-sized, source-ratio repaint when crop, focal scale, area, light or colour topology is transformable.
-4. Read [paint-architecture.md](paint-architecture.md). Rebuild protected topology and the focal silhouette, then macro masses, legally caused unequal major planes, subordinate transition planes, structural large marks, smaller material-owned marks, and sparse accents. Apply the same ordered logic to people, creatures, products, buildings, machines, and environments. A style edit may simplify identity but may not replace it with a generic anime face, stock pose, new prop state, or similar-noun scene.
-5. Read `directorial-contrast.md`. For Expressive/Radical work, require a dramatic proposition, one primary macro departure, one supporting move, and a thumbnail difference target. Fidelity protects declared recognition anchors; it does not silently preserve every area ratio, crop, horizon, or incidental distribution.
-6. For environment-emphasis, read `environment-abstraction.md`. Select a hero form, a counterform/current, and a visible verb. Make the primary departure change their scale, area, contour, overlap, negative-space, light-shape, perspective, or color-zone relationship rather than merely changing palette and brush texture.
-7. Merge repeated micro-detail into larger shapes and assign each important material a distinct mark grammar derived from rigidity, reflectance, porosity, motion, depth and focal importance. Run the material-swap, texture-removal, and structural-large-mark tests. Exact distributions of incidental trees, rocks, windows, waves, leaves, snow clumps, rubble, and reflections are not invariants unless declared.
-8. Choose one focal event and one composition family from `style-system.md`; restage or crop only when permitted.
-9. Assign focal/support/context contrast tiers. Lower context local contrast, microcontrast, edge density, hue noise, and texture frequency selectively; retain broad depth, material identity, motivated colour, successful large colour fields, and any protected subject geometry.
-10. Read `color-authorship.md`. Audit what already works, choose Preserve-and-refine, Rebalance, or Re-script, then assign one primary contrast axis, an optional subordinate axis, spatially owned color roles, a dark/light anchor for colour-rich frames, and an explicit None/Preserve/Author color-collision decision. Keep source-derived color anchors when recognition depends on them; never add warm-cool or complementary contrast by reflex.
+2. Read `composition-color-lock.md` and choose Preserve-and-enrich or Directed-restage before applying the transformation mode. In Preserve-and-enrich, simplify and repaint without silently changing the source distribution; in Directed-restage, change only the declared axes.
+3. Rebuild the focal silhouette, internal colour turns and major surrounding masses before adding brush marks. Apply the same logic to people, creatures, products, buildings, machines and environments.
+4. Read `directorial-contrast.md`. For Directed-restage/Expressive/Radical work, require a dramatic proposition, one primary macro departure, one supporting move and a thumbnail difference target. Preserve-and-enrich uses light shape, colour adjacency, edge rhythm or a viewing current as its enrichment instead of mandatory crop or scale change.
+5. For environment-emphasis, read `environment-abstraction.md`. Select a hero form, a counterform/current, and a visible verb. Make the primary departure change their scale, area, contour, overlap, negative-space, light-shape, perspective, or color-zone relationship rather than merely changing palette and brush texture.
+6. Merge repeated micro-detail into larger shapes and assign each important material a distinct mark grammar derived from its behavior. Exact distributions of incidental trees, rocks, windows, waves, leaves, snow clumps, rubble, and reflections are not invariants unless declared.
+7. Choose one focal event and one composition family from `style-system.md`; restage or crop only when the lock permits it.
+8. Assign focal/support/context contrast tiers. Lower context local contrast, microcontrast, edge density, hue noise and texture frequency selectively; retain broad depth, material identity, motivated colour and any protected subject geometry.
+9. Read `color-authorship.md`. Audit what already works, choose Preserve-and-refine by default (or Rebalance/Re-script with reason), then assign one primary contrast axis, an optional subordinate axis, spatially owned colour roles and an explicit None/Preserve/Author color-collision decision. Keep source-derived color anchors when recognition depends on them; never add warm-cool or complementary contrast by reflex.
+10. Read `painterly-continuity.md` and bind the locked masses through boundary relationships, internal turns, shared light and material-owned strokes. Add at most one observed model adapter.
 11. Change only what the user allowed.
 
 For Edit Target, write prompt clauses as `Preserve anchors Y; reconstruct elements X`. Do not imply that “stylize” grants permission to change identity, count, protected geometry, or required text, but do not promote incidental photographic detail to an invariant either.

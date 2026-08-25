@@ -1,6 +1,6 @@
 {
-  "skill": "painterly-frame-skill",
-  "purpose": "Effect and regression cases for topology-versus-distribution control, positive visual optimization, source-aware abstraction, authored colour, structural large marks, paint architecture, focal-versus-context contrast, non-interchangeable materials, model-shortcut rejection, multi-scale quality gates, and truthful output claims.",
+  "skill": "painterly-frame-universal",
+  "purpose": "Effect and regression cases for initial-version composition/color locks, source-aware abstraction, connected brushwork, authored colour, material-specific marks, multi-scale quality gates, and truthful output claims.",
   "cases": [
     {
       "id": "portrait-strong-stylization-not-filter",
@@ -8,24 +8,46 @@
       "input_contract": "One environmental portrait with a declared identity, pose, and colour anchor.",
       "expected_route": "Edit Target",
       "expected_behavior": [
-        "Preserve the declared identity, feature spacing, action, subject count, red umbrella state/orientation/contact, adjacency, overlap, and key negative-space anchors.",
+        "Preserve the declared identity, action, subject count, and red umbrella anchor.",
         "Make one thumbnail-visible macro departure plus one supporting move before adding texture.",
-        "Reconstruct the subject with unequal orientation/light/material/fold-derived planes, selective contour fragments, and a focal-to-context mark-density falloff.",
-        "Use non-interchangeable grammars for skin, hair, fabric, vegetation, metal, and sky where present; require the form read to survive texture removal.",
-        "Fail any result whose source photo remains intact beneath one global paint texture or uniform grade, or whose identity becomes a generic cel-anime character."
+        "Reconstruct the subject with readable planes and use different mark grammars for skin, hair, fabric, vegetation, metal, and sky where present.",
+        "Fail any result whose source photo remains intact beneath one global paint texture or uniform grade."
       ]
     },
     {
-      "id": "positive-anchor-authored-restaging",
-      "request": "把这张人物环境照做成更成熟的绘画成片。保持人物身份、动作、张开的亮色伞以及人物与田野、天空、远处建筑的关系，但不要锁死原画幅、头顶空间和人物占比。请像导演一样选择更好的画幅与裁切，可以放大人物或伞；色彩要浓郁耐看，天空和草地可以出现大块结构性笔触，但不要把背景洗灰。",
-      "input_contract": "One environmental portrait with protected identity/action/prop/topology and explicitly transformable output distribution.",
+      "id": "preserve-and-enrich-initial-composition",
+      "request": "把这张有大面积天空、低地平线和小人物的照片转成原创绘画动画画面。初始构图的留白和人物尺度很好，请保留它们，只增强云、草地、衣服之间的连续笔触和共同光线，不要为了风格化放大人物或压缩天空。",
+      "input_contract": "One environmental portrait whose headroom, quiet field and small-subject scale are declared composition strengths.",
       "expected_route": "Edit Target",
       "expected_behavior": [
-        "Separate topology from distribution: preserve identity, action, open-prop state/contact/orientation, adjacency, depth order, landmark relationship, and motion line while treating source ratio, crop, headroom, focal scale, and colour-area allocation as directing variables.",
-        "Choose one thumbnail-visible positive optimization in focal-scale/crop, area/negative-space, light/colour topology, or viewing path; fail a technically safe source-sized repaint that only changes surface texture.",
-        "Build colour richness through a dominant field, structural counter, focal apex, neutral bridge, and contained dark or light anchor; keep successful large colour fields rich while reducing context hue noise, small edges, microcontrast, and competing texture.",
-        "Allow structural large marks when sky, field, cloth, or another named owner uses interlocking strokes that follow volume, flow, gravity, perspective, light, or motion; reject only decorative slabs without those jobs.",
-        "Do not universalize the example's subject, prop, environment, output ratio, or exact palette as a reusable template."
+        "Choose Preserve-and-enrich before any directorial restage.",
+        "Lock ratio, headroom, low horizon, small focal scale, quiet-area share and viewing path; enrich through light shape, colour adjacency, edge rhythm and connected strokes.",
+        "Keep the source exposure key and spatial colour hierarchy instead of adding a dark grade or formulaic warm-cool split.",
+        "Use internal colour turns, neighbour connections and shared light so the person is not a pasted sticker."
+      ]
+    },
+    {
+      "id": "colour-lock-high-key-analogous-scene",
+      "request": "把这张明亮的蓝天、白云和绿色田野照片转成绘画动画画面。保留高调的蓝白绿关系，粉色衣服只是焦点小面积；请不要套橙青或暗夜色调，让颜色在人物、草地和天空之间有自然反射和统一光场。",
+      "input_contract": "One high-key outdoor portrait with an already functional analogous palette and one protected wardrobe accent.",
+      "expected_route": "Edit Target",
+      "expected_behavior": [
+        "Choose Preserve-and-refine with a high-key exposure and an analogous/value-led primary contrast axis.",
+        "Assign blue-white sky as dominant field, green ground as structural counter, and the protected pink garment as focal apex without equal saturated competition.",
+        "Preserve local wardrobe/skin/sky colour while letting shared daylight and reflected colour connect materials.",
+        "Reject a global LUT, forced complementary palette, or dark exposure shortcut."
+      ]
+    },
+    {
+      "id": "directed-restage-requires-permission",
+      "request": "把这张人物与山景照片做成强烈的 Style-first 绘画动画重构：允许把山体放大成压迫性的主形，把前景树冠变成遮挡拱门，但人物身份、动作和山在人物后的关系不能丢。",
+      "input_contract": "One environmental portrait with explicit permission for expressive macro restaging.",
+      "expected_route": "Edit Target with Directed-restage",
+      "expected_behavior": [
+        "Switch to Directed-restage because the user explicitly authorizes it, and declare scale takeover plus foreground occlusion as the primary/supporting moves.",
+        "Keep identity, action, depth order and mountain-behind-person topology locked.",
+        "Carry the locked value and colour roles into the new macro layout before adding painterly continuity.",
+        "Do not mistake texture, extra polygons or a new overall cast for the requested macro departure."
       ]
     },
     {
@@ -85,27 +107,27 @@
       ]
     },
     {
-      "id": "review-cel-anime-source-template-regression",
-      "request": "检查这张跨模型结果：原图人物拿着张开的伞站在右侧，结果却把人物改成举手的通用动漫角色，伞收起来了，地标也消失了；全身有黑描边和两段式明暗。它是否符合这个 skill？",
-      "input_contract": "One source photo plus one generated result that keeps similar nouns but changes identity, pose, prop state, topology, and rendering medium.",
-      "expected_route": "Finished-frame review",
+      "id": "continuity-adapter-does-not-redesign",
+      "request": "这个模型把人物、天空和草地画成几个互不相连的硬边色块，人物像贴纸，但大构图和蓝白绿色彩关系本来是对的。只修复它的渲染捷径，不要改构图、曝光或色彩所有权。",
+      "input_contract": "One failed painterly output with correct composition/color lock but cut-paper and airless-depth behaviour.",
+      "expected_route": "Finished-frame review / targeted correction",
       "expected_behavior": [
-        "Fail immediately for identity/action/prop-state/topology drift; keeping a person, umbrella, field, and sky is not source fidelity.",
-        "Fail the continuous-outline and cel-anime shortcut tests for generic facial replacement, full dark contours, and two-band shading.",
-        "Identify the missing source anchors: feature spacing, pose/gaze, prop state/contact/orientation, landmark relation, adjacency/occlusion, and key negative space.",
-        "Apply only the Source-template adapter plus the Cel-anime adapter on one targeted retry; do not add generic painterly adjectives."
+        "Keep the composition/color lock unchanged and select only the matching cut-paper or sticker adapter.",
+        "Add internal turns, mixed edges, contact/reflected-colour/shared-light connections and a structural current.",
+        "Do not enlarge the subject, crop the sky, darken the frame or invent a new accent palette.",
+        "Fail if the correction stacks every adapter or adds a global texture filter."
       ]
     },
     {
-      "id": "review-brush-slab-low-poly-regression",
-      "request": "检查这张跨模型结果：天空被几块巨大白色矩形笔刷代替，裙子和脸被均匀切成三角面，稻田是几条平涂色带，皮肤、布料和草地的笔触可以互换。请指出问题并给一次定向修正。",
-      "input_contract": "One generated frame exhibiting brush-slab scenery, low-poly/posterized planes, and material-grammar collapse.",
+      "id": "review-facial-geometry-regression",
+      "request": "检查这张人物绘画重制：动作和颜色都对，但人物有点斜眼，眼间距偏大，两个瞳孔视线不一致。请指出问题并给一次定向修正。",
+      "input_contract": "One generated painterly portrait with preserved scene topology but accidental facial feature drift.",
       "expected_route": "Finished-frame review",
       "expected_behavior": [
-        "Fail the brush-slab test because scenery strokes do not follow cloud volume, light, material, or motion.",
-        "Fail the plane-cause test because equal mechanical polygons and poster bands are not orientation/light/material/fold-derived planes.",
-        "Fail the material-swap and texture-removal tests when unrelated surfaces share one grammar or form depends on decorative texture.",
-        "Keep the portable core fixed and apply only the dominant Brush-slab/filter or Low-poly/posterization adapter; after one failed correction, report the runtime outside the supported consistency envelope."
+        "Fail the facial gate while preserving the composition lock, colour lock, pose and painterly continuity packet.",
+        "Identify the concrete defects: incoherent eye-line/head axis, over-wide inter-eye spacing, and mismatched gaze; do not call intentional pose asymmetry a failure without evidence.",
+        "Apply only the facial-anatomy guard once: rebuild skull/jaw, one perspective-aware eye band, aligned pupils, and nose/mouth/chin axis before adding small skin or brush details.",
+        "If the targeted retry still fails, report facial geometry as outside the supported consistency envelope rather than adding generic style adjectives."
       ]
     }
   ]

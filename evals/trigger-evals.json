@@ -1,5 +1,5 @@
 {
-  "skill": "painterly-frame-skill",
+  "skill": "painterly-frame-universal",
   "purpose": "Natural-language discovery cases. Run these separately from effect evaluation; do not name or explicitly invoke the skill in the request.",
   "should_trigger": [
     {
@@ -19,12 +19,16 @@
       "request": "帮我检查这张风格化结果是不是只加了滤镜；请从缩略图大形、分面、材质笔触和背景对比度判断。"
     },
     {
-      "id": "cross-model-paint-architecture-review",
-      "request": "同一提示在另一个图片模型里变成了赛璐璐黑描边、随机多边形和巨型白色笔刷，请按面构建、材质笔触和跨模型一致性规则帮我诊断。"
+      "id": "preserve-source-composition-and-colour",
+      "request": "这张照片原本的留白、人物尺度和蓝白绿色彩都很好，帮我做成有连续画笔质感的绘画动画画面，但不要乱改构图或套固定冷暖色。"
     },
     {
-      "id": "authored-crop-and-colour-restaging",
-      "request": "保留照片里人物的动作、道具状态和场景关系，但不要锁死原画幅和人物大小；请重新导演裁切、焦点尺度和色彩面积，让画面浓郁耐看并保留结构性大笔触。"
+      "id": "cross-model-cutout-repair",
+      "request": "另一个模型生成了硬边色块和贴纸人物，请保留原来的构图和颜色层级，只修复笔触连接、接触阴影、反射色和空气感。"
+    },
+    {
+      "id": "facial-feature-control",
+      "request": "这张人物绘画重制的构图和笔触很好，但有点斜眼、眼间距偏大，请在不改构图和颜色的前提下修好五官。"
     }
   ],
   "should_not_trigger": [
@@ -47,6 +51,10 @@
     {
       "id": "flat-cel-character-sheet",
       "request": "做一张白底、均匀黑描边、纯赛璐璐平涂的角色三视图，不要绘画材质和光影重构。"
+    },
+    {
+      "id": "ordinary-painterly-landscape-no-source-edit",
+      "request": "我想写一个全新的水彩风景插画提示词，不涉及照片编辑、构图锁或跨模型一致性。"
     }
   ]
 }

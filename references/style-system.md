@@ -2,7 +2,11 @@
 
 Use this reference to design the image. Treat numeric ranges as starting targets, not rigid measurements.
 
-Use [positive-quality-anchor.md](positive-quality-anchor.md) to define what success looks like before applying the fixed system: preserve recognition topology, deliberately choose output distribution, and require one visible composition/colour/viewing-path improvement for strong stylization.
+## Composition and Colour Come First
+
+Read [composition-color-lock.md](composition-color-lock.md) before applying this visual system. For an Edit Target, Preserve-and-enrich is the default when the source already has a strong quiet field, focal scale, headroom, horizon or colour-area hierarchy. Directed restaging is a permissioned mode, not a synonym for painterly.
+
+The scene's initial value topology, exposure key and spatial colour ownership are part of the design. Painterly continuity, facets and marks must reinforce those decisions; they must not turn a bright source into a dark grade, replace an analogous palette with forced opposition, or make every region equally busy.
 
 ## Fixed System
 
@@ -10,17 +14,15 @@ These rules survived cross-season, bright/dark, close/wide, character/environmen
 
 ### 1. One perceptually dominant event
 
-Place one subject, relationship, gesture, object, or light event inside the middle attention zone—roughly the central 40–60% of the canvas. It may be off-center or very small. Make it the first read through isolation, local value contrast, chroma, edge sharpness, scale, perspective, or a combination.
+Place one subject, relationship, gesture, object, or light event inside the middle attention zone—roughly the central 40–60% of the canvas. It may be off-center or very small. Make it the first read through isolation, local value contrast, chroma, edge sharpness, scale, perspective, or a combination, while respecting the composition lock's focal scale and quiet-area share.
 
-Do not mechanically center every subject. “Center-emphasized” means perceptual dominance near the middle, not passport-photo symmetry.
+Do not mechanically center every subject. “Center-emphasized” means perceptual dominance near the middle, not passport-photo symmetry. A small subject inside a large sky, wall, fog, field or darkness may already be the strongest first read.
 
-Before surface design, write the dramatic proposition and directorial transform proposal from [directorial-contrast.md](directorial-contrast.md). In Style-first/Expressive work, one primary macro departure must change the composition decision at thumbnail scale; attractive brushwork is not a substitute.
-
-Do not inherit the source ratio, crop, headroom, focal scale, horizon share, or exact coordinates by default. Protect them only when declared or compositionally necessary; otherwise use one of them as a directing tool while preserving relational topology.
+After the composition/color lock, write the dramatic proposition and—only when Directed-restage is selected—the directorial transform proposal from [directorial-contrast.md](directorial-contrast.md). In Style-first/Expressive work, one primary macro departure must change the composition decision at thumbnail scale; attractive brushwork is not a substitute.
 
 ### 2. Three large value groups
 
-Start near a 60/30/10 distribution:
+Start near a 60/30/10 distribution only when it agrees with the locked source/story distribution:
 
 - dominant quiet field;
 - supporting structural mass;
@@ -41,15 +43,12 @@ Audit the source/story and choose a color-authorship mode from [color-authorship
 - **Focal accent:** marks the story event, usually a small area;
 - **Optional memory/echo:** repeats once to connect distant regions.
 - **Neutral bridge:** prevents all regions from competing and keeps materials readable.
-- **Dark/light anchor:** stabilizes a colour-rich frame and prevents equal bright midtones.
 
 Keep the highest chroma controlled and give it clear attention ownership; its area may be small or may belong to a larger focal subject. Tint shadows deliberately rather than defaulting to neutral black or one universal shadow hue.
 
 Choose one primary contrast axis—value, analogous harmony, complementary/split-complementary, warm-cool, saturation, hue-boundary, near-monochrome rupture, or local color versus colored illumination—and at most one subordinate axis. Warm-cool is optional; near-monochrome, analogous, or value-led solutions can be equally specific. Do not default to teal-orange, purple-neon, blue hair, acid green, or any palette sampled from one published frame.
 
 The generated frame owns its color outcome: preserve an already functional source palette, rebalance a weak hierarchy, or re-script when allowed and justified. A global grade, decorative accent, or list of attractive hues is not color authorship.
-
-For a colour-rich target, retain successful broad colour fields and reduce background hue noise, small edges, microcontrast and competing texture before reducing their saturation. Richness comes from area hierarchy and controlled ownership, not universal saturation or universal gray.
 
 ### 4. Motivated, shape-readable light
 
@@ -73,10 +72,6 @@ For photo remakes, do not preserve photographic shading and then cover it with t
 - let one or two asymmetric contour accents carry character;
 - preserve recognition anchors, not incidental realism.
 
-Use the closed definitions and mandatory construction order in [paint-architecture.md](paint-architecture.md). `Large shape` means a named compositional mass, not a giant brush stamp; `plane` means an unequal region caused by orientation, light, material, fold mechanics, or a declared silhouette decision, not random triangulation or two-band cel shading.
-
-Large brushwork is allowed when it is structural: multiple strokes must interlock into a named cloud volume, field current, water flow, fold fan, wall plane, rock weight, light corridor, or atmospheric motion. Its direction, edge and scale must change with material and depth. Do not replace this with uniformly small impasto merely to avoid decorative brush slabs.
-
 If the frame still reads as the original photograph beneath one uniform brush treatment, the transformation failed.
 
 ### 7. Environment as a designed subject
@@ -97,15 +92,13 @@ Increase detail toward the focal event and foreground. Compress distant building
 
 Do not equate context compression with uniform softness. Keep a few structural edges, perspective cues, and material boundaries; remove equal competition rather than all information.
 
-### 9. Hierarchical painterly plane modeling
+### 9. Faceted painterly modeling
 
-Model faces and objects with unequal, hierarchical planes rather than uniform gradients. For a face, 4–7 meaningful plane changes are usually enough before small accents, and each break must be owned by orientation, light, material or anatomy. Keep one broad plane dominant. Do not interpret `faceted` as a triangulated low-poly mosaic, equal-size polygon tiling, uniform hard bands, or an ink outline around every plane. Allow cool and warm shifts within skin, but keep skin quieter than scar, fabric, wall, metal, smoke, or magical material.
+Model faces and objects with stepped planes rather than uniform gradients. For a face, 4–7 meaningful plane changes are usually enough before small accents. Allow cool and warm shifts within skin, but keep skin quieter than scar, fabric, wall, metal, smoke, or magical material.
 
-Use visible brush boundaries locally and keep mark scale smaller than the form it describes. Mark density must fall from focal to support to context. Avoid global canvas grain, opaque brush slabs used as clouds/land/walls, noisy pores, waxy subsurface skin, wet-plastic highlights, evenly sharp hair strands, or continuous comic outlines.
+Use visible brush boundaries locally. Avoid global canvas grain, noisy pores, waxy subsurface skin, wet-plastic highlights, or evenly sharp hair strands.
 
 Assign material-specific shape and mark grammar rather than one universal paint texture. The following are examples, not a required material list; select only relevant rows and derive unlisted materials from scale, rigidity, reflectance, motion, and focal importance.
-
-Use the more explicit plane causes, material-swap test, texture-removal test, material library, and failure adapters in [paint-architecture.md](paint-architecture.md).
 
 | Material | Primary construction | Avoid |
 |---|---|---|
@@ -139,7 +132,6 @@ For action, choose one verb—strike, flee, brace, reach, fall, aim, confront—
 - Does the viewing path end at the intended subject?
 - For environment-emphasis, do a hero form and counterforce remain legible after repeated detail disappears?
 - For a source remake, does the source/result blur map show a different major area, contour, overlap, focal scale, light shape, or color-zone adjacency rather than only different texture?
-- If output distribution was transformable, did the chosen ratio/crop/headroom/focal scale/area decision visibly improve the first read?
 - Do non-focal regions read first as one or two chromatic-gray/scene-owned fields while retaining depth?
 
 ### Meso: subject and environment

@@ -1,81 +1,79 @@
 ---
-name: painterly-frame-skill
-description: Create or edit original painterly frames through source-faithful topology, distribution-flexible crop and focal-scale direction, scene-owned rich colour, structural large marks, material-specific paint architecture, spatial depth, and model-portable multi-scale QA. Use when a photo or prompt should become a strongly stylized painted frame, visually optimized scene reconstruction, or finished-frame review. Do not use for faithful photo correction, flat cel/anime rendering, pixel-locked preservation, or copying a named work, character, logo, or exact frame.
+name: painterly-frame-universal
+description: Create or edit original painterly frames with initial-version composition and colour control plus portable connected brushwork. Use this skill whenever a photo or prompt should become a strongly stylized hand-painted frame, when another image model produces pasted colour blocks, cutout subjects, flat cel bands, global texture or malformed facial features, or when a finished painterly frame needs source-aware composition, authored colour, shared light, face geometry and material-specific QA. Preserve a strong source distribution by default; open expressive restaging only when the user or source diagnosis permits it. Do not use for faithful photo correction, pixel-locked preservation, or copying a named work, character, logo or exact frame.
 ---
 
-# Painterly Frame Skill
+# Painterly Frame Universal
 
-Translate shorthand such as “hand-painted animated film” or “dark graphic cartoon mood” into an original, observable visual system. Optimize the finished frame, not resemblance to a protected sample.
+Translate shorthand such as “hand-painted animated film” or “painterly remake” into an original, observable visual system. The universal contract has two layers: first lock the picture's composition, value and colour authorship; then make the locked design read as one connected painted field across different image models.
 
-Treat any demonstrated photo or failed output as a regression case, not a content template. Generalize the failure class across portraits, environments, architecture, products, creatures, and action scenes; keep subject-specific materials and compositions conditional.
+Treat any demonstrated photo or failed output as a regression case, not a content template. Generalize the failure class across portraits, environments, architecture, products, creatures and action scenes; keep subject-specific materials and compositions conditional.
 
 ## Route the Request
 
 Choose the smallest route that satisfies the request.
 
-- **Generate:** Create a new finished keyframe from text or semantic-source images.
-- **Edit Target:** Restage or repaint a user image while preserving declared identity, object, or spatial invariants.
-- **Reference Analysis:** Extract evidence, fixed rules, variables, and sample residue. Do not generate unless asked.
-- **Prompt-only:** Return an executable prompt. Do not generate or claim visual inspection.
-- **Analyze + Generate:** Analyze references, discard sample residue, then create a different subject and composition.
+- **Generate:** Create one finished keyframe from text or semantic-source images.
+- **Edit Target:** Repaint a supplied image while preserving declared identity, object and spatial invariants.
+- **Reference Analysis:** Extract evidence, fixed rules, variables and sample residue. Do not generate unless asked.
+- **Prompt-only:** Return one executable prompt. Do not generate or claim visual inspection.
+- **Analyze + Generate:** Analyze references, discard sample residue and create a different subject/composition.
 
 Default to one finished borderless image when the user asks to make an image and gives enough direction. Do not run an intake questionnaire when the answer can be safely inferred.
 
 ## Load Only Relevant References
 
-- For every Generate, Edit Target, or Prompt-only task, read [references/style-system.md](references/style-system.md) and [references/prompt-compiler.md](references/prompt-compiler.md).
-- For every Generate, Edit Target, Prompt-only, or finished-frame review task, read [references/positive-quality-anchor.md](references/positive-quality-anchor.md). It defines the positive visual target: preserve recognition topology while authoring crop, focal scale, area, viewing path, colour roles, and structural large marks when those dimensions are transformable.
-- For every Generate, Edit Target, Prompt-only, or finished-frame review task, read [references/paint-architecture.md](references/paint-architecture.md). It defines macro masses, legal plane causes, mark-density tiers, material ownership, source-fidelity anchors, and behaviour-based model adapters.
-- For every Generate, Edit Target, Prompt-only, or finished-frame review task, read [references/model-consistency.md](references/model-consistency.md). It defines the portable render contract and the boundary between perceptual consistency and impossible pixel identity.
-- For every Generate, Edit Target, Prompt-only, or finished-frame review task, read [references/directorial-contrast.md](references/directorial-contrast.md). This is the macro-departure and contrast-ownership contract.
-- For every generation, edit, prompt-only, reference-analysis, or finished-frame review task, read [references/color-authorship.md](references/color-authorship.md). Color balance is required; warm-cool contrast is optional.
+- For every Generate, Edit Target or Prompt-only task, read [references/composition-color-lock.md](references/composition-color-lock.md), [references/style-system.md](references/style-system.md) and [references/prompt-compiler.md](references/prompt-compiler.md).
+- For every Generate, Edit Target, Prompt-only or finished-frame review task, read [references/model-consistency.md](references/model-consistency.md) and [references/painterly-continuity.md](references/painterly-continuity.md). The former defines portable invariants; the latter defines connected brush fields and weak-model adapters.
+- For every Generate, Edit Target, Prompt-only or finished-frame review task, read [references/directorial-contrast.md](references/directorial-contrast.md) for permitted macro departures and [references/color-authorship.md](references/color-authorship.md) for scene-owned colour decisions.
 - When any image is supplied, also read [references/source-analysis.md](references/source-analysis.md).
-- When the environment carries the focal event, no character/object anchor is present, or the user permits expressive scene distortion, also read [references/environment-abstraction.md](references/environment-abstraction.md).
+- When a human face is visible, also read [references/facial-control.md](references/facial-control.md) and build the facial packet before compiling the final prompt. This is required for portraits, figures, groups and any cropped face that carries identity or expression.
+- When the environment carries the focal event or the user permits expressive scene distortion, also read [references/environment-abstraction.md](references/environment-abstraction.md).
 - For multiple directions or a series, read [references/variation-engine.md](references/variation-engine.md).
 - After generation/editing, or when reviewing a result, read [references/quality-gate.md](references/quality-gate.md).
-- Read [references/research-basis.md](references/research-basis.md) only when the user asks how the system was derived, wants an audit, or supplies new style references to reconcile.
+- Read [references/research-basis.md](references/research-basis.md) only when the user asks how the system was derived, wants an audit or supplies new style references to reconcile.
 
 ## Source and Reference Boundaries
 
-Assign each supplied image exactly one primary role before prompting: pixel-locked region, edit target, support insert, semantic source, or style reference. Record identity/structure fidelity, transformation mode, scene emphasis, abstraction strength, exposure key, and color-authorship mode separately. Never infer that stronger style means darker exposure, that recognizable identity requires photographic literalness, that an empty environment should remain a conventional realistic landscape, or that this visual family requires a fixed warm-cool/complementary palette.
+Assign every supplied image exactly one primary role: pixel-locked region, edit target, support insert, semantic source or style reference. Record identity/topology fidelity, transformation mode, scene emphasis, abstraction strength, exposure key, composition mode and colour-authorship mode separately.
 
+- Preserve declared identity, count, action, gaze, adjacency, depth order, required text, protected local colours and explicit camera/landmark relations.
+- When a face is visible and identity or expression matters, preserve the head axis, eye-line, gaze, expression cues and relative feature spacing. Simplifying skin texture or lashes never authorizes slanted eyes, an over-wide eye gap, crossed gaze or an off-axis nose/mouth.
+- For an Edit Target, use `Preserve-and-enrich` by default when the source already has effective headroom, negative space, focal scale, horizon, diagonal/current or colour-area hierarchy. Do not tighten the crop, enlarge the subject or lower a bright exposure merely to prove stylization.
+- Use `Directed-restage` only when the user explicitly authorizes Style-first/Expressive/Radical change or the Source Card identifies a real compositional imbalance. Declare one primary macro departure, one supporting move and the anchors that remain fixed.
+- Audit source colour before naming hues. Preserve-and-refine is the default; Rebalance or Re-script only for a stated hierarchy problem or user permission. Warm-cool, complementary, teal-orange and dark exposure are optional, never automatic.
 - Do not promise machine-identical pixels from generative editing. Use deterministic compositing when exact pixels are required, or disclose the limitation.
-- Preserve only the declared recognition-critical invariants before style. Nonessential folds, hardware, foliage, texture, atmospheric detail, and repeated props may be merged, exaggerated, or redesigned when the selected transformation mode allows it.
-- For edit targets, declare pose/action, gaze, prop state, hand contact, orientation, adjacency, occlusion, depth order, landmark relation, key negative space, and dominant motion line as preserved or transformable. Keeping only similar object nouns is not source fidelity.
-- In Style-first/Expressive work, preserve a short anchor set and deliberately transform the remaining scene through one primary macro departure plus one supporting move. The primary move must alter a major area, contour, overlap, focal scale, negative space, light shape, or color-zone relationship at 128–256 px; axis count and surface texture alone do not qualify.
-- Treat source fidelity and source distribution separately. Preserve declared identity, count, action, protected geometry, text, and recognition colors; do not automatically preserve documentary headroom, crop, horizon, incidental asset positions, or local contrast distribution.
-- Record output ratio, crop, headroom, focal scale, exact-versus-relational position, horizon, negative-space share, and colour-area allocation as a separate distribution decision. Do not lock them merely because topology is protected; do not alter them when the user explicitly declares them exact or fixed.
-- Passing avoidance rules is not the positive target. For strong stylization, require one visible quality improvement in crop/focal scale, area/negative space, light/colour topology, or viewing path while keeping the protected topology intact.
-- Assign contrast ownership across focal, supporting, and context tiers. Non-focal regions may become quieter chromatic-gray fields through lower local contrast, microcontrast, edge density, hue noise, and texture frequency, but must retain broad depth, material, and motivated color.
-- From style references, learn attention geometry, value topology, color function, material treatment, edge rhythm, and FX behavior. Exclude characters, text, branding, exact props, runes, locations, and camera layouts.
-- Treat named-style shorthand as a discovery phrase. Compile it into visible decisions; do not leave a protected work's name as the main style instruction in the final image prompt.
+- Do not leave reference characters, text, branding, exact props, locations or camera layouts in the final prompt; learn only abstract visual relationships.
 
 ## Decision Priority
 
-1. User contract, safety, and image-role boundaries
-2. Semantic minimum and declared identity/structure invariants
-3. Selected transformation/abstraction mode, output-distribution permissions, positive quality target, and one dominant focal read
-4. Primary macro departure, supporting move, area/overlap/light/color topology, and viewing path
-5. Scene-owned exposure, contrast ownership, deliberate color authorship, and motivated light
-6. Paint architecture: hierarchical structural planes, structural large marks, material-owned marks, edge hierarchy, and graphic 2D accents/FX
-7. Optional decoration and variant preferences
+1. User contract, safety and image-role boundaries
+2. Semantic minimum, recognition/topology invariants and facial geometry when a face is present
+3. Composition lock: ratio, crop/headroom, focal scale, quiet space, horizon, viewing path and restage permission
+4. Colour lock: exposure key, three value groups, spatial colour roles, protected local colours and one primary contrast axis
+5. Selected transformation, dramatic proposition and one dominant focal read
+6. Permitted macro departure, supporting move and area/overlap/light/colour topology
+7. Painterly continuity: internal colour turns, boundary binding, shared illumination, material marks and edge hierarchy
+8. Optional graphic 2D marks, FX and decoration
 
 ## Workflow
 
 1. Inspect every target/reference image with the available image viewer. If a required image is unavailable, ask for it instead of guessing.
-2. Build the Source Card from [references/source-analysis.md](references/source-analysis.md); separate `observed` from `inferred`, then choose identity fidelity, transformation mode, scene emphasis, abstraction strength, exposure key, and color-authorship mode independently.
-3. Distill recognition anchors from transformable detail. Use [references/positive-quality-anchor.md](references/positive-quality-anchor.md) to separate protected topology from output-distribution permissions, then declare one positive quality target: focal-scale/crop, area/negative-space, light/colour topology, or viewing-path reinforcement. Write the dramatic proposition, primary macro departure, supporting move, contrast-ownership map, optional color-collision decision, and thumbnail difference target from [references/directorial-contrast.md](references/directorial-contrast.md). Use [references/paint-architecture.md](references/paint-architecture.md) to rebuild in a fixed order: protected topology and silhouette; five-to-nine macro masses; unequal major structural planes caused by orientation/light/material/fold mechanics; subordinate transition planes; structural large marks and smaller material-owned marks; sparse accents. For environment-emphasis, define one hero form, one counterform/current, a macro-shape budget, and source-owned transform decisions from [references/environment-abstraction.md](references/environment-abstraction.md). Audit the source palette and build a role-based color plan from [references/color-authorship.md](references/color-authorship.md); choose one primary contrast axis and at most one subordinate axis rather than forcing warm-cool.
-4. Compile a short priority-ordered prompt using [references/prompt-compiler.md](references/prompt-compiler.md). Before model-specific wording, write the portable render contract from [references/model-consistency.md](references/model-consistency.md), including the Paint-Architecture Packet: selective contour language; legal plane causes and unequal topology; focal/support/context mark-density ladder; at least three relevant non-interchangeable material grammars when three or more materials are present; texture-removal result; and the shortest applicable anti-cel, anti-brush-slab, anti-low-poly, or source-template adapter. Do not stack every adapter by default.
-5. Use the runtime's image generation/editing tool once. Pass target images through the tool's actual reference-image mechanism.
-6. Inspect the returned image beside the source at 128–256 px, blurred/thumbnail scale, mid scale, and close scale. Apply [references/quality-gate.md](references/quality-gate.md), the positive acceptance gate in [references/positive-quality-anchor.md](references/positive-quality-anchor.md), the texture-removal/material-swap/continuous-outline/structural-large-mark tests in [references/paint-architecture.md](references/paint-architecture.md), and the contract-conformance test in [references/model-consistency.md](references/model-consistency.md). For Style-first/Expressive edits, fail the result when the macro/colour-block map remains essentially interchangeable with the source even if close-up brushwork is attractive, or when conservative preservation produces a technically safe but visually timid result. Also fail cel-shaded replacement, mechanical polygon mosaics, decorative scenery slabs without volumetric work, universal surface texture, or source edits that retain nouns but lose pose/prop/topology. When comparing different models, judge whether every output passes the same contract; do not use pixel similarity, seed reuse, or an average score as proof of consistency.
-7. If a specific module fails, make at most one targeted correction. Do not regenerate blindly or change unrelated modules.
-8. Return the actual image or path plus a concise fidelity/limitation note. Never claim generation, inspection, or validation that did not occur.
+2. Build the Source Card from [references/source-analysis.md](references/source-analysis.md); separate observed facts from inferences.
+3. Write the Composition Lock and Colour Lock from [references/composition-color-lock.md](references/composition-color-lock.md). Decide `Preserve-and-enrich` or `Directed-restage` before choosing a composition family, macro departure or palette change.
+4. Distill recognition anchors and the directorial proposition. For Directed-restage only, declare one primary macro departure, one supporting move and a thumbnail difference target from [references/directorial-contrast.md](references/directorial-contrast.md). For environment emphasis, define one hero form, one counterform/current and a five-to-nine-mass budget.
+5. Build the portable render contract from [references/model-consistency.md](references/model-consistency.md): canvas/anchors; composition lock; five-to-nine masses; three value groups; spatial colour roles; focal/support/context contrast tiers; shape/plane map; material grammars; edge hierarchy; continuity packet; and anti-filter conditions. When a face is present, add the facial packet and the facial anatomy guard from [references/facial-control.md](references/facial-control.md) without changing the composition or colour lock.
+6. Compile a short priority-ordered prompt with [references/prompt-compiler.md](references/prompt-compiler.md). Put composition/color lock first, continuity second and only the shortest observed adapter last. Never stack every adapter.
+7. Use the runtime's real image generation/editing tool once. Pass target images through its actual reference-image mechanism.
+8. Inspect the returned image beside the source at thumbnail/blur, mid and close scale. Apply [references/quality-gate.md](references/quality-gate.md) and the model-consistency/continuity tests. When a face is present, run the close-scale facial gate in [references/facial-control.md](references/facial-control.md). A result fails when the lock is lost, the image is a collection of attractive blocks, the source remains under a global paint filter, or a face has accidental feature drift.
+9. If one module fails, make at most one targeted correction. A facial-anatomy adapter or other adapter may fix only its named rendering shortcut; it may not change the composition lock, colour lock or exposure. If the facial module fails, use the facial guard once and then report the runtime outside the supported envelope if it still fails.
+10. Return the actual image/path plus a concise fidelity or limitation note. Never claim generation, inspection or validation that did not occur.
 
-Prompt-only and Reference Analysis routes stop before tool execution and clearly say no image was generated or verified.
+Prompt-only and Reference Analysis routes stop before tool execution and clearly state that no image was generated or verified.
 
 ## Output Contract
 
 - **Generate/Edit Target:** requested number of finished images; default one. Include the actual result and mention only material preservation limits or an unresolved quality issue.
-- **Reference Analysis:** observed evidence, inferred intent, fixed system, variable system, sample residue, and a reusable operational prompt.
-- **Prompt-only:** one tool-ready prompt and any required input-role mapping; state that no image was generated or checked.
-- **Failure:** identify the failed contract precisely. Do not present a draft or uninspected output as a pass.
+- **Reference Analysis:** observed evidence, inferred intent, fixed system, variable system, sample residue and one reusable operational prompt.
+- **Prompt-only:** one tool-ready prompt and any required input-role map; state that no image was generated or checked.
+- **Failure:** identify the failed contract precisely. Do not present an uninspected draft as a pass.

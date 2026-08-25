@@ -1,4 +1,4 @@
 interface:
-  display_name: "Painterly Frame Skill"
-  short_description: "Painterly frames with authored focus and colour"
-  default_prompt: "Use $painterly-frame-skill to preserve the supplied image's declared identity and topology while authoring a stronger crop, focal scale, colour structure, and material-owned paint marks where allowed."
+  display_name: "Painterly Frame Universal"
+  short_description: "Source-aware colour, composition and connected brushwork"
+  default_prompt: "Use $painterly-frame-universal to turn the supplied image into an original painterly frame: lock composition and scene-owned colour first, then connect the forms with shared-light brushwork while preserving declared anchors."

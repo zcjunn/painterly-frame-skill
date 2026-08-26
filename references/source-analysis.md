@@ -1,6 +1,6 @@
 # Source Analysis and Image Roles
 
-Read this whenever an image is supplied.
+Read this whenever an image is supplied. Use the original file's pixel dimensions for the canvas decision; the application's resized preview is reference-only and must not determine the output ratio.
 
 ## Assign Roles Before Style
 
@@ -62,8 +62,9 @@ Record compactly:
 
 ```yaml
 file_facts:
-  size: observed dimensions if available
-  ratio: observed aspect ratio
+  size: observed original pixel dimensions
+  ratio: exact width:height from the original file
+  output_ratio_policy: inherit the exact source ratio unless the user explicitly requests an override
   orientation: landscape / portrait / square
   quality_limits: blur, crop, occlusion, compression
 image_role: one primary role

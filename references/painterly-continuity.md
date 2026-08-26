@@ -10,6 +10,7 @@ Do not treat later cross-model precision as permission to make every frame busie
 
 - A small subject inside a large sky, field, wall, fog bank, water body or darkness can be the strongest composition.
 - Preserve an already effective source ratio, headroom, quiet-area share and subject scale. Change them only when the user allows it and the change clearly improves the first read.
+- For a supplied photo, preserve the exact original pixel aspect ratio by default. Measure width and height from the source file, not the resized preview, and do not substitute a stock canvas; if the runtime lacks that exact preset, use the closest supported ratio without stretch or unintended crop and disclose it.
 - A macro departure may reshape light, colour adjacency, cloud volume, field current or viewing path inside the existing distribution. It does not have to enlarge the subject or replace the crop.
 - Painterly richness comes from connected colour turns, edge variety and directed marks—not from extra objects, uniform texture, more polygons or maximum detail.
 

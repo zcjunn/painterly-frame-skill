@@ -4,7 +4,7 @@ Compile research and Source Cards into visible pixel decisions. Keep the final p
 
 ## Compiler Order
 
-1. **Canvas:** output count, aspect ratio, orientation, finished borderless image, shot scale.
+1. **Canvas:** output count, exact source-derived pixel aspect ratio (or an explicit user override), orientation, finished borderless image, shot scale.
 2. **Source contract:** image role, semantic minimum, recognition anchors, transformable elements, identity fidelity, transformation mode, scene emphasis, abstraction strength, exposure key, color-authorship mode, and allowed changes.
 3. **Composition lock:** ratio, crop/headroom, focal scale, quiet-area share, horizon, major diagonal/current, viewing path, topology anchors, and whether distribution is Preserve-and-enrich or Directed-restage.
 4. **Colour lock:** exposure key; source strengths/problems; Preserve-and-refine, Rebalance, or Re-script; three value groups; spatial colour roles; protected local colours; one primary contrast axis; optional collision with owners and function.
@@ -24,7 +24,7 @@ Write one model-neutral render contract before adding optional phrasing for a pa
 
 ```text
 Portable render contract:
-- Canvas and anchors: [count, ratio, orientation, identity/topology invariants].
+- Canvas and anchors: [count, exact source-derived ratio or explicit override, orientation, identity/topology invariants].
 - Composition lock: [Preserve-and-enrich or Directed-restage; crop/headroom, focal scale, quiet-area share, horizon, viewing path, permitted change].
 - Macro map: [five-to-nine named interlocking masses and their area/overlap relationship].
 - Value and colour lock: [exposure key; three value groups; dominant field, structural counter, focal apex, neutral bridge; protected colours; primary contrast axis].
@@ -42,7 +42,7 @@ Treat this block as required decisions, not prose to copy verbatim. Put recognit
 ## Base Generate Template
 
 ```text
-Create exactly one original [ratio/orientation] painterly-animation keyframe, a finished borderless image.
+Create exactly one original [exact source-derived ratio/orientation] painterly-animation keyframe, a finished borderless image. For a supplied photo, use its original pixel width:height; do not default to 3:2, 2:3, 16:9 or square unless the user explicitly asks.
 
 Scene and verb: [original subject, environment, one readable action/relationship]. Keep the focal event perceptually dominant inside the middle attention zone through [isolation/value/chroma/edge/perspective], while [quiet/occluding region] occupies a substantial part of the frame. Use [one composition family] and a believable spatial camera with clear foreground, middle, and atmosphere.
 
@@ -66,7 +66,7 @@ Replace brackets. Remove irrelevant clauses rather than leaving generic filler.
 Lead with change plus preservation:
 
 ```text
-Edit Image 1 into one finished [ratio] painterly-animation keyframe.
+Edit Image 1 into one finished [exact source-derived ratio] painterly-animation keyframe. Derive the ratio from the original input pixels and preserve it unless the user explicitly requests another canvas; do not use a stock preset by habit.
 
 Preserve as recognition anchors: [identity, count, relationship, gesture, signature silhouette, protected geometry, wardrobe/object color anchors, required text]. Do not add or remove subjects.
 Composition/color lock: use Preserve-and-enrich unless the user explicitly asks for restaging. Keep [ratio, crop/headroom, focal scale, quiet-area share, horizon, major diagonal/current and viewing path] and [high/mid/low]-key exposure. Audit the source palette; use [Preserve-and-refine/Rebalance/Re-script], [primary contrast axis], spatial [dominant/structural/focal/neutral] roles and protected [local-colour anchors].
@@ -96,7 +96,7 @@ For a **Style-first environment-emphasis** remake, use this explicit abstraction
 ```text
 Rebuild Image 1 as one finished [ratio] painterly animation environment keyframe. Use Medium/Low structural fidelity, Style-first transformation, [Expressive/Radical] abstraction, and [High/Mid/Low]-key exposure. Do not preserve scenic realism beneath painted texture.
 
-Preserve only: [principal landform/structure, foreground-middle-distance relationship, dominant direction, protected geometry/color anchors, ratio if required]. Treat [tree/rock/window/wave/foliage/rubble/reflection counts and minor positions] as transformable; merge them into a few rhythm groups.
+Preserve only: [principal landform/structure, foreground-middle-distance relationship, dominant direction, protected geometry/color anchors, exact source-derived ratio unless explicitly overridden]. Treat [tree/rock/window/wave/foliage/rubble/reflection counts and minor positions] as transformable; merge them into a few rhythm groups.
 
 Environmental drama: make [hero form] [visual verb] against [counterform/current]. Reduce the frame to about five to nine interlocking macro masses. Make [primary macro departure] so [major area/contour/overlap/light/color relationship] changes at thumbnail scale; reinforce it with [supporting move] [plus a second primary-level departure for Radical]. Permit controlled restaging of [crop/horizon/overlap/spacing/local perspective] without breaking the preserved anchors. Make [focal event] the first read through [two cues] and keep [quiet field] intentionally broad.
 
@@ -136,7 +136,7 @@ Do not invoke an image tool unless the user also asks for a result.
 ## Tool Execution
 
 - Use the runtime's real image generation/editing mechanism; attach every Edit Target and Support Insert through tool parameters, not prose alone.
-- Use the requested ratio when supported. If a backend supports only nearby sizes, preserve composition intent and disclose the actual output.
+- For image-supplied tasks, use the measured source pixel ratio by default; only an explicit user override may change it. If a backend supports only nearby sizes, choose the closest supported ratio without stretch, padding or unintended crop, preserve composition intent, and disclose the actual output ratio.
 - Default to one result. Generate a batch only when requested.
 - After tool output, inspect the actual image before describing it as successful.
 

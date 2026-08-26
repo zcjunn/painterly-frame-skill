@@ -1,11 +1,11 @@
 ---
-name: painterly-frame-skill
-description: Create or edit original painterly frames with initial-version composition and colour control plus portable connected brushwork. Use this skill whenever a photo or prompt should become a strongly stylized hand-painted frame, when another image model produces pasted colour blocks, cutout subjects, flat cel bands, global texture or malformed facial features, or when a finished painterly frame needs source-aware composition, authored colour, shared light, face geometry and material-specific QA. Preserve a strong source distribution by default; open expressive restaging only when the user or source diagnosis permits it. Do not use for faithful photo correction, pixel-locked preservation, or copying a named work, character, logo or exact frame.
+name: painterly-frame
+description: Create or edit original painterly frames with initial-version composition and colour control plus portable connected brushwork. For supplied photos, inherit each input's exact pixel aspect ratio by default. Use this skill whenever a photo or prompt should become a strongly stylized hand-painted frame, when another image model produces pasted colour blocks, cutout subjects, flat cel bands, global texture or malformed facial features, or when a finished painterly frame needs source-aware composition, authored colour, shared light, face geometry and material-specific QA. Preserve a strong source distribution by default; open expressive restaging only when the user or source diagnosis permits it. Do not use for faithful photo correction, pixel-locked preservation, or copying a named work, character, logo or exact frame.
 ---
 
-# Painterly Frame Skill
+# Painterly Frame
 
-Translate shorthand such as “hand-painted animated film” or “painterly remake” into an original, observable visual system. The universal contract has two layers: first lock the picture's composition, value and colour authorship; then make the locked design read as one connected painted field across different image models.
+Translate shorthand such as “hand-painted animated film” or “painterly remake” into an original, observable visual system. The universal contract has two layers: first lock the picture's composition, value and colour authorship; then make the locked design read as one connected painted field across different image models. For photo inputs, the source pixel aspect ratio is a first-class composition invariant, not a generic 3:2, 2:3 or 16:9 suggestion.
 
 Treat any demonstrated photo or failed output as a regression case, not a content template. Generalize the failure class across portraits, environments, architecture, products, creatures and action scenes; keep subject-specific materials and compositions conditional.
 
@@ -38,6 +38,8 @@ Default to one finished borderless image when the user asks to make an image and
 Assign every supplied image exactly one primary role: pixel-locked region, edit target, support insert, semantic source or style reference. Record identity/topology fidelity, transformation mode, scene emphasis, abstraction strength, exposure key, composition mode and colour-authorship mode separately.
 
 - Preserve declared identity, count, action, gaze, adjacency, depth order, required text, protected local colours and explicit camera/landmark relations.
+- Measure each supplied image's actual pixel width and height (not a resized chat preview). If the user has not explicitly requested a different canvas, inherit that exact source aspect ratio for the output. Never silently substitute a stock ratio such as 3:2, 2:3, 16:9 or square; when multiple images are processed independently, derive the ratio separately for each target.
+- If the runtime only offers preset canvases, choose the closest supported ratio without stretching, padding or unintended crop, and disclose the actual output ratio.
 - When a face is visible and identity or expression matters, preserve the head axis, eye-line, gaze, expression cues and relative feature spacing. Simplifying skin texture or lashes never authorizes slanted eyes, an over-wide eye gap, crossed gaze or an off-axis nose/mouth.
 - For an Edit Target, use `Preserve-and-enrich` by default when the source already has effective headroom, negative space, focal scale, horizon, diagonal/current or colour-area hierarchy. Do not tighten the crop, enlarge the subject or lower a bright exposure merely to prove stylization.
 - Use `Directed-restage` only when the user explicitly authorizes Style-first/Expressive/Radical change or the Source Card identifies a real compositional imbalance. Declare one primary macro departure, one supporting move and the anchors that remain fixed.
@@ -58,13 +60,13 @@ Assign every supplied image exactly one primary role: pixel-locked region, edit 
 
 ## Workflow
 
-1. Inspect every target/reference image with the available image viewer. If a required image is unavailable, ask for it instead of guessing.
+1. Inspect every target/reference image with the available image viewer and record its actual pixel dimensions and source-derived ratio. If a required image is unavailable, ask for it instead of guessing.
 2. Build the Source Card from [references/source-analysis.md](references/source-analysis.md); separate observed facts from inferences.
-3. Write the Composition Lock and Colour Lock from [references/composition-color-lock.md](references/composition-color-lock.md). Decide `Preserve-and-enrich` or `Directed-restage` before choosing a composition family, macro departure or palette change.
+3. Write the Composition Lock and Colour Lock from [references/composition-color-lock.md](references/composition-color-lock.md), carrying the measured source ratio into the Canvas line unless the user explicitly overrides it. Decide `Preserve-and-enrich` or `Directed-restage` before choosing a composition family, macro departure or palette change.
 4. Distill recognition anchors and the directorial proposition. For Directed-restage only, declare one primary macro departure, one supporting move and a thumbnail difference target from [references/directorial-contrast.md](references/directorial-contrast.md). For environment emphasis, define one hero form, one counterform/current and a five-to-nine-mass budget.
-5. Build the portable render contract from [references/model-consistency.md](references/model-consistency.md): canvas/anchors; composition lock; five-to-nine masses; three value groups; spatial colour roles; focal/support/context contrast tiers; shape/plane map; material grammars; edge hierarchy; continuity packet; and anti-filter conditions. When a face is present, add the facial packet and the facial anatomy guard from [references/facial-control.md](references/facial-control.md) without changing the composition or colour lock.
+5. Build the portable render contract from [references/model-consistency.md](references/model-consistency.md): source-derived canvas/anchors; composition lock; five-to-nine masses; three value groups; spatial colour roles; focal/support/context contrast tiers; shape/plane map; material grammars; edge hierarchy; continuity packet; and anti-filter conditions. When a face is present, add the facial packet and the facial anatomy guard from [references/facial-control.md](references/facial-control.md) without changing the composition or colour lock.
 6. Compile a short priority-ordered prompt with [references/prompt-compiler.md](references/prompt-compiler.md). Put composition/color lock first, continuity second and only the shortest observed adapter last. Never stack every adapter.
-7. Use the runtime's real image generation/editing tool once. Pass target images through its actual reference-image mechanism.
+7. Use the runtime's real image generation/editing tool once. Pass target images through its actual reference-image mechanism and request the measured source ratio; do not rely on the runtime's default canvas.
 8. Inspect the returned image beside the source at thumbnail/blur, mid and close scale. Apply [references/quality-gate.md](references/quality-gate.md) and the model-consistency/continuity tests. When a face is present, run the close-scale facial gate in [references/facial-control.md](references/facial-control.md). A result fails when the lock is lost, the image is a collection of attractive blocks, the source remains under a global paint filter, or a face has accidental feature drift.
 9. If one module fails, make at most one targeted correction. A facial-anatomy adapter or other adapter may fix only its named rendering shortcut; it may not change the composition lock, colour lock or exposure. If the facial module fails, use the facial guard once and then report the runtime outside the supported envelope if it still fails.
 10. Return the actual image/path plus a concise fidelity or limitation note. Never claim generation, inspection or validation that did not occur.
@@ -73,7 +75,7 @@ Prompt-only and Reference Analysis routes stop before tool execution and clearly
 
 ## Output Contract
 
-- **Generate/Edit Target:** requested number of finished images; default one. Include the actual result and mention only material preservation limits or an unresolved quality issue.
+- **Generate/Edit Target:** requested number of finished images; default one. For each supplied photo, the finished canvas must inherit the measured source aspect ratio unless the user explicitly overrides it. Include the actual result and mention only material preservation limits or an unresolved quality issue.
 - **Reference Analysis:** observed evidence, inferred intent, fixed system, variable system, sample residue and one reusable operational prompt.
 - **Prompt-only:** one tool-ready prompt and any required input-role map; state that no image was generated or checked.
 - **Failure:** identify the failed contract precisely. Do not present an uninspected draft as a pass.

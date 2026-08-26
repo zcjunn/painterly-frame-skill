@@ -8,7 +8,7 @@ Lock the decisions that define the visual system. Allow the model to vary only t
 
 ### Required invariants
 
-1. **Semantic and topology contract** — output count, ratio/orientation, subject identity/count/action, protected objects and colours, depth order, adjacency, and any declared camera or landmark relationship. When a human face is visible, also lock head axis, eye-line, gaze, expression cues and relative feature spacing.
+1. **Semantic and topology contract** — output count, ratio/orientation, subject identity/count/action, protected objects and colours, depth order, adjacency, and any declared camera or landmark relationship. For a supplied photo, ratio means the exact original pixel width:height unless the user explicitly overrides it; never silently replace it with a preset or preview ratio. When a human face is visible, also lock head axis, eye-line, gaze, expression cues and relative feature spacing.
 2. **Composition-distribution contract** — record Preserve-and-enrich or Directed-restage, crop/headroom, focal scale, quiet-area share, horizon, dominant diagonal/current, viewing path and any permitted macro change. A strong source distribution may not be silently tightened or enlarged.
 3. **Macro-mass contract** — name roughly five to nine interlocking masses and their area, contour, overlap, direction or negative-space relationship. For Directed-restage, state the primary macro departure and supporting move; for Preserve-and-enrich, state the light/colour/edge/current enrichment instead.
 4. **Value and colour-lock contract** — define exposure key, three large value groups, spatial owners for dominant field, structural counter, focal apex and neutral bridge, one primary contrast axis and protected local colours. Lock colour function and hierarchy, not exact RGB values.
@@ -35,7 +35,7 @@ Allowed variation becomes a failure when it changes the first read, breaks a rec
 Before writing the final generation prompt, record this compact contract:
 
 ```text
-Canvas/anchors: [count, ratio, identity, topology, protected colours; facial packet when present]
+Canvas/anchors: [count, exact source-derived ratio or explicit override, orientation, identity, topology, protected colours; facial packet when present]
 Composition lock: [Preserve-and-enrich or Directed-restage; crop/headroom, focal scale, quiet-area share, horizon, viewing path, permitted change]
 Macro map: [5–9 masses, enrichment or primary departure, supporting move, thumbnail target]
 Value/colour lock: [exposure key; dominant/support/apex; dominant field / structural counter / focal apex / neutral bridge; primary axis]
@@ -54,7 +54,7 @@ The final prompt may be shorter, but it must express every populated line as an 
 
 When actual multi-model comparison is requested:
 
-1. Use the same source image, Source Card, composition/color lock, portable render contract, output count, and aspect ratio for every model.
+1. Use the same source image, Source Card, composition/color lock, portable render contract, output count, and exact source-derived aspect ratio for every model.
 2. Keep required decisions identical; translate only the minimum syntax needed by each runtime.
 3. Inspect every output at thumbnail, mid, and close scale with [quality-gate.md](quality-gate.md).
 4. Mark each required invariant pass/fail. Do not average away a failure and do not select consistency by visual similarity alone.

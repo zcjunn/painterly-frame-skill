@@ -1,5 +1,5 @@
 {
-  "skill": "painterly-frame-skill",
+  "skill": "painterly-frame",
   "purpose": "Effect and regression cases for initial-version composition/color locks, source-aware abstraction, connected brushwork, authored colour, material-specific marks, multi-scale quality gates, and truthful output claims.",
   "cases": [
     {
@@ -24,6 +24,17 @@
         "Lock ratio, headroom, low horizon, small focal scale, quiet-area share and viewing path; enrich through light shape, colour adjacency, edge rhythm and connected strokes.",
         "Keep the source exposure key and spatial colour hierarchy instead of adding a dark grade or formulaic warm-cool split.",
         "Use internal colour turns, neighbour connections and shared light so the person is not a pasted sticker."
+      ]
+    },
+    {
+      "id": "inherit-source-aspect-ratio",
+      "request": "把这张照片转成绘画动画画面。除非我另说，请严格沿用原始输入照片的画面比例，不要自动改成 3:2、2:3 或 16:9。",
+      "input_contract": "One supplied photo whose original pixel dimensions, not the resized preview, define the output canvas.",
+      "expected_route": "Edit Target",
+      "expected_behavior": [
+        "Measure the original file width and height and record the exact source aspect ratio.",
+        "Inherit that ratio as a composition invariant unless the user explicitly overrides it; do not silently choose a stock preset.",
+        "If the runtime only supports nearby presets, avoid stretch, padding and unintended crop, then disclose the actual output ratio."
       ]
     },
     {

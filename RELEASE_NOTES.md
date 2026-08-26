@@ -1,3 +1,23 @@
+# Painterly Frame — v1.0.2
+
+This release makes the source photo's original pixel aspect ratio a first-class composition invariant and restores the concise public skill identifier `painterly-frame`.
+
+## Included
+
+- Inherits each supplied photo's exact width:height ratio by default, measured from the original file rather than a resized preview.
+- Prevents silent fallback to stock 3:2, 2:3, 16:9 or square canvases; preset-only runtimes must choose the closest ratio without stretch, padding or unintended crop and disclose it.
+- Applies the ratio rule consistently to source analysis, composition/color lock, portable cross-model contract, continuity guidance, prompt compilation, eval metadata and UI invocation.
+- Renames the public skill identifier, explicit invocation and UI display name to `painterly-frame`.
+- Keeps the v1.0.1 initial composition/color priorities, connected brushwork contract, facial controls and personal non-commercial license unchanged.
+
+## Deliberately not guaranteed
+
+- Exact output dimensions when a runtime exposes only fixed presets; the selected preset and any resulting ratio difference must be reported.
+- Identical pixels, seeds, brush stamps or facial microgeometry across different models.
+- A user-requested alternate canvas: an explicit user override still takes precedence over source-ratio inheritance.
+
+---
+
 # Painterly Frame Skill — v1.0.1
 
 This patch release keeps the universal composition/colour lock and connected-painterly continuity contract while restoring the public skill identifier to `painterly-frame-skill`.

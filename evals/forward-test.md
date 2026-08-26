@@ -1,4 +1,4 @@
-# Painterly Frame Skill — forward contract test
+# Painterly Frame — forward contract test
 
 ## Input scenario
 
@@ -10,7 +10,7 @@ One high-key outdoor portrait with a broad blue-white sky, low horizon, small se
 
 ## Expected portable decisions
 
-- Composition lock keeps ratio, crop/headroom, focal scale class, low horizon, quiet-area share and viewing path.
+- Composition lock inherits the original input pixel ratio (unless explicitly overridden) and keeps crop/headroom, focal scale class, low horizon, quiet-area share and viewing path.
 - Colour lock keeps the source high-key exposure, dominant sky field, supporting green ground, protected wardrobe/skin colours and one primary value/analogous contrast axis.
 - No subject enlargement, dark grade, forced complementary split, new object or global LUT.
 - Continuity then binds sky/subject/ground with mixed edges, contact/reflected colour/shared light and a cloud-to-field stroke current.

@@ -1,5 +1,5 @@
 {
-  "skill": "painterly-frame-skill",
+  "skill": "painterly-frame",
   "purpose": "Natural-language discovery cases. Run these separately from effect evaluation; do not name or explicitly invoke the skill in the request.",
   "should_trigger": [
     {

@@ -1,6 +1,6 @@
-# Painterly Frame Skill
+# Painterly Frame
 
-`Painterly Frame Skill` 是一个把照片或文字场景转译成原创绘画动画画面的通用 skill。它先锁定初始版本最重要的构图、曝光与色彩作者性，再用连续、互相连接的笔触和材质差异完成画面，避免弱模型把结果做成色块拼贴或全局滤镜。
+`Painterly Frame` 是一个把照片或文字场景转译成原创绘画动画画面的通用 skill。它先锁定初始版本最重要的构图、曝光与色彩作者性，并默认继承输入照片的原始像素比例，再用连续、互相连接的笔触和材质差异完成画面，避免弱模型把结果做成色块拼贴或全局滤镜。
 
 > [!IMPORTANT]
 > **仅限个人、非商业使用。** 不允许销售、收费生成、订阅服务、代做、咨询、培训、SaaS/API、公司或客户项目及其他商业化用途。任何商业使用均须事先获得 zcjun（GitHub：[@zcjunn](https://github.com/zcjunn)）的明确书面许可。详见 [个人非商业许可证](LICENSE)。
@@ -30,7 +30,7 @@
 
 ## English Introduction
 
-`Painterly Frame Skill` is a source-aware image transformation skill. It first locks composition, exposure and scene-owned colour, then turns the locked design into an original painterly animated frame with connected brush fields and material-specific marks instead of applying a generic filter.
+`Painterly Frame` is a source-aware image transformation skill. It first locks composition, exposure and scene-owned colour, inherits the supplied photo's exact pixel aspect ratio by default, then turns the locked design into an original painterly animated frame with connected brush fields and material-specific marks instead of applying a generic filter.
 
 ![Painterly Frame English workflow](assets/painterly-frame-flow-en.png)
 
@@ -58,7 +58,7 @@ Do not use it to copy a named work, character, logo, exact frame or protected pr
 
 推荐至少说明四件事：
 
-1. **必须保留的锚点**：人物身份、人数、动作、山峰位置、地平线、建筑关系、文字等。
+1. **必须保留的锚点**：人物身份、人数、动作、山峰位置、地平线、建筑关系、文字等；未另行指定时，输出画面比例继承输入照片的原始像素比例。
 2. **允许改变的范围**：仅用户授权的主体放大、前景遮挡、负空间重组、重复元素合并、光形重构或色彩重脚本；未授权的 Edit Target 默认保留原分布。
 3. **第一视觉读取**：观众最先看到什么，或希望画面产生什么压力与方向。
 4. **色彩倾向**：保留原色、重新平衡、或完全重写；是否允许色彩碰撞。冷暖对比不是必选项。
@@ -68,7 +68,7 @@ Do not use it to copy a named work, character, logo, exact frame or protected pr
 也可以直接写：
 
 ```text
-$painterly-frame-skill
+$painterly-frame
 ```
 
 然后补充输入图、保留锚点、抽象程度和输出要求。
@@ -76,7 +76,7 @@ $painterly-frame-skill
 ### 3. 可复制的请求模板
 
 ```text
-使用 $painterly-frame-skill。
+使用 $painterly-frame。
 把这张图转成一张原创绘画动画关键帧，输出一张无边框成片。
 
 必须保留：{人物/主体/地标/位置/动作/比例}
@@ -132,15 +132,15 @@ See [Model Consistency Contract](references/model-consistency.md) for the full p
 将本目录放入 skills 目录即可：
 
 ```bash
-git clone https://github.com/zcjunn/painterly-frame-skill.git ~/.codex/skills/painterly-frame-skill
+git clone https://github.com/zcjunn/painterly-frame-skill.git ~/.codex/skills/painterly-frame
 ```
 
-安装后可用自然语言自动触发，或显式写 `$painterly-frame-skill`。
+安装后可用自然语言自动触发，或显式写 `$painterly-frame`。
 
 ## 项目结构 / Project Structure
 
 ```text
-painterly-frame-skill/
+painterly-frame/
 ├── SKILL.md                  # 运行入口：触发范围、路由、主流程与验收契约
 ├── agents/openai.yaml        # UI 名称、简述和默认调用提示
 ├── references/               # 按任务条件读取的视觉系统与质量标准

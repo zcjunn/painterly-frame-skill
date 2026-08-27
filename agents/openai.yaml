@@ -1,4 +1,4 @@
 interface:
   display_name: "Painterly Frame"
-  short_description: "Source-aware colour, composition and connected brushwork"
-  default_prompt: "Use $painterly-frame to turn the supplied image into an original painterly frame: inherit the source photo's exact aspect ratio, lock composition and scene-owned colour first, then connect the forms with shared-light brushwork while preserving declared anchors."
+  short_description: "Source-aware composition and brushwork; best with gpt-5.6 Luna-极高"
+  default_prompt: "Use $painterly-frame to turn the supplied image into an original painterly frame: inherit the source photo's exact aspect ratio, lock composition and scene-owned colour first, then connect the forms with shared-light brushwork while preserving declared anchors. When available, prefer gpt-5.6 Luna-极高; model performance affects the generated image's quality and fine detail."

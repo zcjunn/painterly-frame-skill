@@ -2,6 +2,9 @@
 
 `Painterly Frame` 是一个把照片或文字场景转译成原创绘画动画画面的通用 skill。它先锁定初始版本最重要的构图、曝光与色彩作者性，并默认继承输入照片的原始像素比例，再用连续、互相连接的笔触和材质差异完成画面，避免弱模型把结果做成色块拼贴或全局滤镜。
 
+> [!TIP]
+> **模型建议：** 如果运行环境支持选择模型，优先使用 `gpt-5.6 Luna-极高`。模型的性能会直接影响画面的生成效果和细节表现，包括构图执行、笔触连续性、材质、人物五官与空间层次；更弱或不同的模型可能产生明显不同的结果。
+
 > [!IMPORTANT]
 > **仅限个人、非商业使用。** 不允许销售、收费生成、订阅服务、代做、咨询、培训、SaaS/API、公司或客户项目及其他商业化用途。任何商业使用均须事先获得 zcjun（GitHub：[@zcjunn](https://github.com/zcjunn)）的明确书面许可。详见 [个人非商业许可证](LICENSE)。
 >
@@ -31,6 +34,9 @@
 ## English Introduction
 
 `Painterly Frame` is a source-aware image transformation skill. It first locks composition, exposure and scene-owned colour, inherits the supplied photo's exact pixel aspect ratio by default, then turns the locked design into an original painterly animated frame with connected brush fields and material-specific marks instead of applying a generic filter.
+
+> [!TIP]
+> **Model recommendation:** When model selection is available, prefer `gpt-5.6 Luna-极高`. Model capability directly affects the generated image's overall quality and fine detail, including composition execution, brush continuity, materials, facial geometry and depth; weaker or different models may produce visibly different results.
 
 ![Painterly Frame English workflow](assets/painterly-frame-flow-en.png)
 
@@ -132,7 +138,7 @@ See [Model Consistency Contract](references/model-consistency.md) for the full p
 将本目录放入 skills 目录即可：
 
 ```bash
-git clone https://github.com/zcjunn/painterly-frame-skill.git ~/.codex/skills/painterly-frame
+git clone https://github.com/zcjunn/painterly-frame.git ~/.codex/skills/painterly-frame
 ```
 
 安装后可用自然语言自动触发，或显式写 `$painterly-frame`。
@@ -161,6 +167,6 @@ The repository uses progressive disclosure: discovery metadata selects the skill
 
 ## 许可证 / License
 
-本项目采用自定义的 [Painterly Frame Skill 个人非商业许可证](LICENSE)。它允许自然人为了个人学习、研究、试验或兴趣免费使用和修改，但不允许任何商业、组织或客户用途，也不允许将本 Skill 或其生成服务用于收费。商业使用须事先获得 zcjun 的明确书面许可。
+本项目采用自定义的 [Painterly Frame 个人非商业许可证](LICENSE)。它允许自然人为了个人学习、研究、试验或兴趣免费使用和修改，但不允许任何商业、组织或客户用途，也不允许将本项目或其生成服务用于收费。商业使用须事先获得 zcjun 的明确书面许可。
 
-This project uses a custom [Painterly Frame Skill Personal Non-Commercial License](LICENSE). It is not an open-source license: personal non-commercial use is permitted, while commercial, organizational, client, paid-generation, subscription, consulting, training, SaaS/API, and monetized-output uses require prior explicit written permission from zcjun.
+This project uses a custom [Painterly Frame Personal Non-Commercial License](LICENSE). It is not an open-source license: personal non-commercial use is permitted, while commercial, organizational, client, paid-generation, subscription, consulting, training, SaaS/API, and monetized-output uses require prior explicit written permission from zcjun.

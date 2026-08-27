@@ -1,3 +1,16 @@
+# Painterly Frame — v1.0.3
+
+This release makes `painterly-frame` the canonical repository and public name, and documents the recommended runtime for the best image-generation quality.
+
+## Included
+
+- Renames the GitHub repository from `painterly-frame-skill` to `painterly-frame`.
+- Removes “Skill” from the public product name and the personal non-commercial license title.
+- Recommends `gpt-5.6 Luna-极高` when model selection is available.
+- Clarifies that model performance directly affects overall image generation quality and fine detail.
+
+---
+
 # Painterly Frame — v1.0.2
 
 This release makes the source photo's original pixel aspect ratio a first-class composition invariant and restores the concise public skill identifier `painterly-frame`.

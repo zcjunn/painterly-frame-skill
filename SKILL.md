@@ -1,6 +1,6 @@
 ---
 name: painterly-frame
-description: Create or edit original painterly frames with initial-version composition and colour control plus portable connected brushwork. For supplied photos, inherit each input's exact pixel aspect ratio by default. Use this skill whenever a photo or prompt should become a strongly stylized hand-painted frame, when another image model produces pasted colour blocks, cutout subjects, flat cel bands, global texture or malformed facial features, or when a finished painterly frame needs source-aware composition, authored colour, shared light, face geometry and material-specific QA. Preserve a strong source distribution by default; open expressive restaging only when the user or source diagnosis permits it. Do not use for faithful photo correction, pixel-locked preservation, or copying a named work, character, logo or exact frame.
+description: Create or edit original painterly frames with initial-version composition and colour control plus portable connected brushwork. For supplied photos, inherit each input's exact pixel aspect ratio by default. Use this skill whenever a photo or prompt should become a strongly stylized hand-painted frame, when another image model produces pasted colour blocks, cutout subjects, flat cel bands, global texture or malformed facial features, or when a finished painterly frame needs source-aware composition, authored colour, shared light, face geometry and material-specific QA. For best results, prefer gpt-5.6 Luna-极高 when available; model performance directly affects the generated image's overall quality and fine detail. Preserve a strong source distribution by default; open expressive restaging only when the user or source diagnosis permits it. Do not use for faithful photo correction, pixel-locked preservation, or copying a named work, character, logo or exact frame.
 ---
 
 # Painterly Frame
@@ -8,6 +8,12 @@ description: Create or edit original painterly frames with initial-version compo
 Translate shorthand such as “hand-painted animated film” or “painterly remake” into an original, observable visual system. The universal contract has two layers: first lock the picture's composition, value and colour authorship; then make the locked design read as one connected painted field across different image models. For photo inputs, the source pixel aspect ratio is a first-class composition invariant, not a generic 3:2, 2:3 or 16:9 suggestion.
 
 Treat any demonstrated photo or failed output as a regression case, not a content template. Generalize the failure class across portraits, environments, architecture, products, creatures and action scenes; keep subject-specific materials and compositions conditional.
+
+## Recommended Model
+
+When the runtime allows model selection, prefer `gpt-5.6 Luna-极高` for this skill. The model's capability directly affects the image-generation result and the fidelity of composition, connected brushwork, material rendering, facial geometry and fine detail; weaker or different models may produce visibly different results even when given the same contract.
+
+如果运行环境支持选择模型，优先推荐 `gpt-5.6 Luna-极高`。模型本身的性能会直接影响画面的生成效果与细节表现，也会影响构图执行、连续笔触、材质、人物五官和空间层次；即使使用同一份视觉合同，不同或较弱的模型仍可能产生明显差异。
 
 ## Route the Request
 

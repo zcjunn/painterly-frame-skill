@@ -1,6 +1,6 @@
 ---
 name: painterly-frame
-description: Create or edit original painterly frames with initial-version composition and colour control plus portable connected brushwork. For supplied photos, inherit each input's exact pixel aspect ratio by default. Use this skill whenever a photo or prompt should become a strongly stylized hand-painted frame, when another image model produces pasted colour blocks, cutout subjects, flat cel bands, global texture or malformed facial features, or when a finished painterly frame needs source-aware composition, authored colour, shared light, face geometry and material-specific QA. For best results, prefer gpt-5.6 Luna-极高 when available; model performance directly affects the generated image's overall quality and fine detail. Preserve a strong source distribution by default; open expressive restaging only when the user or source diagnosis permits it. Do not use for faithful photo correction, pixel-locked preservation, or copying a named work, character, logo or exact frame.
+description: Create or edit exactly one original painterly frame with composition, colour, connected brushwork, shared light, face geometry and material-specific control. For supplied photos, inherit the exact pixel aspect ratio and preserve a strong source distribution unless expressive restaging is authorized. Use when a photo or prompt should become one hand-painted frame, or when a result has pasted blocks, cutout subjects, flat cel bands, global texture or malformed faces. Prefer gpt-5.6 Luna-极高 when available. Do not use as the page, panel-count, camera, pose or layout controller for photo-derived comic pages, 漫画组图, storyboards, sequences or requests for three or more panels; route those to photo-to-comic and contribute rendering methods only. Do not use for faithful photo correction, pixel-locked preservation or copying a named work, character, logo or exact frame.
 ---
 
 # Painterly Frame
@@ -24,6 +24,12 @@ Choose the smallest route that satisfies the request.
 - **Reference Analysis:** Extract evidence, fixed rules, variables and sample residue. Do not generate unless asked.
 - **Prompt-only:** Return one executable prompt. Do not generate or claim visual inspection.
 - **Analyze + Generate:** Analyze references, discard sample residue and create a different subject/composition.
+
+### Collaboration boundary with `photo-to-comic`
+
+When a request asks for a photo-derived comic page, 漫画组图, 分镜, sequence, storyboard, or at least three panels, `photo-to-comic` owns the outer `2:3` page, panel count, panel geometry, shot scales, camera positions, actions, poses, gaze, expressions, and narrative order. In that combined route, this skill contributes only transferable rendering methods: colour/value roles, shape and faceted-plane authorship, connected brush fields, shared boundary illumination, material-local marks, edge/contrast hierarchy, character/environment finish matching, and face-identity proportions.
+
+Do not activate this skill's source-ratio inheritance, `Preserve-and-enrich` composition lock, single-frame camera/crop/headroom/horizon/quiet-space/subject-scale lock, pose/gaze/expression lock, single focal-event rule, or single-frame Output Contract inside a comic sequence. The source photograph becomes semantic scene/story evidence rather than this skill's Edit Target. The final result must remain one comic page with at least three visibly divided panels, never one painterly hero frame.
 
 Default to one finished borderless image when the user asks to make an image and gives enough direction. Do not run an intake questionnaire when the answer can be safely inferred.
 
@@ -85,3 +91,5 @@ Prompt-only and Reference Analysis routes stop before tool execution and clearly
 - **Reference Analysis:** observed evidence, inferred intent, fixed system, variable system, sample residue and one reusable operational prompt.
 - **Prompt-only:** one tool-ready prompt and any required input-role map; state that no image was generated or checked.
 - **Failure:** identify the failed contract precisely. Do not present an uninspected draft as a pass.
+
+For any photo-derived comic-page or storyboard request, defer the entire output contract to `photo-to-comic`; this skill has no authority to collapse the result to one frame or restore the source ratio/composition/pose.
